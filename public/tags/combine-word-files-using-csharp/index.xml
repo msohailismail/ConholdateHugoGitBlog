@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Combine Word Files using CSharp on Conholdate.Total</title>
+    <link>/tags/combine-word-files-using-csharp/</link>
+    <description>Recent content in Combine Word Files using CSharp on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 19 Nov 2021 03:48:57 +0000</lastBuildDate><atom:link href="/tags/combine-word-files-using-csharp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Merge Word Documents using C#</title>
+      <link>/2021/11/19/merge-word-documents-using-csharp/</link>
+      <pubDate>Fri, 19 Nov 2021 03:48:57 +0000</pubDate>
+      
+      <guid>/2021/11/19/merge-word-documents-using-csharp/</guid>
+      <description>As a C# developer, you can easily merge two or more Word documents into a single document programmatically. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to merge Word documents using C#&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>We can easily merge two or more Word documents into a single document using C#. We do it because sharing or printing a single file is easier than processing multiple files. In this article, we will learn <strong>how to merge Word documents using C#</strong>.</p>
+<p>The following topics shall be covered in this article:</p>
+<ul>
+<li><a href="#CSharp-API-to-Merge-Word-Documents">C# API to Merge Word Documents</a></li>
+<li><a href="#Merge-Two-or-More-Word-Documents-using-CSharp">Merge Two or More Word Documents using C#</a></li>
+<li><a href="#Combine-Specific-Pages-of-Word-Documents-using-CSharp">Combine Specific Pages of Word Documents using C#</a></li>
+<li><a href="#Merge-and-Secure-with-Password-using-CSharp">Merge DOCX Files and Secure with Password using C#</a></li>
+<li><a href="#Merge-Word-Document-into-PDF-using-CSharp">Merge Word Document into PDF using C#</a></li>
+</ul>
+<h2 id="CSharp-API-to-Merge-Word-Documents">C# API to Merge Word Documents</h2>
+<p>For merging <a href="https://docs.fileformat.com/word-processing/doc/">DOC</a> or <a href="https://docs.fileformat.com/word-processing/docx/">DOCX</a> files, we will be using <a href="https://products.groupdocs.com/merger/net">GroupDocs.Merger for .NET</a> API. Please either <a href="https://downloads.groupdocs.com/merger/net">download</a> the DLL of the API or install it using <a href="https://www.nuget.org/packages/groupdocs.merger">NuGet</a>.</p>
+<!-- raw HTML omitted -->
+<h2 id="Merge-Two-or-More-Word-Documents-using-CSharp">Merge Two or More Word Documents using C#</h2>
+<p>We can easily merge two or more Word documents programmatically by following the steps given below:</p>
+<ul>
+<li>Firstly, load the DOCX file using the <strong><em><a href="https://apireference.groupdocs.com/merger/net/groupdocs.merger/Merger">Merger</a></em></strong> class.</li>
+<li>Next, call the <strong><em><a href="https://apireference.groupdocs.com/merger/net/groupdocs.merger.merger/join/methods/2">Merger.Join()</a></em></strong> method with target DOCX file path to merge with the loaded file.</li>
+<li>Then, repeat the above step to merge more files.</li>
+<li>Finally, call the <strong><em><a href="https://apireference.groupdocs.com/merger/net/groupdocs.merger.merger/save/methods/1">Merger.Save()</a></em></strong> method with the output file path to save the merged file.</li>
+</ul>
+<p>The following code sample shows how to merge two or more DOCX files using C#.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/11/Merge-Word-Documents-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Merge two or more Word Documents using C#.<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="Combine-Specific-Pages-of-Word-Documents-using-CSharp">Combine Specific Pages of Word Documents using C#</h2>
+<p>We can combine specific pages of Word documents programmatically by following the simple steps mentioned below:</p>
+<ul>
+<li>Firstly, load the DOCX file using the <strong><em><a href="https://apireference.groupdocs.com/merger/net/groupdocs.merger/Merger">Merger</a></em></strong> class.</li>
+<li>Next, create an instance of the **<em><a href="https://apireference.groupdocs.com/merger/net/groupdocs.merger.domain.options/JoinOptions">JoinOptions</a></em> **class with the start page and end page number. You may also set range mode to join odd or even pages from the specified page range.</li>
+<li>Then, call the <em><strong><a href="https://apireference.groupdocs.com/merger/net/groupdocs.merger.merger/join/methods/2">Merger.Join()</a></strong></em> method with the target DOCX file path and <em>JoinOptions</em> object as arguments. The <em>JoinOptions</em> object merges specific pages of the target file with the source file.</li>
+<li>Finally, call the <strong><em><a href="https://apireference.groupdocs.com/merger/net/groupdocs.merger.merger/save/methods/1">Merger.Save()</a></em></strong> method with the output file path to save the merged file.</li>
+</ul>
+<p>The following code sample shows how to combine selected pages of Word documents using C#.</p>
+<!-- raw HTML omitted -->
+<h2 id="Merge-and-Secure-with-Password-using-CSharp">Merge DOCX Files and Secure with Password using C#</h2>
+<p>We can merge two or more DOCX files and then secure the merged file with a password programmatically by following the simple steps given below:</p>
+<ul>
+<li>Firstly, load the DOCX file using the <strong><em><a href="https://apireference.groupdocs.com/merger/net/groupdocs.merger/Merger">Merger</a></em></strong> class.</li>
+<li>Next, call the <strong><em><a href="https://apireference.groupdocs.com/merger/net/groupdocs.merger.merger/join/methods/2">Merger.Join()</a></em></strong> method with target DOCX file path to merge with the loaded file.</li>
+<li>Optionally, repeat the above step to merge more files.</li>
+<li>Then, set password using <strong><em><a href="https://apireference.groupdocs.com/merger/net/groupdocs.merger.domain.options/AddPasswordOptions">AddPasswordOptions</a></em></strong></li>
+<li>After that, call the <strong><em><a href="https://apireference.groupdocs.com/merger/net/groupdocs.merger/merger/methods/addpassword">Merger.AddPassword()</a></em></strong> method with <em>AddPasswordOptions</em>.</li>
+<li>Finally, call the <strong><em><a href="https://apireference.groupdocs.com/merger/net/groupdocs.merger.merger/save/methods/1">Merger.Save()</a></em></strong> method to save the password-protected merged file.</li>
+</ul>
+<p>The following code sample shows how to merge multiple Word documents and then <strong>secure the merged file with a password using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<h2 id="Merge-Word-Document-into-PDF-using-CSharp">Merge Word Documents into PDF using C#</h2>
+<p>We can merge Word documents into a PDF document programmatically by following the simple steps given below:</p>
+<ul>
+<li>Firstly, load the PDF file using the <strong><em><a href="https://apireference.groupdocs.com/merger/net/groupdocs.merger/Merger">Merger</a></em></strong> class.</li>
+<li>Next, call the <strong><em><a href="https://apireference.groupdocs.com/merger/net/groupdocs.merger.merger/join/methods/2">Merger.Join()</a></em></strong> method with target DOCX file path to merge with the loaded file.</li>
+<li>Optionally, repeat the above step to merge more files.</li>
+<li>Finally, call the <strong><em><a href="https://apireference.groupdocs.com/merger/net/groupdocs.merger.merger/save/methods/1">Merger.Save()</a></em></strong> method with the output PDF file path to save the merged file.</li>
+</ul>
+<p>The following code sample shows <strong>how to merge DOCX files into a PDF file using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>Please try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, we have learned <strong>how to merge two or more Word documents using C#</strong>. We have also seen <strong>how to combine specific pages of Word documents</strong> programmatically. This article also explained how to merge DOCX files into a PDF file using C#. Besides, you can learn more about GroupDocs.Merger for .NET API using the <a href="https://docs.groupdocs.com/merger/net/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/merger/">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.groupdocs.com/2021/05/04/merge-multiple-file-types-using-csharp/">Merge Multiple File Types into One File using C#</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

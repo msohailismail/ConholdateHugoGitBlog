@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Combine Multiple Workbooks into One on Conholdate.Total</title>
+    <link>/tags/combine-multiple-workbooks-into-one/</link>
+    <description>Recent content in Combine Multiple Workbooks into One on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Sep 2021 05:12:15 +0000</lastBuildDate><atom:link href="/tags/combine-multiple-workbooks-into-one/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Combine Multiple Excel Files into One using Java</title>
+      <link>/2021/09/02/combine-multiple-excel-files-into-one-using-java/</link>
+      <pubDate>Thu, 02 Sep 2021 05:12:15 +0000</pubDate>
+      
+      <guid>/2021/09/02/combine-multiple-excel-files-into-one-using-java/</guid>
+      <description>As a Java developer, you can easily merge multiple Excel files into one file programmatically. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to combine multiple Excel files into one using Java.&lt;!-- raw HTML omitted --&gt;</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>You have several Excel workbooks, and you want to combine them together into one file for reporting or to keep data in one place. As a Java developer, you can easily merge multiple Excel files into one file programmatically. In this article, you will learn <strong>how to combine multiple Excel files into one using Java</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#Java-API-to-Merge-Excel-Files">Java API to Merge Excel Files</a></li>
+<li><a href="#Combine-Multiple-Excel-Files-using-Java">Combine Multiple Excel Files into One using Java</a></li>
+<li><a href="#Combine-Specific-Worksheets-of-Multiple-Excel-Files-into-One-using-Java">Combine Specific Worksheets of Multiple Excel Files into One using Java</a></li>
+<li><a href="#Merge-Multiple-Worksheets-into-One-Worksheet-using-Java">Merge Multiple Worksheets into One Worksheet using Java</a></li>
+<li><a href="#Consolidate-Columns-of-Multiple-Worksheets-into-One-using-Java">Consolidate Columns of Multiple Worksheets into One using Java</a></li>
+</ul>
+<h2 id="Java-API-to-Merge-Excel-Files">Java API to Merge Excel Files</h2>
+<p>For merging multiple <a href="https://docs.fileformat.com/spreadsheet/xlsx/">Excel</a> files, I will be using <a href="https://products.aspose.com/cells/java/">Aspose.Cells for Java API</a>. This API enables you to create, manipulate, convert, protect or print spreadsheets without relying on Microsoft Excel. It allows you to perform Excel automation features programmatically in your Java applications.</p>
+<p>You can <a href="https://downloads.aspose.com/cells/java">download</a> the JAR of the API or just add the following <strong><em>pom.xml</em></strong> configuration in your Maven-based Java application to try the below-mentioned code examples.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="Combine-Multiple-Excel-Files-using-Java">Combine Multiple Excel Files into One using Java</h2>
+<p>You can easily combine multiple Excel files into a single file programmatically by following the steps mentioned below:</p>
+<ul>
+<li>Create an instance of the _<a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Workbook">Workbook</a> _class with first source file</li>
+<li>Create an instance of the _<a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Workbook">Workbook</a> _class with second source file</li>
+<li>Repeat above step for combining more than two files</li>
+<li>Call the <a href="https://apireference.aspose.com/cells/java/com.aspose.cells/workbook#combine(com.aspose.cells.Workbook)"><em>combine()</em></a> method with second source file instance</li>
+<li>Repeat above step for all source files one by one</li>
+<li>Save the output file by calling the <em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/workbook#save(java.lang.String)">save()</a></em> method of the <em>Workbook</em> class</li>
+</ul>
+<p>The following code sample shows <strong>how to combine multiple Excel files into one file using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/09/Combine-Multiple-Excel-Files-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Combine Multiple Excel Files into One using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Workbook">Workbook</a></strong> class of the API is the main class used to create an Excel Spreadsheet. It enables you to open and save the native Excel files. It also provides several properties and methods to work with Excel Spreadsheet. The <strong><em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/workbook#combine(com.aspose.cells.Workbook)">combine()</a></em></strong> method of this class combines the current workbook with another Workbook object. The <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/workbook#save(java.lang.String)"><em>save()</em></a></strong> method of the <em>Workbook</em> class saves the output file at the specified file path.</p>
+<h2 id="Combine-Specific-Worksheets-of-Multiple-Excel-Files-into-One-using-Java">Combine Specific Worksheets of Multiple Excel Files into One using Java</h2>
+<p>You can easily combine specific worksheets from multiple Excel files into a single file programmatically by following the steps mentioned below:</p>
+<ul>
+<li>Create an instance of the _<a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Workbook">Workbook</a> _class for source file 1</li>
+<li>Create an instance of the _<a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Workbook">Workbook</a> _class for source file 2</li>
+<li>Repeat above step for combining worksheets from more than two files</li>
+<li>Create an instance of the _<a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Workbook">Workbook</a> _class for destination file</li>
+<li>Add worksheet(s) using <em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/worksheetcollection#add()">add()</a></em> method of the <em>WorksheetCollection</em> class</li>
+<li>Call the <em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/workbook#copy(com.aspose.cells.Workbook)">copy()</a></em> method to copy specified worksheet from source file 1 to destination file</li>
+<li>Call the <em>copy()</em> method to copy specified worksheet from source file 2 to destination file</li>
+<li>Rename worksheets in destination file by using the <em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/worksheet#Name">setName()</a></em> method</li>
+<li>Save the destination file by calling the <em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/workbook#save(java.lang.String)">save()</a></em> method of the <em>Workbook</em> class</li>
+</ul>
+<p>The following code sample shows <strong>how to combine specific worksheets from multiple Excel files into one file using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/09/Combine-Specific-Worksheets-of-Multiple-Excel-Files-into-One-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Combine Specific Worksheets of Multiple Excel Files into One using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/workbook#Worksheets">getWorksheets()</a></strong> property method of the Workbook class returns a collection of all the worksheets in a Workbook. You can add a worksheet to the collection of worksheets using the <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/worksheetcollection#add()">add()</a></strong> method.</p>
+<p>The <a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Worksheet"><strong>Worksheet</strong></a> class of this API represents a single worksheet. It provides several properties and methods to work with a worksheet. The <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/worksheet#copy(com.aspose.cells.Worksheet)">copy()</a></strong> method of this class copies content and formats from another worksheet. The Worksheet class also provides <strong>get()</strong> methods to get a specific worksheet by its index or by its name. The <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/worksheet#Name">setName()</a></strong> property method sets the name of the worksheet.</p>
+<h2 id="Merge-Multiple-Worksheets-into-One-Worksheet-using-Java">Merge Multiple Worksheets into One Worksheet using Java</h2>
+<p>You can easily merge multiple worksheets of an Excel file into a single worksheet programmatically by following the steps mentioned below:</p>
+<ul>
+<li>Create an instance of the _<a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Workbook">Workbook</a> _class for source file</li>
+<li>Add a new worksheet using the <em>add()</em> method</li>
+<li>Iterate over source worksheets and do the following:
+<ul>
+<li>create a range of cells and columns for one worksheet using the <em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/cells#createRange(int,%20int,%20boolean)">createRange()</a></em> method</li>
+<li>Copy data from a source range to the destination range using the <em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/range#copy(com.aspose.cells.Range)">copy()</a></em> method</li>
+</ul>
+</li>
+<li>Save the output file by calling the <em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/workbook#save(java.lang.String)">save()</a></em> method of the <em>Workbook</em> class</li>
+</ul>
+<p>The following code sample shows <strong>how to merge multiple worksheets into one worksheet using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/09/Merge-Multiple-Worksheets-into-One-Worksheet-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Merge Multiple Worksheets into One Worksheet using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/worksheet#Cells">getCells()</a></strong> property method of the Worksheet class provides the collection of the Cells available in the worksheet. The <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Cells">Cells</a></strong> class of the API represents a collection of objects relevant to a cell, such as a <a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Cell">Cell</a>, <a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Row">Row</a>, etc. The <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/cells#MaxDisplayRange">getMaxDisplayRange()</a></strong> property method of the Cells class provides the max range which includes data, merged cells, and shapes. The <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Range">Range</a></strong> class represents a range of cells within a spreadsheet.</p>
+<p>The Cells class provides the following methods to create a range of cells:</p>
+<ul>
+<li><strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/cells#createRange(int,%20int,%20boolean)">createRange</a></strong>(int firstIndex, int number, boolean isVertical) method to create a Range object from rows of cells or columns of cells.</li>
+<li><strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/cells#createRange(int,%20int,%20int,%20int)">createRange</a></strong>(int firstRow, int firstColumn, int totalRows, int totalColumns) method to create a Range object from a range of cells.</li>
+<li>The <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/cells#createRange(java.lang.String)">createRange</a></strong>(java.lang.String address) method creates a Range object from an address of the range.</li>
+<li>The <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/cells#createRange(java.lang.String,%20java.lang.String)">createRange</a></strong>(java.lang.String upperLeftCell, java.lang.String lowerRightCell) method creates a Range object from a range of cells.</li>
+</ul>
+<p>The <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/range#copy(com.aspose.cells.Range)">copy()</a></strong> method of the Range class copies all kinds of data (including formulas), formatting, drawing objects, etc. from a source range to the destination range.</p>
+<h2 id="Consolidate-Columns-of-Multiple-Worksheets-into-One-using-Java">Consolidate Columns of Multiple Worksheets into One using Java</h2>
+<p>You can easily merge columns of multiple worksheets into a single worksheet programmatically by following the steps mentioned below:</p>
+<ul>
+<li>Create an instance of the _<a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Workbook">Workbook</a> _class for source file</li>
+<li>Add a new worksheet using the <em>add()</em> method</li>
+<li>Iterate over source worksheets and do the following:
+<ul>
+<li>Copy all columns one by one using the <em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/cells#copyColumn(com.aspose.cells.Cells,%20int,%20int)">copyColumn()</a></em> method with source worksheets cells and column index</li>
+</ul>
+</li>
+<li>Save the output file by calling the <em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/workbook#save(java.lang.String)">save()</a></em> method of the <em>Workbook</em> class</li>
+</ul>
+<p>The following code sample shows <strong>how to consolidate columns of multiple worksheets into one worksheet using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/09/Consolidate-Columns-of-Multiple-Worksheets-into-One-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Consolidate Columns of Multiple Worksheets into One using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/cells#Columns">getColumns()</a></strong> property method of the Cells class provides the collection of the columns available in the worksheet. The <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/ColumnCollection">ColumnCollection</a></strong> class represents the collection of the individual columns in a worksheet, whereas the <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Column">Column</a></strong> class represents a single column in a worksheet.</p>
+<p>The <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/cells#copyColumn(com.aspose.cells.Cells,%20int,%20int)">copyColumn()</a></strong> method of the Cells class copies the data and formats of a whole column. The Cells class also provides overloaded copyColumn() methods to copy data with the PasteOptions, column number, source, and destination total columns, etc.</p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.aspose.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to combine multiple Excel files into one file</strong>. You have also learned <strong>how to combine specific worksheets of multiple Excel files using Java</strong>. Moreover, you have learned <strong>how to merge multiple worksheets into a single worksheet</strong> programmatically. This article also explained <strong>how to consolidate columns of multiple worksheets into one using Java</strong>. You can learn more about Aspose.Cells for Java API using the <a href="https://docs.aspose.com/cells/java/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.aspose.com/c/cells/9">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.conholdate.com/2021/08/27/export-data-to-excel-in-java/">Export Data to Excel in Java</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

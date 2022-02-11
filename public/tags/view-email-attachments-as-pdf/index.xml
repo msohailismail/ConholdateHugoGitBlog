@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>View Email Attachments as PDF on Conholdate.Total</title>
+    <link>/tags/view-email-attachments-as-pdf/</link>
+    <description>Recent content in View Email Attachments as PDF on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Oct 2021 11:03:23 +0000</lastBuildDate><atom:link href="/tags/view-email-attachments-as-pdf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Save Attachments from Emails using C#</title>
+      <link>/2021/10/29/save-attachments-from-emails-using-csharp/</link>
+      <pubDate>Fri, 29 Oct 2021 11:03:23 +0000</pubDate>
+      
+      <guid>/2021/10/29/save-attachments-from-emails-using-csharp/</guid>
+      <description>As a C# developer, you can easily extract and save the attachments from email messages programmatically. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to save attachments from emails using C#&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>As a C# developer, you can easily extract and save the attachments from email messages programmatically. In this article, you will learn <strong>how to save attachments from emails using C#</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#CSharp-API-to-Save-Email-Attachments">C# API to Save Email Attachments</a></li>
+<li><a href="#Extract-and-Save-Attachments-from-Emails-using-CSharp">Extract and Save Attachments from Emails using C#</a></li>
+<li><a href="#Save-Attachments-as-PDF-from-Emails-using-CSharp">Save Attachments as PDF from Emails using C#</a></li>
+</ul>
+<h2 id="CSharp-API-to-Save-Email-Attachments">C# API to Save Email Attachments</h2>
+<p>For saving the attachments from <a href="https://docs.fileformat.com/email/msg/">MSG</a> files, we will be using <a href="https://products.groupdocs.com/viewer/net">GroupDocs.Viewer for .NET API</a>. It is a powerful document viewer API to render and display widely used file formats without installing any external software. It also enables you to quickly view popular <a href="https://docs.groupdocs.com/viewer/net/supported-document-formats/">supported file formats</a> of <a href="https://docs.fileformat.com/word-processing/">Word</a>, <a href="https://docs.fileformat.com/spreadsheet/">Excel</a>, <a href="https://docs.fileformat.com/presentation/">PowerPoint</a>, <a href="https://docs.fileformat.com/email/">Outlook emails</a>, <a href="https://docs.fileformat.com/project-management/">Project</a>, <a href="https://docs.fileformat.com/pdf/">PDF</a>, <a href="https://docs.fileformat.com/web/html/">HTML</a>, and <a href="https://docs.fileformat.com/web/xml/">XML</a>.</p>
+<p>You can either <a href="https://downloads.groupdocs.com/viewer/net">download</a> the DLL of the API or install it using <a href="https://www.nuget.org/packages/GroupDocs.Viewer">NuGet</a>.</p>
+<!-- raw HTML omitted -->
+<h2 id="Extract-and-Save-Attachments-from-Emails-using-CSharp">Extract and Save Attachments from Emails using C#</h2>
+<p>You can extract and save attachments from email MSG files programmatically by following the steps given below:</p>
+<ul>
+<li>Firstly, load the MSG file using the <a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/Viewer">Viewer</a> class.</li>
+<li>Then, call the <a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/getattachments">Viewer.GetAttachments()</a> method to get all the attachments of the loaded MSG file. Get the results as a collection of attachments.</li>
+<li>For each attachment in the collection, save the attachment by calling the <a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/saveattachment">Viewer.SaveAttachment()</a> method. Pass the attachment object and file path to save it.</li>
+</ul>
+<p>The following code sample shows <strong>how to extract and save the attachments contained by email MSG file using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/10/Extract-and-Save-Attachments-from-Emails-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Extract and save attachments from emails using C#.<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="Save-Attachments-as-PDF-from-Emails-using-CSharp">Save Attachments as PDF from Emails using C#</h2>
+<p>You can save the email message attachments as PDF programmatically by following the steps given below:</p>
+<ul>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.results/attachment">Attachment</a> class with the attached file name and file path.</li>
+<li>Initialize an instance of the MemoryStream class.</li>
+<li>Load the MSG file using the <a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/Viewer">Viewer</a> class.</li>
+<li>Then, call the <a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/saveattachment">Viewer.SaveAttachment()</a> method and pass the Attachment and the MemoryStream object as input parameters. It will extract and save the specified attachment in the memory stream.</li>
+<li>Now, load the MemoryStream object using the <a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/Viewer">Viewer</a> class.</li>
+<li>Then, create an instance of the <a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions">PdfViewOptions</a> class with the output PDF file path.</li>
+<li>Finally, call the <a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view">Viewer.View()</a> method to save and view the attachment as a PDF.</li>
+</ul>
+<p>The following code sample shows <strong>how to save and view the attachment as a PDF from an email MSG file using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/10/Save-Attachments-as-PDF-from-Emails-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Save attachments as PDF from emails using C#.<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to <strong>extract and save the attachments contained by email MSG file using</strong> C#</strong>. Moreover, you have seen <strong>how to save a specific attachment as a PDF</strong> programmatically. Besides, you can learn more about GroupDocs.Viewer for .NET API using the <a href="https://docs.groupdocs.com/viewer/net/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/viewer/">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.conholdate.com/2021/07/06/render-zip-archives-using-csharp/">Render ZIP Archives using C#</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

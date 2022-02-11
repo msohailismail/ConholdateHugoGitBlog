@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Render Visio File as HTML on Conholdate.Total</title>
+    <link>/tags/render-visio-file-as-html/</link>
+    <description>Recent content in Render Visio File as HTML on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 07 Apr 2021 08:54:39 +0000</lastBuildDate><atom:link href="/tags/render-visio-file-as-html/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Render Visio Diagrams in HTML, PDF, and Image using Java</title>
+      <link>/2021/04/07/render-visio-diagrams-in-html-pdf-and-image-using-java/</link>
+      <pubDate>Wed, 07 Apr 2021 08:54:39 +0000</pubDate>
+      
+      <guid>/2021/04/07/render-visio-diagrams-in-html-pdf-and-image-using-java/</guid>
+      <description>Render Visio diagram (.vsdx, .vssx, .vstx) files in HTML, PDF, and other popular image formats programmatically. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to render Visio diagrams in HTML, PDF, and Image using Java&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>Microsoft Visio is a popular vector graphics tool that helps you visualize data-connected business process flows. It can be used to draw a variety of diagrams such as flowcharts, organization charts, building plans, floor plans, data flow diagrams, process flow diagrams, business process modeling, swimlane diagrams, 3D maps, and many more. As a Java developer, you can easily render Visio diagrams in HTML, PDF, and other popular image formats programmatically. In this article, you will learn <strong>how to render Visio diagrams in HTML, PDF, and Image using Java</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#java-viewer-api">Java API to View Visio Files</a></li>
+<li><a href="#render-vssx-to-html">Render Visio VSSX in HTML</a></li>
+<li><a href="#render-vstx-to-pdf">Render Visio VSTX in PDF</a></li>
+<li><a href="#render-vsdx-to-image">View Visio VSDX as Image</a></li>
+</ul>
+<h2 id="java-viewer-api">Java API to View Visio Files</h2>
+<p>I will be using <a href="https://products.groupdocs.com/viewer/java">GroupDocs.Viewer for Java API</a> for the rendering of Visio files. It provides a most flexible document viewing solution to render and display widely used file formats anywhere. Using this API, you can create powerful document and image rendering applications in Java without installing any external software. It enables you to quickly view PDF, HTML, XML, Microsoft Office Word, Excel worksheets, PowerPoint presentations, Outlook emails, Visio diagrams, Project, metafiles, images, and various other file formats with ease and fewer programming hazards.</p>
+<h3 id="download-and-configure">Download and Configure</h3>
+<p><a href="https://downloads.groupdocs.com/viewer/java">Get the library</a> from downloads or just add the following <strong><em>pom.xml</em></strong> configuration in your Maven-based Java applications to try the below-mentioned examples.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="render-vssx-to-html">Render Visio VSSX in HTML</h2>
+<p>You can render the Visio VSSX file in HTML by following the simple steps given below:</p>
+<ol>
+<li>Create an instance of the <strong><a href="https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer">Viewer</a></strong> class</li>
+<li>Provide the input file path</li>
+<li>Create an instance of <a href="https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions"><em><strong>HtmlViewOptions</strong></em></a> class</li>
+<li>Provide output file path</li>
+<li>Call the <em><strong><a href="https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)">View</a></strong></em> method and pass HtmlViewOptions</li>
+</ol>
+<p>The following code sample shows <strong>how to render the VSSX file in HTML using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/04/Render-VSSX-in-HTML.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Render VSSX in HTML<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The **<em>HtmlViewOptions</em> **class provides options for rendering documents into HTML format. The <a href="https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#forEmbeddedResources(java.lang.String)">ForEmbeddedResources</a> constructor creates a new instance of <em>HtmlViewOptions</em> class for rendering into HTML with embedded resources. It provides certain options for various file formats such as VisioRenderingOptions for Visio files, Watermark options to set text watermark, security options, rendering options to render hidden pages, notes, and comments, etc.</p>
+<p>You can find more details about “<a href="https://docs.groupdocs.com/viewer/java/document-viewer-html-viewer/">Document HTML Viewer</a>” in the documentation.</p>
+<h2 id="render-vstx-to-pdf">Render Visio VSTX in PDF</h2>
+<p>You can render the Visio VSTX file in PDF format by following the simple steps given below:</p>
+<ol>
+<li>Create an instance of the <strong><a href="https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer">Viewer</a></strong> class</li>
+<li>Provide the input file path</li>
+<li>Create an instance of <a href="https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PdfViewOptions"><em><strong>PdfViewOptions</strong></em></a> class</li>
+<li>Provide output file path</li>
+<li>Call the <em><strong><a href="https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)">View</a></strong></em> method and pass PdfViewOptions</li>
+</ol>
+<p>The following code sample shows <strong>how to render the VSTX file in PDF using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/04/Render-VSTX-in-PDF.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Render VSTX in PDF<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The **<em>PdfViewOptions</em> **class provides options for rendering documents into PDF format. It also allows setting separate options for different file formats including text watermark, security options, and rendering of hidden pages, notes, and comments, etc.</p>
+<p>You can find more details about “<a href="https://docs.groupdocs.com/viewer/java/document-viewer-pdf-viewer/">Document PDF Viewer</a>” in the documentation.</p>
+<h2 id="render-vsdx-to-image">Render Visio VSDX as Image</h2>
+<p>You can render the Visio VSDX file in JPG or PNG format by following the simple steps given below:</p>
+<ol>
+<li>Create an instance of the <strong><a href="https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer">Viewer</a></strong> class</li>
+<li>Provide the input file path</li>
+<li>Create an instance of <a href="https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions"><em><strong>PngViewOptions</strong></em></a> class</li>
+<li>Provide output file path</li>
+<li>Call the <em><strong><a href="https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)">View</a></strong></em> method and pass PngViewOptions</li>
+</ol>
+<p>The following code sample shows <strong>how to render the VSDX file in PNG using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/04/Render-VSDX-in-PNG.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Render VSDX as PNG<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>You may also render the Visio files in JPG using Java as shown below:</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/04/Render-VSDX-in-JPG.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Render VSDX as JPG<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The **<em>PngViewOptions</em> <strong>class provides options for rendering documents into PNG format. Similarly, the </strong><em>JpgViewOptions</em> **class provides options for rendering documents into JPG format. Both of the classes also provide setting options for other formats along with text watermark, security options, and rendering of hidden pages, notes, and comments, etc.</p>
+<p>You can find more details about “<a href="https://docs.groupdocs.com/viewer/java/document-viewer-image-viewer/">Document Image Viewer</a>” in the documentation.</p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to render Visio (.vsdx, .vstx, .vssx) files in HTML, PDF, PNG, and Jpg</strong> using Java. You can learn even more about GroupDocs.Viewer Java API using the <a href="https://docs.groupdocs.com/viewer/java/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/viewer/">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li>[<a href="https://blog.groupdocs.com/2019/08/24/view-messages-from-desired-folders-in-outlook-data-files-ostpst/">View messages from desired folders in Outlook Data Files (OST/PST)</a>]<a href="https://blog.conholdate.com/2020/08/10/export-data-to-excel-in-csharp/">25</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

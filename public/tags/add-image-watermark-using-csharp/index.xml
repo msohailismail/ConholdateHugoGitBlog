@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Add Image Watermark using CSharp on Conholdate.Total</title>
+    <link>/tags/add-image-watermark-using-csharp/</link>
+    <description>Recent content in Add Image Watermark using CSharp on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 22 Oct 2021 10:35:19 +0000</lastBuildDate><atom:link href="/tags/add-image-watermark-using-csharp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Add Text or Image Watermarks in Word Documents using C#</title>
+      <link>/2021/10/22/add-text-or-image-watermarks-in-word-documents-using-csharp/</link>
+      <pubDate>Fri, 22 Oct 2021 10:35:19 +0000</pubDate>
+      
+      <guid>/2021/10/22/add-text-or-image-watermarks-in-word-documents-using-csharp/</guid>
+      <description>As a C# developer, you can easily add text or image watermarks in Word documents programmatically. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to add text or image watermarks in Word documents using C#.&lt;!-- raw HTML omitted --&gt;</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>As a C# developer, you can easily add text or image watermarks in Word documents programmatically. A watermark is a sort of message in the form of text or an image, usually used to identify or protect the documents by showing copyright information, disclaimer, logo, stamp, or signature. In this article, you will learn <strong>how to add text or image watermarks in Word documents using C#</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#CSharp-API-to-Add-Watermark-in-Word-Documents">C# API to Add Watermark in Word Documents</a></li>
+<li><a href="#Add-Text-Watermark-in-Word-Documents-using-CSharp">Add Text Watermark in Word Documents using C#</a></li>
+<li><a href="#Add-Image-Watermark-in-Word-Documents-using-CSharp">Add Image Watermark in Word Documents using C#</a></li>
+<li><a href="#Watermark-Images-in-Word-Documents-using-CSharp">Watermark the Images of a Word Document using C#</a></li>
+<li><a href="#Add-Watermark-to-Specific-Pages-in-Word-Documents-using-CSharp">Add Watermark to Specific Pages in Word Documents using C#</a></li>
+<li><a href="#Add-Watermark-to-Header-or-Footer-of-Word-Documents-using-CSharp">Add Watermark to Header or Footer of Word Documents using C#</a></li>
+</ul>
+<h2 id="CSharp-API-to-Add-Watermark-in-Word-Documents">C# API to Add Watermark in Word Documents</h2>
+<p>For adding text or image watermarks in <a href="https://docs.fileformat.com/word-processing/doc">DOC</a> or <a href="https://docs.fileformat.com/word-processing/docx">DOCX</a> files, we will be using <a href="https://products.groupdocs.com/watermark/java">GroupDocs.Watermark for .NET</a> API. It enables you to add, edit, search and remove image and text watermarks in <a href="https://docs.groupdocs.com/watermark/net/supported-document-formats/">supported file formats</a>. It also allows obtaining the basic information about source documents such as file type, size, pages count, page height and width, etc. The document preview feature of the API allows generating image representations of document pages for a better understanding of the document.</p>
+<p>You can either <a href="https://downloads.groupdocs.com/watermark/net">download</a> the DLL of the API or install it using <a href="https://www.nuget.org/packages/groupdocs.watermark">NuGet</a>.</p>
+<!-- raw HTML omitted -->
+<h2 id="Add-Text-Watermark-in-Word-Documents-using-CSharp">Add Text Watermark in Word Documents using C#</h2>
+<p>You can add a text watermark to Word documents by following the steps given below:</p>
+<ul>
+<li>Firstly, load the DOCX file using the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark/Watermarker">Watermarker</a> class.</li>
+<li>Initialize the font to be used for watermark text using the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/font">Font</a> class.</li>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/textwatermark">TextWatermark</a> class to create a text watermark. Pass the text to show as watermark and defined font object as input parameters.</li>
+<li>Now, set various <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/textwatermark/properties/index">watermark properties</a> such as Foreground Color, Background Color, Rotate Angle, Height, Width, Opacity, etc.</li>
+<li>Then, call the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark/watermarker/methods/add">Watermarker.Add()</a> method to add the text watermark to the document.</li>
+<li>Finally, call the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.watermarker/save/methods/4">Watermarker.Save()</a> method to save the watermarked Word document.</li>
+</ul>
+<p>The following code sample shows <strong>how to add a text watermark in a DOCX file using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/10/Add-Text-Watermark-in-Word-Documents-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Add Text Watermark in Word Documents using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="Add-Image-Watermark-in-Word-Documents-using-CSharp">Add Image Watermark in Word Documents using C#</h2>
+<p>You can add an image as a watermark to Word documents by following the steps given below:</p>
+<ul>
+<li>Firstly, load the DOCX file using the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark/Watermarker">Watermarker</a> class.</li>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/imagewatermark">ImageWatermark</a> class with the image path to create an image watermark.</li>
+<li>Now, set various <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/textwatermark/properties/index">watermark properties</a> such as Alignment, Height, Width, etc.</li>
+<li>Then, call the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark/watermarker/methods/add">Watermarker.Add()</a> method to add the image watermark to the document.</li>
+<li>Finally, call the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.watermarker/save/methods/4">Watermarker.Save()</a> method to save the watermarked Word document.</li>
+</ul>
+<p>The following code sample shows <strong>how to add an image watermark in a DOCX file using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/10/Add-Image-Watermark-in-Word-Documents-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Add Image Watermark in Word Documents using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="Watermark-Images-in-Word-Documents-using-CSharp">Watermark the Images of a Word Document using C#</h2>
+<p>You can add text watermark to the images in Word documents by following the steps given below:</p>
+<ul>
+<li>Firstly, load the DOCX file using the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark/Watermarker">Watermarker</a> class.</li>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/textwatermark">TextWatermark</a> class to create a text watermark. Pass the text to show as watermark and the font to be used for watermark text using the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/font">Font</a> class as input parameters.</li>
+<li>Now, set various <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/textwatermark/properties/index">watermark properties</a> e.g. Foreground Color, Alignment, Rotate Angle, Scale Factor, etc.</li>
+<li>Then, Call the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark/watermarker/methods/getimages">Watermarker.GetImages()</a> method to find all images in the document and get results in the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.contents.image/watermarkableimagecollection">WatermarkableImageCollection</a> class object.</li>
+<li>For each image in WatermarkableImageCollection, add watermark by calling the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.contents.image/watermarkableimage/methods/add">WatermarkableImage.Add()</a> method with the TextWatermark object.</li>
+<li>Finally, call the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.watermarker/save/methods/4">Watermarker.Save()</a> method to save the watermarked Word document.</li>
+</ul>
+<p>The following code sample shows <strong>how to add a text watermark to the images in a DOCX file using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/10/Watermark-Images-in-Word-Documents-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Watermark Images in Word Documents using C#.<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="Add-Watermark-to-Specific-Pages-in-Word-Documents-using-CSharp">Add Watermark to Specific Pages in Word Documents using C#</h2>
+<p>You can add watermark to a specific page of the Word document by following the steps given below:</p>
+<ul>
+<li>Firstly, load the DOCX file using the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark/Watermarker">Watermarker</a> class.</li>
+<li>Initialize the font to be used for watermark text using the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/font">Font</a> class.</li>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/textwatermark">TextWatermark</a> class to create a text watermark. Pass the text to show as watermark and defined font object as input parameters.</li>
+<li>Now, set various <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/textwatermark/properties/index">watermark properties</a> such as Foreground Color, Background Color, Alignment, etc.</li>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarkpagesoptions">WordProcessingWatermarkPagesOptions</a> class</li>
+<li>Now, set the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarkpagesoptions/properties/pagenumbers">PageNumbers</a> to add the watermark. You can set a single page number or a comma separated list of page numbers. We set it to the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.contents.wordprocessing/wordprocessingcontent/properties/pagecount">WordProcessingContent.PageCount</a> which indicates the last page of the document here.</li>
+<li>Then, call the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark/watermarker/methods/add">Watermarker.Add()</a> method to add the defined watermark.</li>
+<li>Finally, call the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.watermarker/save/methods/4">Watermarker.Save()</a> method to save the watermarked Word document.</li>
+</ul>
+<p>The following code sample shows <strong>how to add a text watermark to a specific page in a DOCX file using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<h2 id="Add-Watermark-to-Header-or-Footer-of-Word-Documents-using-CSharp">Add Watermark to Header or Footer of Word Documents using C#</h2>
+<p>You can add a watermark to the header or footer sections of the Word documents by following the steps given below:</p>
+<ul>
+<li>Firstly, load the DOCX file using the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark/Watermarker">Watermarker</a> class.</li>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/imagewatermark">ImageWatermark</a> class with the image path to create an image watermark.</li>
+<li>Then, set various <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/textwatermark/properties/index">watermark properties</a> such as Alignment, Height, Width, etc.</li>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarksectionoptions">WordProcessingWatermarkSectionOptions</a> class.</li>
+<li>Now, set the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarksectionoptions/properties/sectionindex">WordProcessingWatermarkSectionOptions.SectionIndex</a> to 0 to add watermark to the first section of the document.</li>
+<li>Then, call the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark/watermarker/methods/add">Watermarker.Add()</a> method to add the image watermark to first section.</li>
+<li>Call the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark/watermarker/methods/getcontent/_1">Watermarker.GetContent()</a> method to get the content for the loaded document and get results in the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.contents.wordprocessing/wordprocessingcontent">WordProcessingContent</a> class object.</li>
+<li>Loop through all the sections and call the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.contents.wordprocessing/wordprocessingheaderfootercollection/methods/linktoprevious">LinkToPrevious()</a> method with true boolean value as input parameter. It will link all headers and footers of all the sections with the first section.</li>
+<li>Finally, call the <a href="https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.watermarker/save/methods/4">Watermarker.Save()</a> method to save the watermarked Word document.</li>
+</ul>
+<p>The following code sample shows <strong>how to add a watermark to a header or footer section in a DOCX file using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/10/Add-Watermark-to-Header-or-Footer-of-Word-Documents-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Add Watermark to Header or Footer of Word Documents using C#.<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to add text or image watermark in the Word documents using C#</strong>. Moreover, you have seen <strong>how to add watermark to a specific page of a Word document</strong> programmatically. This article also explained <strong>how to add watermark to images in the DOCX file</strong> using C#. Besides, you can learn more about GroupDocs.Watermark for .NET API using the <a href="https://docs.groupdocs.com/watermark/net/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/watermark/">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.groupdocs.com/2021/07/27/watermark-pdf-files-using-csharp/">Add Watermark to PDF using C#</a></li>
+<li><a href="https://blog.groupdocs.com/2021/05/01/add-watermark-to-presentations-using-csharp/">Add Watermark to Presentations in C#</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

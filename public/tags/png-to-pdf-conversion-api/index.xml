@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>PNG to PDF conversion API on Conholdate.Total</title>
+    <link>/tags/png-to-pdf-conversion-api/</link>
+    <description>Recent content in PNG to PDF conversion API on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Apr 2021 17:42:08 +0000</lastBuildDate><atom:link href="/tags/png-to-pdf-conversion-api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Image to PDF conversion using C# .NET API</title>
+      <link>/2021/04/01/image-to-pdf-conversion-using-csharp-net-apis/</link>
+      <pubDate>Thu, 01 Apr 2021 17:42:08 +0000</pubDate>
+      
+      <guid>/2021/04/01/image-to-pdf-conversion-using-csharp-net-apis/</guid>
+      <description>“A picture is worth a thousand words“. The ideas can be conveyed by a single still image in an efficacious mechanism than a mere verbal description. Therefore, images are widely used in daily life. A large variety of image formats including JPEG, PNG, BMP, GIF, TIFF, etc are used for information sharing. However, if we stumble upon a requirement to share a large set of images, either we need to archive them into one bundle or make a booklet in a format that can be easily viewed on receiving end.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>“<strong>A</strong> <strong>picture is worth</strong> <strong>a thousand words</strong>“. The ideas can be conveyed by a single still <strong>image</strong> in an efficacious mechanism than a mere verbal description. Therefore, images are widely used in daily life. A large variety of image formats including <a href="https://docs.fileformat.com/image/jpeg/">JPEG</a>, <a href="https://docs.fileformat.com/image/png/">PNG</a>, <a href="https://docs.fileformat.com/image/bmp/">BMP</a>, <a href="https://docs.fileformat.com/image/gif/">GIF</a>, <a href="https://docs.fileformat.com/image/tiff/">TIFF</a>, etc are used for information sharing. However, if we stumble upon a requirement to share a large set of images, either we need to archive them into one bundle or make a booklet in a format that can be easily viewed on receiving end. So, our choice is Portable Document Format (<a href="https://docs.fileformat.com/pdf/">PDF</a>) because it maintains the document fidelity irrespective of application software, hardware as well as Operating System being used for viewing the file. Therefore, in this article, we are going to talk about the Image to PDF conversion feature using <a href="https://products.conholdate.com/total/net">Conholdate.Total for .NET</a> APIs.</p>
+<!-- raw HTML omitted -->
+<pre><code>However, before we proceed further, let&amp;#8217;s discuss some points highlighting a difference between Conholdate.Total for .NET and Aspose.Total for .NET.
+</code></pre>
+<!-- raw HTML omitted -->
+<p><a href="https://products.aspose.com/total/net">Aspose.Total for .NET</a> is a collection of programming APIs specifically developed to create, manipulate and transform leading file formats. It includes Word, Excel, PDF, PowerPoint, Outlook, Diagram, MS Project, HTML, and more than other 100 file formats all within the standard desktop, Console, ASP.NET, and VB.NET applications.</p>
+<p>Albeit, <a href="https://products.conholdate.com/total/net">Conholdate.Total for .NET</a> also includes Aspose.Total for .NET. But, it also includes <a href="https://products.groupdocs.com/total/net">GroupDocs.Total for .NET</a>. It provides extra capabilities to view, convert, annotate, compare, sign, assemble, edit, search, and parse the most commonly used document formats. So in this single package, you get the capabilities to load files, view them, manipulate them and render the output in other supported formats i.e. <a href="https://docs.aspose.com/words/net/converting-to-fixed-page-format/">Load MS Word file and save into JPEG format</a>.</p>
+<p>So in this article, we are going to discuss the feature to load the <a href="https://docs.fileformat.com/image/">raster image file</a> and save the output in <a href="https://docs.fileformat.com/pdf/">PDF</a> format using C# .NET.</p>
+<ul>
+<li><a href="#Convert-Image-to-PDF-in-Csharp">Convert Image to PDF in C#</a></li>
+<li><a href="#Get-a-Free-License">Get a Free License</a></li>
+</ul>
+<h2 id="Convert-Image-to-PDF-in-Csharp">Convert Image to PDF in C#</h2>
+<p>The API is a leading programming solution offering the capabilities to deal with MS Word (<a href="https://docs.fileformat.com/word-processing/doc/">DOC</a>, <a href="https://docs.fileformat.com/word-processing/docx/">DOCX</a>, <a href="https://docs.fileformat.com/word-processing/rtf/">RTF</a>, <a href="https://docs.fileformat.com/word-processing/dot/">DOT</a>, <a href="https://docs.fileformat.com/word-processing/dotx/">DOTX</a>, <a href="https://docs.fileformat.com/word-processing/dotm/">DOTM</a>, <a href="https://docs.fileformat.com/word-processing/docm/">DOCM</a>), <strong>OpenOffice:</strong> <a href="https://docs.fileformat.com/word-processing/odt/">ODT</a>, <a href="https://docs.fileformat.com/word-processing/ott/">OTT</a> files. The API empowers the developers to modify, generate, render, convert and print documents without using Microsoft Word. It supports the feature to render the output in <a href="https://docs.fileformat.com/word-processing/doc/">DOC</a>, <a href="https://docs.fileformat.com/word-processing/rtf/">RTF</a>, <a href="https://docs.fileformat.com/web/html/">HTML</a>, <a href="https://docs.fileformat.com/word-processing/odt/">OpenDocument</a>, <a href="https://docs.fileformat.com/pdf/">PDF</a>, <a href="https://docs.fileformat.com/page-description-language/xps/">XPS</a>, <a href="https://docs.fileformat.com/ebook/epub/">EPUB</a>, and many more. So we can use this API for Image to PDF conversion.</p>
+<p>In order to use the API, you may either <a href="https://downloads.aspose.com/words/net">download</a> the .dll or open <a href="https://www.nuget.org/packages/Aspose.Words/">NuGet</a> package manager, search for <strong>Aspose.Words</strong> and install. Please run the following command on Package Manager Console to install it.</p>
+<!-- raw HTML omitted -->
+<p>Please follow the steps given below to perform the conversion operation</p>
+<p><strong>C#.NET</strong></p>
+<ul>
+<li>Create an instance of <a href="https://apireference.aspose.com/words/net/aspose.words/document">Document</a> class.</li>
+<li>Create an instance of <a href="https://apireference.aspose.com/words/net/aspose.words/documentbuilder">DocumentBuilder</a> and pass the Document object as an argument.</li>
+<li>Call <a href="https://apireference.aspose.com/words/net/aspose.words.documentbuilder/insertimage/methods/9">InsertImage(…)</a> method of DocumentBuilder class and pass source image path as argument.</li>
+<li>Call <a href="https://apireference.aspose.com/words/net/aspose.words.document/save/methods/2">Save</a>(..) method and provide resultant file name as argument.</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="Get-a-Free-License">Get a Free License</h2>
+<p>In order to use the API without any limitations, please consider requesting a <a href="https://purchase.aspose.com/temporary-license">Free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, we have learned about the capabilities of <a href="https://products.conholdate.com/total/net">Conholdate.Total for .NET</a> package for the conversion of raster images to PDF format.</p>
+<h2 id="related-articles"><strong>Related articles</strong></h2>
+<p>You may consider visiting following links for details on</p>
+<ul>
+<li><a href="https://blog.aspose.com/2021/02/04/convert-pdf-files-to-svg-using-csharp/">Convert PDF Files to SVG using C#</a></li>
+<li><a href="https://blog.aspose.com/2020/11/25/pdf-to-png-using-csharp/">Convert PDF Pages to PNG Images using C#</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

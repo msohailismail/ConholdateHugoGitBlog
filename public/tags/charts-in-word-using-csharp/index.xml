@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Charts in Word using CSharp on Conholdate.Total</title>
+    <link>/tags/charts-in-word-using-csharp/</link>
+    <description>Recent content in Charts in Word using CSharp on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 31 Oct 2021 11:50:18 +0000</lastBuildDate><atom:link href="/tags/charts-in-word-using-csharp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create Charts in Word Documents using C#</title>
+      <link>/2021/10/31/create-charts-in-word-documents-using-csharp/</link>
+      <pubDate>Sun, 31 Oct 2021 11:50:18 +0000</pubDate>
+      
+      <guid>/2021/10/31/create-charts-in-word-documents-using-csharp/</guid>
+      <description>As a C# developer, you can insert various types of charts in Word documents programmatically. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to create charts in Word documents using C#&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>As a C# developer, you can insert various types of charts in Word documents programmatically. It helps to graphically present your data and information. In this article, you will learn <strong>how to create charts in Word documents using C#</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#CSharp-API-to-Insert-Charts-in-Word-Documents">C# API to Insert Charts in Word Documents</a></li>
+<li><a href="#Create-Columns-Charts-in-Word-Documents-using-CSharp">Create Columns Charts in Word Documents</a></li>
+<li><a href="#Create-Scatter-Charts-in-Word-Documents-using-CSharp">Create Scatter Charts in Word Documents using C#</a></li>
+<li><a href="#Insert-Area-Charts-in-Word-Documents-using-CSharp">Insert Area Charts in Word Documents using C#</a></li>
+<li><a href="#Insert-Bubble-Charts-in-Word-Documents-using-CSharp">Insert Bubble Charts in Word Documents using C#</a></li>
+</ul>
+<h2 id="CSharp-API-to-Insert-Charts-in-Word-Documents">C# API to Insert Charts in Word Documents</h2>
+<p>For inserting charts in DOCX files, we will be using <a href="https://products.aspose.com/words/net/">Aspose.Words for .NET API</a>. It allows you to generate, modify, convert, render and print files without utilizing Microsoft Word directly within cross-platform applications. The API enables you to insert various <a href="https://apireference.aspose.com/words/net/aspose.words.drawing.charts/charttype">supported chart types</a> in Word documents programmatically.</p>
+<p>You can either <a href="https://downloads.aspose.com/words/net">download</a> the DLL of the API or install it using <a href="https://www.nuget.org/packages/aspose.words">NuGet</a>.</p>
+<!-- raw HTML omitted -->
+<h2 id="Create-Columns-Charts-in-Word-Documents-using-CSharp">Create Columns Charts in Word Documents</h2>
+<p>You can create columns charts in Word documents programmatically by following the steps given below:</p>
+<ul>
+<li>Firstly, create a new document using the <a href="https://apireference.aspose.com/words/net/aspose.words/document">Document</a> class.</li>
+<li>Now, create an instance of the <a href="https://apireference.aspose.com/words/net/aspose.words/documentbuilder">DocumentBuilder</a> class with the <em>Document</em> class object.</li>
+<li>Then, call the <a href="https://apireference.aspose.com/words/net/aspose.words/documentbuilder/methods/insertchart">DocumentBuilder.InsertChart()</a> method. Pass <a href="https://apireference.aspose.com/words/net/aspose.words.drawing.charts/charttype">ChartType</a> as <em>Column</em>, with <em>height</em> and <em>width</em> as input parameters.</li>
+<li>Get results in the <a href="https://apireference.aspose.com/words/net/aspose.words.drawing/shape">Shape</a> class object.</li>
+<li>Now, create an instance of the <a href="https://apireference.aspose.com/words/net/aspose.words.drawing.charts/chart">Chart</a> class and assign <a href="https://apireference.aspose.com/words/net/aspose.words.drawing/shape/properties/chart">Shape.Chart</a> object to it. It provides access to the chart properties if this shape has a Chart.</li>
+<li>Then, get chart series collection in <a href="https://apireference.aspose.com/words/net/aspose.words.drawing.charts/chartseriescollection">ChartSeriesCollection</a> object.</li>
+<li>Create category names array.</li>
+<li>Now, call the <a href="https://apireference.aspose.com/words/net/aspose.words.drawing.charts.chartseriescollection/add/methods/3">ChartSeriesCollection.Add()</a> method to add chart series. Pass name, category array and values as input parameters. Repeat this step to add more series.</li>
+<li>Finally, call the <a href="https://apireference.aspose.com/words/net/aspose.words.document/save/methods/2">Document.Save()</a> method with output file path to save the file.</li>
+</ul>
+<p>The following code sample shows <strong>how to create a columns chart in a Word document using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/10/Create-Columns-Charts-in-Word-Documents-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Create Columns Charts in Word Documents using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="Create-Scatter-Charts-in-Word-Documents-using-CSharp">Create Scatter Charts in Word Documents using C#</h2>
+<p>You can insert scatter charts in your Word documents programmatically by following the steps mentioned earlier. However, you need to set ChartType.Scatter in <a href="https://apireference.aspose.com/words/net/aspose.words/documentbuilder/methods/write">DocumentBuilder.InsertChart()</a> method.</p>
+<p>The following code sample shows <strong>how to create a scatter chart in a Word document using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/10/Create-Scatter-Charts-in-Word-Documents-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Create Scatter Charts in Word Documents using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="Insert-Area-Charts-in-Word-Documents-using-CSharp">Insert Area Charts in Word Documents using C#</h2>
+<p>You can insert area charts in Word documents programmatically by following the steps mentioned earlier. However, you need to set ChartType.Area in <a href="https://apireference.aspose.com/words/net/aspose.words/documentbuilder/methods/write">DocumentBuilder.InsertChart()</a> method.</p>
+<p>The following code sample shows <strong>how to create an area chart in a Word document using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/10/Insert-Area-Charts-in-Word-Documents-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Insert Area Charts in Word Documents using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="Insert-Bubble-Charts-in-Word-Documents-using-CSharp">Insert Bubble Charts in Word Documents using C#</h2>
+<p>You can insert bubble charts in Word documents programmatically by following the steps mentioned earlier. However, you need to set ChartType.Bubble in <a href="https://apireference.aspose.com/words/net/aspose.words/documentbuilder/methods/write">DocumentBuilder.InsertChart()</a> method.</p>
+<p>The following code sample shows <strong>how to create a bubble chart in a Word document using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/10/Insert-Bubble-Charts-in-Word-Documents-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Insert Bubble Charts in Word Documents using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to create charts in Word documents using C#</strong>. Particularly, you have learned how to create column, area, bubble, and scatter charts in Word documents programmatically. Similarly, you can create other types of charts. You can learn more about Aspose.Words for .NET API using the <a href="https://docs.aspose.com/words/net/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.aspose.com/c/words/8">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.aspose.com/2021/03/02/work-with-table-of-contents-in-word-csharp/">Work with Table of Contents in Word Document C#</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

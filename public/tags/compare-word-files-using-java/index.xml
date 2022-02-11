@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Compare Word Files using Java on Conholdate.Total</title>
+    <link>/tags/compare-word-files-using-java/</link>
+    <description>Recent content in Compare Word Files using Java on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 Aug 2021 17:17:27 +0000</lastBuildDate><atom:link href="/tags/compare-word-files-using-java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Compare Word Documents and Highlight Differences using Java</title>
+      <link>/2021/08/03/compare-word-documents-and-highlight-differences-using-java/</link>
+      <pubDate>Tue, 03 Aug 2021 17:17:27 +0000</pubDate>
+      
+      <guid>/2021/08/03/compare-word-documents-and-highlight-differences-using-java/</guid>
+      <description>As a Java developer, you can easily compare your two or more Word documents programmatically. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to compare two or more Word documents and highlight differences using Java&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>You can easily compare two or more Word documents and highlight the differences programmatically. You may need to compare multiple versions of the same Word file or different files for the differences and similarities in your Java application. In this article, you will learn <strong>how to compare two or more Word documents and highlight differences using Java</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#java-comparison-api">Java API to Compare Word Documents</a></li>
+<li><a href="#Compare-Word-Documents-using-Java">Compare Word Documents using Java</a></li>
+<li><a href="#Get-Changes-Text-using-Java">Get Text of the Changes using Java</a></li>
+<li><a href="#Compare-Bookmarks-in-Word-Documents-using-Java">Compare Bookmarks in Word Documents</a></li>
+</ul>
+<h2 id="java-comparison-api">Java API to Compare Word Documents</h2>
+<p>I will be using <a href="https://products.groupdocs.com/comparison/java">GroupDocs.Comparison for Java API</a> for comparing the <a href="https://docs.fileformat.com/word-processing/docx/">DOCX</a> documents. It compares to detect content changes for words, paragraphs, and characters while providing a comparison document that lists a summary of differences. It also enables you to detect changes and differences in text style between similar document formats. The API supports comparing all industry-standard document formats such as PDF, HTML, Word, Excel, PowerPoint, Outlook emails, Visio diagrams, OpenDocument, AutoCAD, and images.</p>
+<p>You can <a href="https://downloads.groupdocs.com/comparison/java">download</a> the JAR of the API or just add the following <strong><em>pom.xml</em></strong> configuration in your Maven-based Java application to try the below-mentioned code examples.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="Compare-Word-Documents-using-Java">Compare Word Documents using Java</h2>
+<p>You can compare two or more Word documents by following the simple steps given below:</p>
+<ol>
+<li>Create an instance of the _<strong><a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer">Comparer</a> </strong>_class</li>
+<li>Provide the source DOCX file path to the constructor</li>
+<li><strong><em><a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#add(java.nio.file.Path)">Add</a></em></strong> target DOCX file to the comparison</li>
+<li>Call the <em><strong><a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#Comparer(java.lang.String)">Compare()</a></strong></em> method along with the output file path</li>
+</ol>
+<p>The following code sample shows <strong>how to compare Word documents and highlights the differences using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/08/source-and-target-word-documents.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Source and Target Documents<!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted --><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/08/result.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Compare Two Word Documents using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The resulting document also includes a summary page at the end of the document. It shows the summary of all the changes.</p>
+<p>The <strong><a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer">Comparer</a></strong> class is the main class that controls the documents comparison process. The <a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#Comparer(java.lang.String)">Compare()</a> method of this class compares the source and target documents. This method saves results to the file path provided as an input parameter. The <a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#add(java.nio.file.Path)">Add()</a> method of this class, adds a file to the comparison process. You can easily add multiple files to the comparison by using the Add() method as shown below:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="Get-Changes-Text-using-Java">Get Text of the Changes using Java</h2>
+<p>You can get the text of the changes programmatically by following the simple steps given below:</p>
+<ol>
+<li>Create an instance of the _<strong><a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer">Comparer</a> </strong>_class</li>
+<li>Provide the source DOCX file path to the constructor</li>
+<li><em><strong><a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#add(java.nio.file.Path)">Add</a></strong></em> target DOCX file to the comparison</li>
+<li>Call the _<strong><a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#Comparer(java.lang.String)">Compare()</a> </strong>_method</li>
+<li>Call the <strong><em><a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#getChanges()">getChanges()</a></em></strong> method and get the details of changes</li>
+<li>Show the changes</li>
+</ol>
+<p>The following code sample shows <strong>how to get the text of the changes using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>You can get a list of changes between source and target files by calling the <strong><a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#getChanges()">getChanges()</a></strong> method of the <em>Comparer</em> class. It returns a list of <a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.result/ChangeInfo">ChangeInfo</a> objects. The <em>ChangeInfo</em> class provides methods to get details of the changes such as <a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.result/ChangeInfo#getText()"><em>getText()</em></a> to get the text of a specific change.</p>
+<h2 id="Compare-Bookmarks-in-Word-Documents-using-Java">Compare Bookmarks in Word Documents</h2>
+<p>You can compare bookmarks present in Word documents programmatically by following the simple steps given below:</p>
+<ol>
+<li>Create an instance of the _**<a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer">Comparer</a> **_class</li>
+<li>Provide the source DOCX file path to the constructor</li>
+<li><strong><em><a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#add(java.nio.file.Path)">Add</a></em></strong> target DOCX file to the comparison</li>
+<li>Create an instance of the <strong><em><a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options/CompareOptions">CompareOptions</a></em></strong></li>
+<li>Set the <em><strong><a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options/CompareOptions#setCompareBookmarks(boolean)">CompareBookmarks</a></strong></em> to true</li>
+<li>Call the <a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#compare(java.lang.String,%20com.groupdocs.comparison.options.CompareOptions)"><strong><em>Compare()</em></strong></a> method along with the output file path and <em>CompareOptions</em> object</li>
+</ol>
+<p>The following code sample shows <strong>how to compare bookmarks in Word documents using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/08/Compare-Bookmarks-in-Word-Documents-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Compare Bookmarks in Word Documents using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>You can enhance your comparison process by applying various compare options. For this purpose, the <a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options/CompareOptions"><strong>CompareOptions</strong></a> class enables you to set different compare options by providing various methods. The <em>setCompareBookmarks()</em> method enables you to compare the bookmarks available in the source and target documents.</p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to compare two or more Word documents and highlight</strong> <strong>differences</strong> using Java. You have also learned <strong>how to get the text of highlighted changes.</strong> Moreover, you have learned <strong>how to compare bookmarks in Word documents</strong> programmatically. You can learn more about GroupDocs.Comparison for Java API using the <a href="https://docs.groupdocs.com/comparison/java/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/comparison/">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.groupdocs.com/2021/06/16/compare-images-in-java/">Compare Images in Java to Highlight Differences</a></li>
+<li><a href="https://blog.groupdocs.com/2020/07/15/compare-text-word-pdf-files-with-java-difference-library/">Compare Text, Word, and PDF files using Java Comparison Library</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

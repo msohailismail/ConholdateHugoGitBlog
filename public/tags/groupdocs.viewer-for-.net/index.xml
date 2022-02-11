@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>GroupDocs.Viewer for .NET on Conholdate.Total</title>
+    <link>/tags/groupdocs.viewer-for-.net/</link>
+    <description>Recent content in GroupDocs.Viewer for .NET on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 06 Jul 2021 10:34:08 +0000</lastBuildDate><atom:link href="/tags/groupdocs.viewer-for-.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Render ZIP Archives using C#</title>
+      <link>/2021/07/06/render-zip-archives-using-csharp/</link>
+      <pubDate>Tue, 06 Jul 2021 10:34:08 +0000</pubDate>
+      
+      <guid>/2021/07/06/render-zip-archives-using-csharp/</guid>
+      <description>You can easily render your ZIP archives programmatically in .NET applications. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to render ZIP archives using C#&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>ZIP files contain one or more compressed files or folders to act as a single file. These are widely used to save storage space and increase the performance of your computers. You can effectively transfer your files and folders in a ZIP archive from one location to another. As a C# developer, you can easily render ZIP archives and view their content programmatically. This article will be focusing on <strong>how to render ZIP archives using C#</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#csharp-zip-viewer-api">C# API to View ZIP Files</a></li>
+<li><a href="#render-zip-to-html">Render ZIP Archives in HTML</a></li>
+<li><a href="#Render-Specific-Folder-from-ZIP-Archives">Render Specific Folder from ZIP Archives in HTML</a></li>
+<li><a href="#render-zip-to-pdf">View Content of ZIP Archives in PDF</a></li>
+<li><a href="#render-zip-to-jpg">Render ZIP Archives to JPG</a></li>
+<li><a href="#Get-a-List-of-Folders-from-ZIP-archives">Get a List of Folders from ZIP archives</a></li>
+<li><a href="#Render-and-Rename-ZIP-Files">Render and Rename ZIP Files</a></li>
+</ul>
+<h2 id="csharp-zip-viewer-api">C# API to View ZIP Files</h2>
+<p>For the rendering of ZIP files, I will be using <a href="https://products.groupdocs.com/viewer/net">GroupDocs.Viewer for .NET API</a>. It is a powerful document viewer API that supports over 170 file and document types. The API provides the most flexible document viewing solution to render and display widely used file formats anywhere without installing any external software. It also enables you to quickly view PDF, HTML, XML, Microsoft Office Word, Excel worksheets, PowerPoint presentations, Outlook emails, Visio diagrams, Project, metafiles, images, and various other file formats with ease and with fewer programming hazards.</p>
+<p>You can either <a href="https://downloads.groupdocs.com/viewer/net">download</a> the DLL of the API or install it using the <a href="https://www.nuget.org/packages/GroupDocs.Viewer">NuGet</a>.</p>
+<!-- raw HTML omitted -->
+<h2 id="render-zip-to-html">Render ZIP Archives in HTML</h2>
+<p>You can render the ZIP file in HTML by following the simple steps given below:</p>
+<ol>
+<li>Create an instance of the _<strong><a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer">Viewer</a></strong> _class</li>
+<li>Provide the input file path</li>
+<li>Create an instance of <a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions"><em><strong>HtmlViewOptions</strong></em> </a>class</li>
+<li>Provide output file path</li>
+<li>Call the <em><strong><a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view">View()</a></strong></em> method and pass HtmlViewOptions</li>
+</ol>
+<p>The following code sample shows <strong>how to render the ZIP file in HTML using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/07/render-zip-to-html.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Render ZIP Archives in HTML<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <strong><a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer">Viewer</a></strong> class is the main class that provides functionality to control the document rendering process. The <a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view">View()</a> method of this class creates the view of all document pages.</p>
+<p>The **<a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions">HtmlViewOptions </a>**class provides options for the rendering of documents into HTML format. The <a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options.htmlviewoptions/forembeddedresources/methods/4">ForEmbeddedResources</a> constructor method creates a new instance of <em>HtmlViewOptions</em> class for rendering into HTML with embedded resources. As you can see, I have provided the output file path in the code example.</p>
+<p>You can find more details about “<a href="https://docs.groupdocs.com/viewer/net/document-viewer-html-viewer/">Document HTML Viewer</a>” in the documentation.</p>
+<h2 id="Render-Specific-Folder-from-ZIP-Archives">Render Specific Folder from ZIP Archives in HTML</h2>
+<p>You can render a specific folder available inside the ZIP file in HTML by following the simple steps given below:</p>
+<ol>
+<li>Create an instance of the _<strong><a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer">Viewer</a></strong> _class</li>
+<li>Provide the input file path</li>
+<li>Create an instance of <a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions"><em><strong>HtmlViewOptions</strong></em> </a>class</li>
+<li>Provide output file path</li>
+<li>Set the folder name to render</li>
+<li>Call the <em><strong><a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view">View()</a></strong></em> method and pass HtmlViewOptions</li>
+</ol>
+<p>The following code sample shows <strong>how to render a specific folder from the ZIP file in HTML using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/07/Render-Specific-Folder-from-ZIP-Archives.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Render Specific Folder from ZIP Archives in HTML<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <strong><a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/archiveoptions">ArchiveOptions</a></strong> class provides options for the rendering of archive files. It enables you to render a specific folder from ZIP archives by providing the name of the folder available inside the archive.</p>
+<h2 id="render-zip-to-pdf">View Content of ZIP Archives in PDF</h2>
+<p>You can render the ZIP file in PDF document by following the simple steps given below:</p>
+<ol>
+<li>Create an instance of the _<strong><a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer">Viewer</a></strong> _class</li>
+<li>Provide the input file path</li>
+<li>Create an instance of <a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions"><em><strong>PdfViewOptions</strong></em> </a>class</li>
+<li>Provide output file path</li>
+<li>Call the <em><strong><a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view">View()</a></strong></em> method and pass PdfViewOptions</li>
+</ol>
+<p>The following code sample shows <strong>how to render the ZIP file in PDF using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/07/render-zip-to-pdf.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->View Content of ZIP Archives in PDF<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The **<a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions">PdfViewOptions</a> **class provides options for the rendering of documents into PDF format. You can find more details about “<a href="https://docs.groupdocs.com/viewer/net/document-viewer-pdf-viewer/">Document PDF Viewer</a>” in the documentation.</p>
+<h2 id="render-zip-to-jpg">Render ZIP Archives to JPG</h2>
+<p>You can render the ZIP file in JPG image by following the simple steps given below:</p>
+<ol>
+<li>Create an instance of the _<strong><a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer">Viewer</a></strong> _class</li>
+<li>Provide the input file path</li>
+<li>Create an instance of <a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions"><em><strong>JpgViewOptions</strong></em> </a>class</li>
+<li>Provide output file path</li>
+<li>Call the <em><strong><a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view">View()</a></strong></em> method and pass JpgViewOptions</li>
+</ol>
+<p>The following code sample shows <strong>how to render the ZIP file in JPG image using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/07/render-zip-to-jpg.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Render ZIP Archives to JPG<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>You can render documents to JPG or PNG image formats. The **<a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions">JpgViewOptions</a> **class provides options for the rendering of documents into JPG format. Similarly, the **<a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions">PngViewOptions</a> **class provides options for rendering documents into PNG format.</p>
+<p>You can find more details about “<a href="https://docs.groupdocs.com/viewer/net/document-viewer-image-viewer/">Document Image Viewer</a>” in the documentation.</p>
+<h2 id="Get-a-List-of-Folders-from-ZIP-archives">Get a List of Folders from ZIP archives</h2>
+<p>You can get a list of all the folders and subfolders from the ZIP file programmatically by following the steps given below:</p>
+<ol>
+<li>Create an instance of the _<strong><a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer">Viewer</a></strong> _class</li>
+<li>Provide the input file path</li>
+<li>Create <strong><em><a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/viewinfooptions">ViewInfoOptions</a></em></strong></li>
+<li>Create <strong><em><a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo">ViewInfo</a></em></strong> instance by calling <a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/getviewinfo"><em><strong>GetViewInfo()</strong></em></a> method</li>
+<li>Get <strong><em><a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.results/archiveviewinfo">ArchiveViewInfo</a></em></strong></li>
+<li>Show the results</li>
+</ol>
+<p>The following code sample shows <strong>how to get a list of folders from the ZIP file using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/07/Get-a-List-of-Folders-from-ZIP-archives.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Get a List of Folders from ZIP archives<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <strong><a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/viewinfooptions">ViewInfoOptions</a></strong> class provides options used for retrieving the information about the view. It provides various methods to get view information for specific formats. I used the <a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/viewinfooptions/methods/forhtmlview">ForHtmlView()</a> method which initializes a new instance of ViewInfoOptions class to retrieve information about the view when rendering into HTML.</p>
+<p>The <strong><a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo">ViewInfo</a></strong> class provides view information for the generic documents. The <a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/getviewinfo">GetViewInfo()</a> method of the Viewer class returns information about the view and document-specific information.</p>
+<p>The <strong><a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.results/archiveviewinfo">ArchiveViewInfo</a></strong> class provides view information for the archive file.</p>
+<h2 id="Render-and-Rename-ZIP-Files">Render and Rename ZIP Files</h2>
+<p>You can rename ZIP files while rendering programmatically by following the steps given below:</p>
+<ol>
+<li>Create an instance of the _<strong><a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer">Viewer</a></strong> _class</li>
+<li>Provide the input file path</li>
+<li>Create an instance of <a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions"><em><strong>PdfViewOptions</strong></em> </a>class</li>
+<li>Provide output file path</li>
+<li>Set new file name to display</li>
+<li>Call the <em><strong><a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view">View()</a></strong></em> method and pass PdfViewOptions</li>
+</ol>
+<p>The following code sample shows <strong>how to rename ZIP file while rendering using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/07/Render-and-Rename-ZIP-Files.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Render and Rename ZIP Files<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <strong><a href="https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/archiveoptions">ArchiveOptions</a></strong> class provides the <em>FileName</em> property which is used to display the file name in the header. You can set a new display name as shown in the above code example. By default, it displays the name of the source file.</p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to render ZIP archives using C#</strong>. You have also learned <strong>how to convert and view the content of ZIP files</strong> in HTML, PDF, and JPG images. Moreover, you have learned <strong>how to get a list of folders and subfolders from the ZIP archive</strong> programmatically in C#. You can learn more about GroupDocs.Viewer for .NET API using the <a href="https://docs.groupdocs.com/viewer/net/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/viewer/">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.groupdocs.com/2021/04/27/view-cad-documents-using-charp/">View CAD files in C# using .NET API</a></li>
+<li><a href="https://blog.groupdocs.com/2021/02/28/play-pause-animated-gif-and-apng-in-web-pages-using-csharp/">Play and Pause Animated GIF and APNG Images using C#</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

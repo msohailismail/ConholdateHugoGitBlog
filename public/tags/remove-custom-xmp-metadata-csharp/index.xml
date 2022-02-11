@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Remove Custom XMP Metadata CSharp on Conholdate.Total</title>
+    <link>/tags/remove-custom-xmp-metadata-csharp/</link>
+    <description>Recent content in Remove Custom XMP Metadata CSharp on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 05 May 2021 10:37:17 +0000</lastBuildDate><atom:link href="/tags/remove-custom-xmp-metadata-csharp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Add or Remove Custom XMP Metadata from GIF using C#</title>
+      <link>/2021/05/05/add-or-remove-custom-xmp-metadata-from-gif-using-csharp/</link>
+      <pubDate>Wed, 05 May 2021 10:37:17 +0000</pubDate>
+      
+      <guid>/2021/05/05/add-or-remove-custom-xmp-metadata-from-gif-using-csharp/</guid>
+      <description>You can add a custom XMP metadata package to your images programmatically. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to add or remove custom XMP metadata from GIF using C#&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>The Extensible Metadata Platform (XMP) metadata is encoded as XML-formatted text. The defined XMP data model can be used to store any set of metadata properties in the form of name/value pair. You can add a custom XMP metadata package to your images programmatically. In this article, you will learn <strong>how to add or remove custom XMP metadata from GIF using C#</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#api-for-XMP-metadata">C# API for Adding or Removing XMP Metadata</a></li>
+<li><a href="#Add-Custom-XMP-Package">Add Custom XMP Metadata Package to GIF using C#</a></li>
+<li><a href="#Read-Custom-XMP-Package">Read Custom XMP Metadata Package Properties using C#</a></li>
+<li><a href="#Remove-Custom-XMP-Package">Remove Custom XMP Metadata Package using C#</a></li>
+</ul>
+<h2 id="api-for-XMP-metadata">C# API for Adding or Removing XMP Metadata</h2>
+<p>I will be using <a href="https://products.groupdocs.com/metadata/net">GroupDocs.Metadata for .NET</a> API for adding or removing custom XMP metadata package. It allows you to add, edit, retrieve, and remove metadata properties from documents and image file formats. The API works with the most notable metadata standards such as built-in, XMP, EXIF, IPTC, Image Resource Blocks, ID3, and custom metadata properties. It can be used to develop applications in any development environment that targets the .NET platform.</p>
+<p>You can either <a href="https://downloads.groupdocs.com/metadata/net">download</a> the DLL of the API or install it using the <a href="https://www.nuget.org/packages/GroupDocs.Metadata">NuGet</a>.</p>
+<!-- raw HTML omitted -->
+<h2 id="Add-Custom-XMP-Package">Add Custom XMP Metadata Package to GIF using C#</h2>
+<p>You can easily create and add a fully custom XMP package containing user-defined properties by following the simple steps mentioned below:</p>
+<ul>
+<li>Create an instance of the <em><a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata/metadata">Metadata</a></em> class</li>
+<li>Provide path of the GIF image</li>
+<li><a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata/metadata/methods/getrootpackage">GetRootPackage</a> as <a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata.standards.xmp/ixmp">IXmp</a> standard</li>
+<li>Create an instance of <a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata.standards.xmp/xmppackage">XmpPackage</a> class</li>
+<li>Provide package Prefix and NamespaceUri</li>
+<li>Set properties in Name/ Value pair using <a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata.standards.xmp.xmppackage/set/methods/7">Set</a> method</li>
+<li>Create an instance of <a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata.standards.xmp/xmppacketwrapper">XmpPacketWrapper</a> class</li>
+<li>Call the <a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata.standards.xmp/xmppacketwrapper/methods/addpackage">AddPackage</a> method and pass created XmpPackage</li>
+<li>Assign created XmpPacketWrapper to IXMp.<a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata.standards.xmp/ixmp/properties/xmppackage">XmpPackage</a></li>
+<li>Save the output file using the <a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata.metadata/save/methods/2">Metadata.Save</a> method</li>
+</ul>
+<p>The following code sample shows how to create and add a custom XMP metadata package to GIF image using C#.</p>
+<!-- raw HTML omitted -->
+<p>The above code sample shall add the XMP metadata package to input image. <!-- raw HTML omitted -->The ExifTool read the following metadata from the generated output GIF image.<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/05/Add_XMP_Metadata_csharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Add XMP Metadata Package to GIF using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata.standards.xmp/ixmp">IXMP</a> interface exposes <a href="http://XmpPackage">XmpPackage</a>{.broken_link} property to gets or set the XMP metadata package.</p>
+<p>The Metadata class provides <a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata/metadata/methods/getrootpackage">GetRootPackage</a> method to get the root package that provides access to all metadata properties extracted from the file.</p>
+<p>The <a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata.standards.xmp/xmppackage">XmpPackage</a> class provides various properties to define the package such as <a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata.standards.xmp/xmppackage/properties/prefix">Prefix</a>, <a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata.standards.xmp/xmppackage/properties/namespaceuri">NamespaceUri</a>, and <a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata.common/metadatapackage/properties/keys">Keys</a>. This class also provides <a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata.standards.xmp.xmppackage/set/methods/7">Set</a> methods to set name/ value for user defined metadata properties.</p>
+<p>The <a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata.standards.xmp/xmppacketwrapper">XmpPacketWrapper</a> class contains serialized XMP package. The <a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata.standards.xmp/xmppacketwrapper/methods/addpackage">AddPackage</a> method of this class allows to add the defined custom package.</p>
+<p>You can find more details about “<a href="https://docs.groupdocs.com/metadata/net/working-with-xmp-metadata/">Working with XMP Metadata</a>” in the documentation.</p>
+<h2 id="Read-Custom-XMP-Package">Read Custom XMP Package Metadata Properties using C#</h2>
+<p>You can easily read all the custom XMP package user-defined properties by following the simple steps mentioned below:</p>
+<ul>
+<li>Create an instance of the <em><a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata/metadata">Metadata</a></em> class</li>
+<li>Provide the path of the GIF image</li>
+<li><a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata/metadata/methods/getrootpackage">GetRootPackage</a> as <a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata.standards.xmp/ixmp">IXmp</a> standard</li>
+<li>Get all packages one by one from <a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata.standards.xmp/xmppacketwrapper/properties/packages">IXmp.XmpPackage.Packages</a></li>
+<li>Get NamespaceUri and Prefix for each package</li>
+<li>Call <a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata.common/metadatapackage/methods/findproperties">FindProperties</a> for each package Key to get property name and value</li>
+</ul>
+<p>The following code sample shows how to read all the properties defined in the custom XMP package using C#.</p>
+<!-- raw HTML omitted -->
+<p>The above code sample shall produce the following output:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>The <a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata.common/metadatapackage/methods/findproperties">FindProperties</a> method of the <a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata.standards.xmp/xmppackage">XmpPackage</a> class recursively searches and finds the metadata properties satisfying the specified predicate.</p>
+<h2 id="Remove-Custom-XMP-Package">Remove Custom XMP Package using C#</h2>
+<p>You can remove XMP package from GIF images by following the simple steps mentioned below:</p>
+<ul>
+<li>Create an instance of the <em><a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata/metadata">Metadata</a></em> class</li>
+<li>Provide the path of the GIF image</li>
+<li><a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata/metadata/methods/getrootpackage">GetRootPackage</a> as <a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata.standards.xmp/ixmp">IXmp</a> standard</li>
+<li>Set IXMp.<a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata.standards.xmp/ixmp/properties/xmppackage">XmpPackage</a> to null</li>
+<li>Save the output file using the <a href="https://apireference.groupdocs.com/metadata/net/groupdocs.metadata.metadata/save/methods/2">Metadata.Save</a> method</li>
+</ul>
+<p>The following code sample shows how to remove XMP metadata package from GIF image using C#.</p>
+<!-- raw HTML omitted -->
+<p>The above code sample shall remove the XMP metadata package from input image. The ExifTool read the following metadata from the generated output GIF image.<!-- raw HTML omitted --></p>
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/05/Remove_XMP_Metadata_csharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Remove XMP Metadata Package from GIF using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to add</strong> <strong>or remove custom XMP package metadata from GIF images using C#</strong>. You also learned how to read XMP package properties using C#. Moreover, you can learn about GroupDocs.Metadata for .NET API using the <a href="https://docs.groupdocs.com/metadata/net/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/metadata/">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.groupdocs.cloud/2021/04/20/extract-and-manipulate-metadata-of-images-using-csharp/">Extract and Manipulate Metadata of Images using C#</a></li>
+<li><a href="https://blog.groupdocs.com/2020/05/13/manage-exif-data-in-csharp-net-for-jpeg-png-tiff-webp-images/">Manage EXIF Data of JPEG, PNG, TIFF &amp; WebP Images in C#</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

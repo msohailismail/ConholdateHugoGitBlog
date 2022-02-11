@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Create Google Docs on Conholdate.Total</title>
+    <link>/tags/create-google-docs/</link>
+    <description>Recent content in Create Google Docs on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 Jun 2020 18:16:50 +0000</lastBuildDate><atom:link href="/tags/create-google-docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Build your own Google Docs like App</title>
+      <link>/2020/06/22/build-your-own-google-docs-like-app/</link>
+      <pubDate>Mon, 22 Jun 2020 18:16:50 +0000</pubDate>
+      
+      <guid>/2020/06/22/build-your-own-google-docs-like-app/</guid>
+      <description>Several customers have approached us and asked how they can create a Google Docs like web app using our APIs. Google Docs is a word processor that allows users to create and edit files online while collaborating with other users in real-time.
+This blog post explains how easy it is to create a lite version of Google Docs that has the following features:
+ Rich Text Editing (change text font, size, colour, style (boldface, italic), alignment etc.</description>
+      <content:encoded><![CDATA[<p>Several customers have approached us and asked how they can create a Google Docs like web app using our APIs. <a href="https://www.google.com/docs/about/">Google Docs</a> is a word processor that allows users to create and edit files online while collaborating with other users in real-time.</p>
+<p>This blog post explains how easy it is to create a lite version of Google Docs that has the following features:</p>
+<ul>
+<li>Rich Text Editing (change text font, size, colour, style (boldface, italic), alignment etc.).</li>
+<li>Real-time collaborative editing of the same document. Multiple users can access the document at the same time and modify it.</li>
+<li>Upload content of an existing Word Document into an editor.</li>
+<li>Save text in the editor as MS Word, PDF, TXT or HTML document.</li>
+</ul>
+<p>Our end product will look as follows:<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --> <!-- raw HTML omitted --></p>
+<ul>
+<li><a href="#Tools-and-Technologies">Tools and Technologies</a></li>
+<li><a href="#Integrate-Firepad">Integrate Firepad</a></li>
+<li><a href="#Upload-Content-of-an-Existing-Word-Document-into-an-Editor">Upload Content of an Existing Word Document into an Editor</a></li>
+<li><a href="#Integrate-GroupDocs.Editor">Integrate GroupDocs.Editor</a></li>
+<li><a href="#Form-Data-Handling">Form Data Handling</a></li>
+</ul>
+<h2 id="Tools-and-Technologies">Tools and Technologies – Create Google Docs like App</h2>
+<p>We will develop the Google Docs like web app in ASP.NET Core and use the following two libraries:</p>
+<ul>
+<li><a href="https://firepad.io/">Firepad</a> is an open-source, collaborative text editor. It uses the <a href="https://firebase.google.com/">Firebase</a> Realtime Database as a backend so it requires no server-side code and can be added to any web app simply by including the JavaScript files.</li>
+<li><a href="https://products.groupdocs.com/editor">GroupDocs.Editor for .NET</a> gives us an ability to edit most popular document formats using any <a href="https://en.wikipedia.org/wiki/WYSIWYG">WYSIWYG</a> editor without any additional applications. We will load document via GroupDocs.Editor into Firepad, edit document in a way we want and save it back to original document format.</li>
+</ul>
+<p>I have used <a href="https://visualstudio.microsoft.com/vs/mac/">Visual Studio for Mac</a> as an <a href="https://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a>. However, you can download the free community edition of Visual Studio, depending upon your platform, from <a href="https://visualstudio.microsoft.com/">here</a>. Let’s start.</p>
+<p>Create a new ASP.NET Core Web Application project and name the project “GoogleDocsLite”.</p>
+<!-- raw HTML omitted -->
+<p>Run the application to ensure everything is set up properly.</p>
+<h2 id="Integrate-Firepad">Integrate Firepad</h2>
+<p>We can add Firepad to our web app by including the following JavaScript files in the <strong><!-- raw HTML omitted --></strong> section of <strong>_Layout.cshtml</strong>.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>To create a Firepad, we will initialize Firebase, CodeMirror and then Firepad. Add the following script and HTML code in <strong>Index.cshtml</strong>.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Please replace the contents of <strong>config</strong> with your own Firebase project’s config.</p>
+<p>We want the above script to execute once a web page has completely loaded all content (script files, CSS files etc.). So, call <strong>init()</strong> function from the <strong>onLoad</strong> event attribute of <strong><!-- raw HTML omitted --></strong> element in <strong>_Layout.cshtml</strong>.</p>
+<!-- raw HTML omitted -->
+<p>Your <!-- raw HTML omitted --> element should look as follows. If it contains unnecessary tags like <!-- raw HTML omitted -->, <!-- raw HTML omitted -->, please remove them.</p>
+<!-- raw HTML omitted -->
+<p>If you run the project, you will notice that <strong>firepad</strong> and <strong>userlist</strong> are not aligned properly. Please use the following CSS code to adjust the size/position of the <strong>firepad</strong> and <strong>userlist</strong>. You may add the following code within <strong><!-- raw HTML omitted --></strong> element of <strong>_Layout.cshtml</strong>.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Firepad has been successfully set up.</p>
+<h2 id="Upload-Content-of-an-Existing-Word-Document-into-an-Editor">Upload Content of an Existing Word Document into an Editor</h2>
+<p>Now we want to give our users a way to upload content of an exiting Word Document in the text editor. On the frontend, we add an <strong><!-- raw HTML omitted --></strong> element of type <strong>file</strong> that lets a user select a Word Document from their local machine. On the backend, we use <a href="https://products.groupdocs.com/editor">GroupDocs.Editor</a> library to retrieve the content of a Word Document as HTML string. Finally, we use Firepad’s <strong>setHtml()</strong> method to show content in the text editor.</p>
+<p>Add the following <strong><!-- raw HTML omitted --></strong> element in <strong>Index.cshtml</strong> file before <strong><!-- raw HTML omitted --></strong> tag.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>In <strong>Index.cshtml.cs</strong> file, define a corresponding property.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Run the project and click on the <strong>Choose file</strong> button. Select a Word Document that you want to upload and click on the <strong>Upload Document</strong> button. Nothing will happen because we have not yet defined the handler in <strong>Index.cshtml.cs</strong>. Before we do this, let’s first add GroupDocs.Editor library in our project.</p>
+<h2 id="Integrate-GroupDocs.Editor">Integrate GroupDocs.Editor</h2>
+<p><strong>GroupDocs.Editor</strong> is available as a NuGet package so we can easily add it to our project. Right-click on the project and select <strong>Manage NuGet Packages</strong> option. The <strong>Manage NuGet Packages</strong> window will open, select the <strong>Browse</strong> tab, and enter <strong>GroupDocs.Editor</strong> in the search field. <strong>GroupDocs.Editor</strong> should appear as a first result, select it and then click on <strong>Add Package</strong> button.<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --> <!-- raw HTML omitted --></p>
+<p>When the package is successfully added, it will appear under <strong>NuGet</strong> subfolder in the <strong>Dependencies</strong> folder.</p>
+<h2 id="Form-Data-Handling">Form Data Handling</h2>
+<p>Now we write a handler (<strong>OnPostUploadDocument()</strong> method) that will be called when a user clicks on <strong>Upload Document</strong> button. <strong>UploadedDocument</strong> object (of type <strong>IFormFile</strong>) contains content of the uploaded document. First, we save the document on the server then use <strong>GroupDocs.Editor</strong> library to get its content as HTML string. Please add the following code in <strong>Index.cshtml.cs</strong> file.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Firepad provides two events for listening. One of them is ‘<strong>ready</strong>‘ which fires once Firepad has retrieved the initial editor contents. We attach a callback to this event type and in the callback, we pass <strong>DocumentContent</strong> string as an argument to <strong>setHtml()</strong> method of <strong>firepad</strong> object. Please add the following code in the <strong>init()</strong> function in <strong>Index.cshtml</strong>.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>You may have noticed that we passed the <strong>documentContent</strong> string first to <strong>htmlDecode()</strong> method before passing to <strong>setHtml()</strong> method. It is to replace character entities such as <strong>&amp;lt</strong>, <strong>&amp;gt</strong> with signs (<strong>&lt;</strong> and <strong>&gt;</strong>). The <strong>htmlDecode()</strong> method looks as follows.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Run the project, now you should be able to upload the content of a Word Document into an editor.</p>
+<p>In <a href="https://blog.conholdate.com/2020/06/29/build-your-own-google-docs-like-app-part-two/">part II</a> of this post, I have explained how we can extend our application to include the following features:</p>
+<ul>
+<li>Download content of the editor as MS Word, PDF, TXT or HTML document.</li>
+<li>Share the URL with friends so that they can edit the document at the same time.</li>
+</ul>
+<p>Please <a href="https://blog.conholdate.com/2020/06/29/build-your-own-google-docs-like-app-part-two/">check it out</a>.</p>
+<p>Complete source code of the project is available on <a href="https://github.com/sohail-aspose/GoogleDocsLite">GitHub</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.conholdate.com/2020/06/29/build-your-own-google-docs-like-app-part-two/">https://blog.conholdate.com/2020/06/29/build-your-own-google-docs-like-app-part-two/</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

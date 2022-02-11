@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Convert Excel to Word in CSharp on Conholdate.Total</title>
+    <link>/tags/convert-excel-to-word-in-csharp/</link>
+    <description>Recent content in Convert Excel to Word in CSharp on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 29 Apr 2021 06:18:58 +0000</lastBuildDate><atom:link href="/tags/convert-excel-to-word-in-csharp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Generate Reports from Excel Data in C#</title>
+      <link>/2021/04/29/generate-reports-from-excel-data-in-csharp/</link>
+      <pubDate>Thu, 29 Apr 2021 06:18:58 +0000</pubDate>
+      
+      <guid>/2021/04/29/generate-reports-from-excel-data-in-csharp/</guid>
+      <description>You can easily generate customized reports programmatically by using Excel spreadsheets as a table of data. This article will be focusing on &lt;!-- raw HTML omitted --&gt;how to generate reports from Excel data using C#&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>You can easily create customized reports from Microsoft Excel data tables. Such reports can be generated programmatically by using Excel spreadsheets as a table of data. This article will be focusing on <strong>how to generate reports from Excel data using C#</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#api-for-generating-reports">C# API for Generating Report</a></li>
+<li><a href="#generate-reports-from-excel">Generate Reports from Excel Data using C#</a></li>
+</ul>
+<h2 id="api-for-generating-reports">C# API for Generating Reports</h2>
+<p>I will be using <a href="https://products.groupdocs.com/assembly/net">GroupDocs.Assembly for .NET</a> API for generating reports from Excel data. It empowers you to build powerful document automation and report generation applications. The API supports fetching data from various data sources such as XML, JSON, and CSV. You can easily generate reports in all commonly used file formats such as PDF, HTML, and Microsoft Word. It can be used to develop applications in any development environment that targets the .NET platform.</p>
+<p>You can either <a href="https://downloads.groupdocs.com/assembly/net">download</a> the DLL of the API or install it using the <a href="https://www.nuget.org/packages/GroupDocs.Assembly">NuGet</a>.</p>
+<!-- raw HTML omitted -->
+<h2 id="generate-reports-from-excel">Generate Reports from Excel Data using C#</h2>
+<p>You can generate reports from Excel data by following the simple steps mentioned below:</p>
+<!-- raw HTML omitted -->
+<h3 id="get-excel-data">Excel Data</h3>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/04/Excel_data_source.png"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Excel Data Source<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h3 id="template">Template</h3>
+<p>Now, define the following template in the DOCX file. This allows iterating Contracts’ data and their respective managers with the contract price. After that, you can jump into code for report generation.<!-- raw HTML omitted --></p>
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/04/Template.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Report Template<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h3 id="generate-excel-to-word-report">Convert Excel to Word Report in C#</h3>
+<p>Please follow the steps mentioned below to automate the conversion of Excel data to the DOCX report based on the template.</p>
+<ul>
+<li>Define Excel data file, the template file, and DOCX output report file paths</li>
+<li>Define <em><strong><a href="https://apireference.groupdocs.com/assembly/net/groupdocs.assembly.data/documenttableoptions">DocumentTableOptions</a></strong></em></li>
+<li>Create <em><strong><a href="https://apireference.groupdocs.com/assembly/net/groupdocs.assembly.data/documenttable">DocumentTable</a></strong></em> with defined Excel data file and <em>DocumentTableOptions</em></li>
+<li>Call the <em><strong><a href="https://apireference.groupdocs.com/assembly/net/groupdocs.assembly.documentassembler/assembledocument/methods/2">AssembleDocument</a></strong></em> method of the **<a href="https://apireference.groupdocs.com/assembly/net/groupdocs.assembly/documentassembler">DocumentAssembler</a> **class to generate the report from the provided Excel data and defined template</li>
+</ul>
+<p>The following code sample shows how to generate a report from an Excel data source according to the defined template using C#.</p>
+<!-- raw HTML omitted -->
+<p>The above code sample will generate the following report.<!-- raw HTML omitted --></p>
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/04/output.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Generated Report<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <em><strong>DocumentTableOptions</strong></em> class provides a set of options to control the extraction of data from a document table. Here, the <em>FirstRowContainsColumnNames</em> property is set to <em>true</em>.</p>
+<p>The <em><strong>DocumentTable</strong></em> class provides access to the data of a single table (or spreadsheet) located in an external document to be used while assembling a document.</p>
+<p>The <strong><em>DocumentAssembler</em></strong> class provides methods to generate reports based on the template document with data.</p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned **how to generate reports **from Excel data using C#****. You can learn more about GroupDocs.Assembly for .NET API using the <a href="https://docs.groupdocs.com/assembly/net/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/assembly/">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.groupdocs.com/2021/03/20/generate-reports-from-json-data-in-csharp/">Generate PDF and Word Reports from JSON Data in C#</a></li>
+<li><a href="https://blog.groupdocs.com/2019/10/21/generate-reports-from-csv-xml-in-csharp/">Generate Reports from CSV or XML Data using C#</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

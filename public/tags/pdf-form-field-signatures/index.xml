@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>PDF Form Field Signatures on Conholdate.Total</title>
+    <link>/tags/pdf-form-field-signatures/</link>
+    <description>Recent content in PDF Form Field Signatures on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Aug 2021 06:03:00 +0000</lastBuildDate><atom:link href="/tags/pdf-form-field-signatures/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sign PDF with Form Field Signatures using C#</title>
+      <link>/2021/08/12/sign-pdf-with-form-field-signatures-using-csharp/</link>
+      <pubDate>Thu, 12 Aug 2021 06:03:00 +0000</pubDate>
+      
+      <guid>/2021/08/12/sign-pdf-with-form-field-signatures-using-csharp/</guid>
+      <description>As a C# developer, you can easily create PDF documents to be filled and signed by users electronically. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to electronically sign PDF documents with Form Field signatures using C#&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>Form Fields are various types of data fields that are used to collect information from the users. As a C# developer, you can easily create PDF documents to be filled and signed by users electronically. This can be helpful in collecting customer feedback, partners’ consent, etc. In this article, you will learn <strong>how to electronically sign PDF documents with Form Field signatures using C#</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#api-for-signing-documents">C# API for Signing PDF Documents</a></li>
+<li><a href="#Sign-PDF-Documents-with-Form-Field-Signatures-using-CSharp">Sign PDF Documents with Form Field Signatures using C#</a></li>
+<li><a href="#Sign-PDF-Documents-with-Multiple-Form-Field-Signatures-using-CSharp">Sign PDF Documents with Multiple Form Field Signatures using C#</a></li>
+</ul>
+<h2 id="api-for-signing-documents">C# API for Signing PDF Documents</h2>
+<p>I will be using <a href="https://products.groupdocs.com/signature/net">GroupDocs.Signature for .NET</a> API for signing the <a href="https://docs.fileformat.com/pdf/">PDF</a> documents enabled with form field signatures. The API allows you to add digital signatures to the <a href="https://docs.groupdocs.com/signature/net/supported-document-formats/">supported document formats</a> and implement popular electronic signature types in your .NET Applications. It also enables you with simple and advanced search options to locate your required signatures on a document.</p>
+<h2 id="Sign-PDF-Documents-with-Form-Field-Signatures-using-CSharp">Sign PDF Documents with Form Field Signatures using C#</h2>
+<p>You can electronically sign your PDF documents using the following types of form field signatures programmatically:</p>
+<ul>
+<li><a href="#Sign-PDF-Documents-with-Text-Form-Field-Signatures">Text Form Field Signatures</a></li>
+<li><a href="#Sign-PDF-Documents-with-Radio-Button-Form-Field-Signatures">Radio Button Form Field Signatures</a></li>
+<li><a href="#Sign-PDF-Documents-with-Combobox-Form-Field-Signatures">Combobox Form Field Signatures</a></li>
+<li><a href="#Sign-PDF-Documents-with-Checkbox-Form-Field-Signatures">Checkbox Form Field Signatures</a></li>
+<li><a href="#Sign-PDF-Documents-with-Digital-Form-Field-Signatures">Digital Form Field Signatures</a></li>
+</ul>
+<h3 id="Sign-PDF-Documents-with-Text-Form-Field-Signatures">Sign PDF Documents with Text Form Field Signatures</h3>
+<p>You can sign PDF documents with Text form field signatures by following the simple steps mentioned below:</p>
+<ul>
+<li>Create an instance of the _<a href="https://apireference.groupdocs.com/signature/net/groupdocs.signature/signature">Signature</a> _class</li>
+<li>Provide path of the input PDF document</li>
+<li>Create an instance of the <em>TextFormFieldSignature</em> class</li>
+<li>Create an instances of the <em><a href="https://apireference.groupdocs.com/signature/net/groupdocs.signature.options/formfieldsignoptions">FormFieldSignOptions</a></em> class with <em>TextFormFieldSignature</em> object</li>
+<li>Set required sign options such as Margin, Height, Width, etc.</li>
+<li>Call the <a href="https://apireference.groupdocs.com/signature/net/groupdocs.signature.signature/sign/methods/4"><em>Sign()</em></a> method with the <em>FormFieldSignOptions</em> and output file path</li>
+</ul>
+<p>The following code sample shows <strong>how to electronically sign a PDF document with text form field signatures using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p>The <a href="https://apireference.groupdocs.com/signature/net/groupdocs.signature/signature">Signature</a> class is the main class that controls the document signing process. It provides various methods to sign, search, delete or verify signatures in a document. The <a href="https://apireference.groupdocs.com/signature/net/groupdocs.signature.signature/sign/methods/4">Sign()</a> method of this class is used to sign the document with defined SignOptions.</p>
+<p>The <a href="https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/textformfieldsignature">TextFormFieldSignature</a> class provides text input form field signature properties for the PDF Documents.</p>
+<h3 id="Sign-PDF-Documents-with-Radio-Button-Form-Field-Signatures">Sign PDF Documents with Radio Button Form Field Signatures</h3>
+<p>You can sign PDF documents with the radio button form field signatures by following the steps mentioned earlier. However, you need to create an instance of <em>RadioButtonFormFieldSignature</em> class instead of <em>TextFormFieldSignature</em>.</p>
+<p>The following code sample shows <strong>how to electronically sign a PDF document with radio button form field signatures using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p>The <a href="https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/radiobuttonformfieldsignature">RadioButtonFormFieldSignature</a> class provides radio-button input form field signature properties for the PDF Documents.</p>
+<h3 id="Sign-PDF-Documents-with-Combobox-Form-Field-Signatures">Sign PDF Documents with Combobox Form Field Signatures</h3>
+<p>You can sign PDF documents with Combobox form field signatures by following the steps mentioned earlier. However, you need to create an instance of <em>ComboboxFormFieldSignature</em> instead of <em>TextFormFieldSignature</em>.</p>
+<p>The following code sample shows <strong>how to electronically sign a PDF document with Combobox form field signatures using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p>The <a href="https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/comboboxformfieldsignature">ComboboxFormFieldSignature</a> class provides combo-box input form field signature properties for the PDF Documents.</p>
+<h3 id="Sign-PDF-Documents-with-Checkbox-Form-Field-Signatures">Sign PDF Documents with Checkbox Form Field Signatures</h3>
+<p>You can sign PDF documents with Checkbox form field signatures by following the same steps mentioned earlier. However, you need to create an instance of <em>CheckboxFormFieldSignature</em> instead of <em>TextFormFieldSignature</em>.</p>
+<p>The following code sample shows <strong>how to electronically sign a PDF document with checkbox form field signatures</strong>.</p>
+<!-- raw HTML omitted -->
+<p>The <a href="https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/checkboxformfieldsignature">CheckboxFormFieldSignature</a> class provides check-box input form field signature properties for the PDF Documents.</p>
+<h3 id="Sign-PDF-Documents-with-Digital-Form-Field-Signatures">Sign PDF Documents with Digital Form Field Signatures</h3>
+<p>You can sign PDF documents with digital form field signatures by following the same steps mentioned earlier. However, you need to create an instance of <em>DigitalFormFieldSignature</em> instead of <em>TextFormFieldSignature</em>.</p>
+<p>The following code sample shows <strong>how to electronically sign a PDF document with digital form field signatures</strong>.</p>
+<!-- raw HTML omitted -->
+<p>The <a href="https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/digitalformfieldsignature">DigitalFormFieldSignature</a> class provides digital signature input form field properties for the PDF Documents. The user shall be able to sign documents with his own digital signatures in this field.</p>
+<h2 id="Sign-PDF-Documents-with-Multiple-Form-Field-Signatures-using-CSharp">Sign PDF Documents with Multiple Form Field Signatures using C#</h2>
+<p>You can electronically sign your PDF documents with multiple form field signatures programmatically by following the simple steps mentioned below:</p>
+<ul>
+<li>Create an instance of the _<a href="https://apireference.groupdocs.com/signature/net/groupdocs.signature/signature">Signature</a> _class</li>
+<li>Provide path of the input PDF document</li>
+<li>Define a list of the <em><a href="https://apireference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions">SignOptions</a></em></li>
+<li>Create the _FormFieldSignature _objects</li>
+<li>Create instances of the _<a href="https://apireference.groupdocs.com/signature/net/groupdocs.signature.options/formfieldsignoptions">FormFieldSignOptions</a> _for the created _FormFieldSignature _objects</li>
+<li>Set required sign options such as position (Margin, Height, Width, etc.) for each object</li>
+<li>Add _FormFieldSignOptions _objects to the _SignOptions _list</li>
+<li>Call the <a href="https://apireference.groupdocs.com/signature/net/groupdocs.signature.signature/sign/methods/6"><em>Sign()</em></a> method with the _SignOptions _and output file path</li>
+</ul>
+<p>The following code sample shows <strong>how to electronically sign a PDF document with multiple form field signatures using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/08/Sign-PDF-Documents-with-Form-Field-Signatures-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Sign PDF Documents with Multiple Form Field Signatures using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.groupdocs.com/signature/net/groupdocs.signature.signature/sign/methods/6">Sign()</a> method of the <em><strong>Signature</strong></em> class is used to sign the document with a list of SignOptions. The <a href="https://apireference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions">SignOptions</a> class allows setting the signature options such as appearance, signature types, etc.</p>
+<p>The <a href="https://apireference.groupdocs.com/signature/net/groupdocs.signature.options/formfieldsignoptions">FormFieldSignOptions</a> class provides the Form Field signature options for the PDF documents. You can define the form field options such as HorizontalAlignment, VerticalAlignment, Margin, Height, and Width. You need to provide the defined object of one of the FormFieldSignature classes while creating the instance of the FormFieldSignOptions class.</p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to create a PDF with Form Field Signatures using C#</strong>. You have also learned <strong>how to electronically sign PDF documents with various Form Field Signature types</strong> programmatically. You can learn more about GroupDocs.Signature for .NET API using the <a href="https://docs.groupdocs.com/signature/net/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/signature/">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.groupdocs.com/2021/07/14/generate-barcode-in-csharp-to-sign-documents-and-images/">Generate Barcode in C#</a></li>
+<li><a href="https://blog.groupdocs.com/2021/03/11/sign-documents-with-digital-certificate-using-csharp/">Sign Documents with Digital Certificate using C#</a></li>
+<li><a href="https://blog.groupdocs.com/2021/01/27/generate-qr-codes-in-csharp-to-sign-documents-and-images/">Generate QR Codes in C#</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

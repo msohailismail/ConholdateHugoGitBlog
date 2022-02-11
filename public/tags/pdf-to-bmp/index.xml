@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>PDF to BMP on Conholdate.Total</title>
+    <link>/tags/pdf-to-bmp/</link>
+    <description>Recent content in PDF to BMP on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Sep 2021 06:07:49 +0000</lastBuildDate><atom:link href="/tags/pdf-to-bmp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Convert PDF to Images using C#</title>
+      <link>/2021/09/23/convert-pdf-to-images-using-csharp/</link>
+      <pubDate>Thu, 23 Sep 2021 06:07:49 +0000</pubDate>
+      
+      <guid>/2021/09/23/convert-pdf-to-images-using-csharp/</guid>
+      <description>As a C# developer, you can easily convert all the pages of a PDF file to PNG, JPG, TIFF, or BMP images programmatically in your .NET applications. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to convert PDF to Images using C#&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>You may need to share the pages of PDF documents as image files with others. As a C# developer, you can easily convert PDF files to PNG, JPG, TIFF, or BMP programmatically in your .NET applications. In this article, you will learn <strong>how to convert PDF to Images using C#</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#PDF-to-Image-Conversion-CSharp-API">PDF to Image Conversion C# API</a></li>
+<li><a href="#Convert-PDF-to-PNG-Images-using-CSharp">Convert PDF to PNG Images using C#</a></li>
+<li><a href="#Convert-PDF-to-JPG-Images-using-CSharp">Convert PDF to JPG Images using C#</a></li>
+<li><a href="#PDF-to-BMP-Conversion-using-CSharp">PDF to BMP Conversion in C#</a></li>
+<li><a href="#PDF-to-TIFF-Conversion-using-CSharp">PDF to TIFF Conversion in C#</a></li>
+<li><a href="#Extract-Images-from-PDF-Documents-using-CSharp">Extract Images from PDF documents using C#</a></li>
+</ul>
+<h2 id="PDF-to-Image-Conversion-CSharp-API">PDF to Image Conversion C# API</h2>
+<p>For converting <a href="https://docs.fileformat.com/pdf/">PDF</a> to images, I will be using <a href="https://products.aspose.com/pdf">Aspose.PDF for .NET API</a>. It is a powerful PDF file management API that lets you manipulate PDF documents from within your .NET applications. It allows you to create, modify, convert, render, secure and print documents without using Adobe Acrobat.</p>
+<p>You can either <a href="https://downloads.aspose.com/pdf/net">download</a> the DLL of the API or install it using the <a href="https://www.nuget.org/packages/Aspose.PDF/">NuGet</a>.</p>
+<!-- raw HTML omitted -->
+<h2 id="Convert-PDF-to-PNG-Images-using-CSharp">Convert PDF to PNG Images using C#</h2>
+<p>You can convert PDF files to PNG images programmatically by following the steps given below:</p>
+<ul>
+<li>Create an instance of the <strong><em><a href="https://apireference.aspose.com/pdf/net/aspose.pdf/document">Document</a></em></strong> class with the input PDF file path.</li>
+<li>Loop through all the pages of the PDF using <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/document/properties/pages"><strong><em>Document.Pages</em></strong></a> collection and do the following:
+<ul>
+<li>Create an instance of the <strong><em><a href="https://apireference.aspose.com/pdf/net/aspose.pdf.devices/resolution">Resolution</a></em></strong> class and set its value.</li>
+<li>Create an instance of the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.devices/pngdevice"><strong><em>PngDevice</em></strong></a> class and pass Width, Height and Resolution object.</li>
+<li>Call the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.devices.pagedevice/process/methods/1"><strong><em>Process(Page, String)</em></strong></a> method with the page number and the output PNG image path to convert the page to a PNG.</li>
+</ul>
+</li>
+</ul>
+<p>The following code sample shows how to convert PDF pages to PNG images using C#.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/09/Convert-PDF-to-PNG-Images-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Convert PDF to PNG Images using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/document">Document</a> class represents the PDF document. It provides several properties and methods to perform various functionalities. The <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/document/properties/pages">Document.Pages</a> collection is a collection of document pages and the page numbering starts from 1 in the collection. The <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.devices/resolution">Resolution</a> class defines the image resolution. The <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.devices/pngdevice">PngDevice</a> class allows saving pages of the PDF document into PNG images. This class provides the following methods to save pages into PNG images:</p>
+<ul>
+<li><a href="https://apireference.aspose.com/pdf/net/aspose.pdf.devices.pagedevice/process/methods/1">Process(Page, String)</a> — Performs some operation on the given page and saves results into the file at given path.</li>
+<li><a href="https://apireference.aspose.com/pdf/net/aspose.pdf.devices/pngdevice/methods/process">Process(Page, Stream)</a> — Converts the page into PNG and saves it in the output stream.</li>
+</ul>
+<h2 id="Convert-PDF-to-JPG-Images-using-CSharp">Convert PDF to JPG Images using C#</h2>
+<p>You can convert PDF files to JPG images programmatically by following the steps given below:</p>
+<ul>
+<li>Create an instance of the <strong><em><a href="https://apireference.aspose.com/pdf/net/aspose.pdf/document">Document</a></em></strong> class with the input file path.</li>
+<li>Loop through all the pages of the PDF using <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/document/properties/pages"><strong><em>Document.Pages</em></strong></a> collection and do the following:
+<ul>
+<li>Create an instance of the <strong><em><a href="https://apireference.aspose.com/pdf/net/aspose.pdf.devices/resolution">Resolution</a></em></strong> class and set its value.</li>
+<li>Create an instance of the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.devices/jpegdevice"><strong><em>JpegDevice</em></strong></a> class and pass Width, Height and Resolution object.</li>
+<li>Call the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.devices.pagedevice/process/methods/1"><strong><em>Process(Page, String)</em></strong></a> method with the page number and the output JPG image path to convert the page to a JPG.</li>
+</ul>
+</li>
+</ul>
+<p>The following code sample shows how to convert PDF pages to JPG images using C#.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/09/Convert-PDF-to-JPG-Images-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Convert PDF to JPG Images using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="PDF-to-BMP-Conversion-using-CSharp">PDF to BMP Conversion using C#</h2>
+<p>You can convert PDF files to BMP images programmatically by following the steps given below:</p>
+<ul>
+<li>Create an instance of the <strong><em><a href="https://apireference.aspose.com/pdf/net/aspose.pdf/document">Document</a></em></strong> class with the input file path.</li>
+<li>Loop through all the pages of the PDF using <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/document/properties/pages"><strong><em>Document.Pages</em></strong></a> collection and do the following:
+<ul>
+<li>Create an instance of the <em><strong><a href="https://apireference.aspose.com/pdf/net/aspose.pdf.devices/resolution">Resolution</a></strong></em> class and set its value.</li>
+<li>Create an instance of the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.devices/bmpdevice"><strong><em>BmpDevice</em></strong></a> class and pass Width, Height and Resolution object.</li>
+<li>Call the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.devices.pagedevice/process/methods/1"><strong><em>Process(Page, String)</em></strong></a> method with the page number and the output BMP image path to convert the page to a BMP.</li>
+</ul>
+</li>
+</ul>
+<p>The following code sample shows how to convert PDF pages to BMP images using C#.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/09/Convert-PDF-to-BMP-Images-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->PDF to BMP Conversion using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="PDF-to-TIFF-Conversion-using-CSharp">PDF to TIFF Conversion using C#</h2>
+<p>You can convert PDF files to TIFF programmatically by following the steps given below:</p>
+<ul>
+<li>Create an instance of the <strong><em><a href="https://apireference.aspose.com/pdf/net/aspose.pdf/document">Document</a></em></strong> class with the input file path.</li>
+<li>Initialize an instance of the <strong><em><a href="https://apireference.aspose.com/pdf/net/aspose.pdf.devices/resolution">Resolution</a></em></strong> class and set its value.</li>
+<li>Create an instance of the <strong><em><a href="https://apireference.aspose.com/pdf/net/aspose.pdf.devices/tiffsettings">TiffSettings</a></em></strong> class.</li>
+<li>Set various properties such as <em>Compression</em>, <em>Depth</em>, <em>Shape</em>, and <em>SkipBlankPages</em>, etc.</li>
+<li>Create an instance of the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.devices/tiffdevice"><strong><em>TiffDevice</em></strong></a> class with the <strong><em>Resolution</em></strong> and the <strong><em>TiffSettings</em></strong> objects.</li>
+<li>Call the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.devices.documentdevice/process/methods/3"><strong><em>Process(Document, String)</em></strong></a> method with the Document object and the output TIFF file path to convert the document to a TIFF.</li>
+</ul>
+<p>The following code sample shows how to convert a PDF file to a TIFF using C#.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/09/Convert-PDF-to-TIFF-Images-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->PDF to TIFF Conversion using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.devices/tiffsettings">TiffSettings</a> class provides several settings for converting a PDF to TIFF. You can set Brightness, Compression, CoordinateType, Depth, Margins, Shape, and SkipBlankPages while converting PDF to TIFF.</p>
+<h2 id="Extract-Images-from-PDF-Documents-using-CSharp">Extract Images from PDF Documents using C#</h2>
+<p>You can extract all the images from any PDF file programmatically by following the steps given below:</p>
+<ul>
+<li>Create an instance of the <strong><em><a href="https://apireference.aspose.com/pdf/net/aspose.pdf/document">Document</a></em></strong> class with the input file path.</li>
+<li>For each page, create <a href="https://apireference.aspose.com/net/pdf/aspose.pdf/ximage">XImage</a> instance for every image in the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/resources/properties/images">Page.Resources.Images</a> collection.</li>
+<li>Create an instance of the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.filestream">FileStream</a> class with the output image file path.</li>
+<li>Call the <strong><em><a href="https://apireference.aspose.com/pdf/net/aspose.pdf/ximage/methods/save">Save()</a></em></strong> method with the FileStream object to save the image</li>
+<li>Finally, close the <em>FileStream</em> using Close() method.</li>
+</ul>
+<p>The following code sample shows how to extract images from a PDF document using C#.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/09/Extract-Images-from-PDF-Documents-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Extract Images from PDF Documents using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/ximage">XImage</a> class represents the image X-Object. It provides several properties and methods to work with images. The XImage class provides the following methods to save the image object:</p>
+<ul>
+<li><a href="https://apireference.aspose.com/pdf/net/aspose.pdf/ximage/methods/save">Save(Stream)</a> — Saves image data into stream as JPEG image.</li>
+<li><a href="https://apireference.aspose.com/pdf/net/aspose.pdf.ximage/save/methods/1">Save(Stream, ImageFormat)</a> — Saves image into stream with requested format.</li>
+<li>The <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.ximage/save/methods/3">Save(Stream, Int32)</a> method — Saves image data into stream as JPEG image with specified resolution.</li>
+<li>The <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.ximage/save/methods/2">Save(Stream, ImageFormat, Int32)</a> method — Saves image into stream with requested format and specified resolution.</li>
+</ul>
+<p>The <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/resources/properties/images">Page.Resources.Images</a> collection represents the collection of images for the specific page.</p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.aspose.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to <strong>convert PDF file pages to images</strong> using C#</strong>. You have also learned <strong>how to convert PDF to PNG, PDF to JPG, PDF to BMP, and PDF to TIFF</strong> programmatically. Moreover, you have learned <strong>how to extract images from a PDF file using C#</strong>. The API also offers compression options, table creation &amp; manipulation, graph &amp; image functions, extensive hyperlink functionality, stamp and watermark tasks, extended security controls and custom font handling. You can learn more about Aspose.PDF for .NET API using the <a href="https://docs.aspose.com/pdf/net/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.aspose.com/c/pdf/10">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.conholdate.com/2021/07/01/classify-pdf-documents-using-csharp/">Classify PDF Documents using C#</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

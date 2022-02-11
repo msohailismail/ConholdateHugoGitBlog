@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Adjust Brightness of an Image in Csharp on Conholdate.Total</title>
+    <link>/tags/adjust-brightness-of-an-image-in-csharp/</link>
+    <description>Recent content in Adjust Brightness of an Image in Csharp on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/adjust-brightness-of-an-image-in-csharp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adjust Image Contrast, Brightness, and Gamma in C#</title>
+      <link>/conholdate.total/adjust-image-contrast-brightness-gamma-csharp/</link>
+      <pubDate>Wed, 29 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/conholdate.total/adjust-image-contrast-brightness-gamma-csharp/</guid>
+      <description>Contrast, brightness, and gamma are popular attributes that are used to tune images. Different values of these attributes are set to control and enhance appearance of the images. In this article, we will show you how to adjust the contrast, brightness, and gamma of an image programmatically in C#. You can utilize this to implement image editing capabilities from within your .NET applications.
+ C# Image Editing API Adjust Contrast of an Image in C# Adjust Brightness of an Image in C# Modify Gamma of an Image in C#  C# API to Adjust Image Contrast, Brightness, and Gamma Aspose.</description>
+      <content:encoded><![CDATA[<p><img loading="lazy" src="images/Adjust-Image-Contrast-Brightness-Gamma-2.png#center" alt="Adjust Image Contrast, Brightness, and Gamma in C#"  title="Adjust Image Contrast, Brightness, and Gamma in C#"  />
+</p>
+<p><a href="https://en.wikipedia.org/wiki/Contrast_(vision)">Contrast</a>, <a href="https://en.wikipedia.org/wiki/Brightness">brightness</a>, and <a href="https://en.wikipedia.org/wiki/Gamma_correction">gamma</a> are popular attributes that are used to tune images. Different values of these attributes are set to control and enhance appearance of the images. In this article, we will show you <strong>how to adjust the contrast, brightness, and gamma of an image programmatically in C#</strong>. You can utilize this to implement image editing capabilities from within your .NET applications.</p>
+<ul>
+<li><a href="#csharp-api-to-adjust-image-contrast-brightness-and-gamma">C# Image Editing API</a></li>
+<li><a href="#adjust-contrast-of-an-image-in-csharp">Adjust Contrast of an Image in C#</a></li>
+<li><a href="#adjust-brightness-of-an-image-in-csharp">Adjust Brightness of an Image in C#</a></li>
+<li><a href="#modify-gamma-of-an-image-in-csharp">Modify Gamma of an Image in C#</a></li>
+</ul>
+<h2 id="csharp-api-to-adjust-image-contrast-brightness-and-gamma">C# API to Adjust Image Contrast, Brightness, and Gamma</h2>
+<p><a href="https://products.aspose.com/imaging/net/">Aspose.Imaging for .NET</a> is a powerful and feature-rich image processing API for .NET/.NET Standard platforms. It supports the manipulation of a wide range of image formats without writing complex code. We will use this API to adjust the contrast, brightness, and gamma of images in C#. You can <a href="https://downloads.aspose.com/imaging/net/">download</a> the API or install it into your .NET applications using <a href="https://nuget.org/packages/Aspose.Imaging">NuGet</a>.</p>
+<p><code>PM&gt; Install-Package Aspose.Imaging</code></p>
+<h2 id="adjust-contrast-of-an-image-in-csharp">Adjust Contrast of an Image in C#</h2>
+<p>The contrast is defined as the difference in pixel intensity. It’s value is adjusted to make the objects in an image more visible and distinguishable. With high contrast, every object in the image looks very clear just like the photographs taken in the sunlight. Whereas, with low contrast, you hardly distinguish the objects just like in the foggy weather.</p>
+<p>Let’s check out how to adjust the contrast of an image in C# using Aspose.Imaging for .NET.</p>
+<ul>
+<li>First, load the image using <a href="https://apireference.aspose.com/imaging/net/aspose.imaging/image">Image</a> class.</li>
+<li>Then, cast object to <a href="https://apireference.aspose.com/imaging/net/aspose.imaging/rasterimage">RasterImage</a> type.</li>
+<li>Cache image if it isn’t using <a href="https://apireference.aspose.com/imaging/net/aspose.imaging/datastreamsupporter/methods/cachedata">RasterImage.CacheData()</a> method.</li>
+<li>Adjust contrast in range [-100, 100] using <a href="https://apireference.aspose.com/imaging/net/aspose.imaging/rasterimage/methods/adjustcontrast">RasterImage.AdjustContrast(float)</a> method.</li>
+<li>Finally, save the resultant image using <a href="https://apireference.aspose.com/imaging/net/aspose.imaging.image/save/methods/3">RasterImage.Save(string)</a> method.</li>
+</ul>
+<p>The following code sample shows how to adjust the contrast of an image in C#.</p>
+<script type="application/javascript" src="https://gist.github.com/aspose-com-gists/3a5e8e91b8f8a8f90f46a3557c434317.js?file=adjust-image-contrast.cs"></script>
+
+<p>The following is the comparison of input and output images after increasing contrast value.</p>
+<figure class="align-center ">
+    <img loading="lazy" src="images/Adjust-Image-Contrast.png#center"
+         alt="Adjust Contrast of Images in C#"/> <figcaption>
+            <p>Adjust Image Contrast</p>
+        </figcaption>
+</figure>
+
+<h2 id="adjust-brightness-of-an-image-in-csharp">Adjust Brightness of an Image in C#</h2>
+<p>The brightness attribute usually controls the visibility of the objects in an image. Its value is adjusted to increase or decrease the darkness. The following are the steps to modify the brightness of an image in C#.</p>
+<ul>
+<li>First, load the image using <a href="https://apireference.aspose.com/imaging/net/aspose.imaging/image">Image</a> class.</li>
+<li>Cast object to <a href="https://apireference.aspose.com/imaging/net/aspose.imaging/rasterimage">RasterImage</a> type.</li>
+<li>Cache image if it isn’t using <a href="https://apireference.aspose.com/imaging/net/aspose.imaging/datastreamsupporter/methods/cachedata">RasterImage.CacheData()</a> method.</li>
+<li>Adjust brightness of the image using <a href="https://apireference.aspose.com/imaging/net/aspose.imaging/rasterimage/methods/adjustbrightness">RasterImage.AdjustBrightness(float)</a> method.</li>
+<li>Finally, save the resultant image using <a href="https://apireference.aspose.com/imaging/net/aspose.imaging.image/save/methods/3">RasterImage.Save(string)</a> method.</li>
+</ul>
+<p>The following code sample shows how to adjust the brightness of an image in C#.</p>
+<script type="application/javascript" src="https://gist.github.com/aspose-com-gists/3a5e8e91b8f8a8f90f46a3557c434317.js?file=adjust-image-brightness.cs"></script>
+
+<p>The following is the comparison of input and output images after adjusting brightness.</p>
+<figure class="align-center ">
+    <img loading="lazy" src="images/Adjust-Image-Brightness.png#center"
+         alt="Adjust Brightness of Images in C#"/> <figcaption>
+            <p>Adjust Image Brightness</p>
+        </figcaption>
+</figure>
+
+<h2 id="modify-gamma-of-an-image-in-csharp">Modify Gamma of an Image in C#</h2>
+<p>The gamma attribute is used to modify the ratio of red, green, and blue colors in an image. Moreover, it also modifies the brightness of the image. The following are the steps to change the gamma value of an image in C#.</p>
+<ul>
+<li>First, load the image using <a href="https://apireference.aspose.com/imaging/net/aspose.imaging/image">Image</a> class.</li>
+<li>Cast object to <a href="https://apireference.aspose.com/imaging/net/aspose.imaging/rasterimage">RasterImage</a> type.</li>
+<li>Cache image if it isn’t using <a href="https://apireference.aspose.com/imaging/net/aspose.imaging/datastreamsupporter/methods/cachedata">RasterImage.CacheData()</a> method.</li>
+<li>Change gamma of the image using <a href="https://apireference.aspose.com/imaging/net/aspose.imaging.rasterimage/adjustgamma/methods/1">RasterImage.AdjustGamma(float, float, float)</a> method.</li>
+<li>Finally, save the resultant image using <a href="https://apireference.aspose.com/imaging/net/aspose.imaging.image/save/methods/3">RasterImage.Save(string)</a> method.</li>
+</ul>
+<p>The following code sample shows how to adjust the gamma of an image in C#.</p>
+<script type="application/javascript" src="https://gist.github.com/aspose-com-gists/3a5e8e91b8f8a8f90f46a3557c434317.js?file=adjust-image-gamma.cs"></script>
+
+<p>The following is the comparison of input and output images after adjusting gamma value.</p>
+<figure class="align-center ">
+    <img loading="lazy" src="images/Adjust-Image-Gamma.png#center"
+         alt="Adjust Gamma of Images in C#"/> <figcaption>
+            <p>Adjust Image Gamma</p>
+        </figcaption>
+</figure>
+
+<h2 id="get-a-free-api-license">Get a Free API License</h2>
+<p>You can <a href="https://purchase.aspose.com/temporary-license">get a free temporary license</a> to use Aspose.Imaging for .NET without evaluation limitations.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned how to adjust the contrast, brightness, and gamma of images in C#. Furthermore, the code samples have demonstrated how an image looks after modifying the contrast, brightness, and gamma. In case you want to explore more about .NET image processing API, visit <a href="https://docs.aspose.com/imaging/net/">documentation</a>. Also, download the complete source code samples of the API from <a href="https://github.com/aspose-imaging/Aspose.Imaging-for-.NET">GitHub</a>. If you would have any questions or queries, reach us at our <a href="https://forum.aspose.com/">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.aspose.com/2021/12/20/resize-images-in-csharp/">Resize Images using C#</a></li>
+<li><a href="https://blog.aspose.com/2021/05/03/convert-images-to-grayscale-in-csharp/">Convert Images to Grayscale in C#</a></li>
+<li><a href="https://blog.aspose.com/2021/03/08/add-watermark-to-images-in-csharp/">Add Watermark to Images using C#</a></li>
+<li><a href="https://blog.aspose.com/2020/11/27/compress-png-jpeg-and-tiff-images-using-csharp/">Compress PNG, JPEG, and TIFF Images using C#</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

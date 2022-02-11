@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>GridView to Excel on Conholdate.Total</title>
+    <link>/tags/gridview-to-excel/</link>
+    <description>Recent content in GridView to Excel on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Aug 2020 08:43:31 +0000</lastBuildDate><atom:link href="/tags/gridview-to-excel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Export Data to Excel in C#</title>
+      <link>/2020/08/10/export-data-to-excel-in-csharp/</link>
+      <pubDate>Mon, 10 Aug 2020 08:43:31 +0000</pubDate>
+      
+      <guid>/2020/08/10/export-data-to-excel-in-csharp/</guid>
+      <description>In this article, I will show you how to export data to Excel in C# and VB.NET from various data sources such as an array, collection of custom objects, DataTable, DataView, DataGrid, GridView, HTML, JSON and CSV.
+ Export Array to Excel in C#  Export ArrayList to Excel Export Collection of Custom Objects to Excel   Copy Rows and Columns from one Excel file to Another Export DataTable to Excel in C#  Export Data of Selective DataColumns to Excel Export DataView to Excel   Export Data from DataGrid and GridView to Excel Export HTML formatted Data to Excel  Export HTML File to Excel   Export JSON Data to Excel in C# Export CSV Data to Excel in C#  Export Data to Excel in C# with Aspose.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>In this article, I will show you how to export data to Excel in C# and VB.NET from various data sources such as an array, collection of custom objects, DataTable, DataView, DataGrid, GridView, HTML, JSON and CSV.</p>
+<ul>
+<li><a href="#Export-from-Array-to-Excel">Export Array to Excel in C#</a>
+<ul>
+<li><a href="#Export-from-ArrayList-to-Excel">Export ArrayList to Excel</a></li>
+<li><a href="#Export-from-Collection-of-Custom-Objects">Export Collection of Custom Objects to Excel</a></li>
+</ul>
+</li>
+<li><a href="#Copy-Rows-and-Columns">Copy Rows and Columns from one Excel file to Another</a></li>
+<li><a href="#Export-from-DataTable-to-Excel">Export DataTable to Excel in C#</a>
+<ul>
+<li><a href="#Export-Data-of-Selective-DataColumns">Export Data of Selective DataColumns to Excel</a></li>
+<li><a href="#Export-Data-from-DataView-to-Excel">Export DataView to Excel</a></li>
+</ul>
+</li>
+<li><a href="#Export-Data-from-DataGrid-and-GridView">Export Data from DataGrid and GridView to Excel</a></li>
+<li><a href="#Export-HTML-formatted-Data-to-Excel">Export HTML formatted Data to Excel</a>
+<ul>
+<li><a href="#Export-HTML-File-to-Excel">Export HTML File to Excel</a></li>
+</ul>
+</li>
+<li><a href="#Export-JSON-Data-to-Excel">Export JSON Data to Excel in C#</a></li>
+<li><a href="#Export-CSV-Data-to-Excel">Export CSV Data to Excel in C#</a></li>
+</ul>
+<h2 id="export-data-to-excel-in-c-with-asposecells-api">Export Data to Excel in C# with Aspose.Cells API</h2>
+<p><a href="https://products.aspose.com/cells/net">Aspose.Cells for .NET</a> is a powerful spreadsheet manipulation API that lets you create, edit, or convert Excel files within .NET applications. The API’s easy to use methods enable you to perform Excel automation features seamlessly in a few lines of code. <strong>NuGet</strong> is the easiest way to download and install <a href="https://www.nuget.org/packages/Aspose.Cells/">Aspose.Cells API for .NET</a>. Open <strong>Manage NuGet Packages</strong> window and type “Aspose.Cells” in the search text box to find the <strong>Aspose.Cells</strong> .NET package. Finally, click the <strong>Install</strong> button to install the latest version of the package.</p>
+<h2 id="Export-from-Array-to-Excel">Export Array to Excel in C#</h2>
+<p>We can export an array (one-dimensional or two-dimensional) of a reference type or value type to an Excel document. We use the <a href="https://apireference.aspose.com/net/cells/aspose.cells/cells/methods/importarray/index">ImportArray</a> method of the <a href="https://apireference.aspose.com/net/cells/aspose.cells/worksheet/properties/cells">Cells</a> collection to export data to a spreadsheet from an array. The overloaded versions of the <a href="https://apireference.aspose.com/net/cells/aspose.cells/cells/methods/importarray/index">ImportArray</a> method are the following.<!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<pre><code>&lt;td&gt;
+  &lt;strong&gt;Description&lt;/strong&gt;
+&lt;/td&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>&lt;td&gt;
+  Exports an array of double into a worksheet.
+&lt;/td&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>&lt;td&gt;
+  Exports an array of an integer into a worksheet.
+&lt;/td&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>&lt;td&gt;
+  Exports an array of string into a worksheet.
+&lt;/td&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>&lt;td&gt;
+  Exports a two-dimensional array of double into a worksheet.
+&lt;/td&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>&lt;td&gt;
+  Exports a two-dimensional array of an integer into a worksheet.
+&lt;/td&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>&lt;td&gt;
+  Exports a two-dimensional array of string into a worksheet.
+&lt;/td&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+<p>A typical overload takes the following parameters:</p>
+<ul>
+<li><strong>Array</strong>, the array object that you are exporting content from.</li>
+<li><strong>Row number</strong>, the row number of the first cell (zero-based) that the data will be exported to.</li>
+<li><strong>Column number</strong>, the column number of the first cell (zero-based) that the data will be exported to.</li>
+<li><strong>Is vertical</strong>, a Boolean value that specifies whether to export data vertically or horizontally.</li>
+</ul>
+<p>The following are the steps to export an array to Excel file in C#.</p>
+<ul>
+<li>Create a <a href="https://apireference.aspose.com/net/cells/aspose.cells/workbook">Workbook</a> object. A <a href="https://apireference.aspose.com/net/cells/aspose.cells/workbook">Workbook</a> class represents a Microsoft Excel file.</li>
+<li>Get a reference to the desired worksheet. The <a href="https://apireference.aspose.com/net/cells/aspose.cells/workbook">Workbook</a> class contains a <a href="https://apireference.aspose.com/net/cells/aspose.cells/workbook/properties/worksheets">Worksheets</a> collection that allows access to each worksheet in an Excel file.</li>
+<li>Call <a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/importarray/index">ImportArray</a> method of a <a href="https://apireference.aspose.com/net/cells/aspose.cells/worksheet/properties/cells">Cells</a> collection to export an array to the worksheet at the specified row and column. The <a href="https://apireference.aspose.com/net/cells/aspose.cells/worksheet">Worksheet</a> class provides a <a href="https://apireference.aspose.com/net/cells/aspose.cells/worksheet/properties/cells">Cells</a> collection.</li>
+<li>Save the Excel file using <a href="https://apireference.aspose.com/net/cells/aspose.cells.workbook/save/methods/2">Workbook.Save(string)</a> method.</li>
+</ul>
+<p>The following code sample shows how to export an array of String to an Excel file in C#.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --> <!-- raw HTML omitted -->Export an array of data to Excel<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>Similarly, we can export a <strong>two-dimensional array to an Excel file</strong>. The following code sample shows how to export two-dimensional array to an Excel file in C#.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h3 id="Export-from-ArrayList-to-Excel">Export ArrayList to Excel in C#</h3>
+<p>To export data from an ArrayList_ _to worksheet, call the <a href="https://apireference.aspose.com/net/cells/aspose.cells/worksheet/properties/cells">Cells</a> collection’s <a href="https://apireference.aspose.com/net/cells/aspose.cells/cells/methods/importarraylist">ImportArrayList</a> method. The <a href="https://apireference.aspose.com/net/cells/aspose.cells/cells/methods/importarraylist">ImportArrayList</a> method takes the following parameters:</p>
+<ul>
+<li><strong>Array list</strong> represents the ArrayList object you are exporting.</li>
+<li><strong>Row</strong> <strong>number</strong> represents the row number of the first cell that the data will be exported to.</li>
+<li><strong>Column number</strong> represents the column number of the first cell that the data will be exported to.</li>
+<li><strong>Is vertical</strong> a Boolean value that specifies whether to export data vertically or horizontally.</li>
+</ul>
+<p>The following code sample shows how to export an ArrayList to an Excel file in C#.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h3 id="Export-from-Collection-of-Custom-Objects">Export Collection of Custom Objects to Excel in C#</h3>
+<p>To export data from a collection of custom objects to a worksheet, we use <a href="https://apireference.aspose.com/net/cells/aspose.cells/cells/methods/importcustomobjects/index">ImportCustomObjects</a> method. There are two overloaded versions of this method.</p>
+<ol>
+<li><a href="https://apireference.aspose.com/cells/net/aspose.cells.cells/importcustomobjects/methods/1">ImportCustomObjects(ICollection list, String[] propertyNames, Boolean isPropertyNameShown, Int32 firstRow, Int32 firstColumn, Int32 rowNumber, Boolean insertions, String dateFormatString, Boolean convertStringToNumber)</a></li>
+<li><a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/importcustomobjects">ImportCustomObjects(ICollection list, Int32 firstRow, Int32 firstColumn, ImportTableOptions options)</a></li>
+</ol>
+<p>We will explore each overloaded method one by one. The description of the parameters of the first overloaded method is given below:</p>
+<ul>
+<li><strong>list</strong> The collection of the custom objects.</li>
+<li><strong>propertyNames</strong> Names of properties of the object to export. If it is null, all properties will be exported.</li>
+<li><strong>isPropertyNameShown</strong> Indicates whether the property names will be exported to the first row.</li>
+<li><strong>firstRow</strong> The row number of the first cell to export to.</li>
+<li><strong>firstColumn</strong> The column number of the first cell to export to.</li>
+<li><strong>rowNumber</strong> Number of objects to be exported.</li>
+<li><strong>insertRows</strong> Indicates whether extra rows are added to fit data.</li>
+<li><strong>dateFormatString</strong> Date format string for cells.</li>
+<li><strong>convertStringToNumber</strong> Indicates if this method will try to convert string to a number.</li>
+</ul>
+<p>In the following example, we are exporting a list of <em>Person</em> objects to an Excel document in C#. Please note that we are exporting only two properties (<em>Name</em> and <em>Age</em>) of a <em>Person</em> object.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --> <!-- raw HTML omitted -->Export a list of Person objects to Excel<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>Now we explore the second overloaded method of <a href="https://apireference.aspose.com/net/cells/aspose.cells/cells/methods/importcustomobjects/index">ImportCustomObjects</a>. The description of the parameters of the method is given below:</p>
+<ul>
+<li><strong>list</strong> The list of custom objects.</li>
+<li><strong>firstRow</strong> The row number of the first cell to export to.</li>
+<li><strong>firstColumn</strong> The column number of the first cell to export to.</li>
+<li><strong>options</strong> <a href="https://apireference.aspose.com/cells/net/aspose.cells/importtableoptions">ImportTableOptions</a> object.</li>
+</ul>
+<p>The <a href="https://apireference.aspose.com/cells/net/aspose.cells/importtableoptions">ImportTableOptions</a> parameter provides several options for exporting data into cells. Some of them are given below:</p>
+<ul>
+<li><strong>CheckMergedCells</strong> Does an Excel document contain merged cells.</li>
+<li><strong>ColumnIndexes</strong> Integer array of column indexes (0-based) to export from the data source. <em>null</em> means all columns should be exported.</li>
+<li><strong>ConvertGridStyle</strong> Indicates whether to apply the style of the grid view to cells.</li>
+<li><strong>ConvertNumericData</strong> A boolean value that indicates whether the string value should be converted to numeric or date value.</li>
+<li><strong>DateFormat</strong> Gets or sets date format string for cells with exported DateTime values.</li>
+<li><strong>DefaultValues</strong> Default value for the cell in the table is null.</li>
+<li><strong>InsertRows</strong> Indicates whether new rows should be added for exporting data records.</li>
+<li><strong>IsFieldNameShown</strong> Indicates whether the field names should be exported.</li>
+<li><strong>IsFormulas</strong> Indicates whether the data are formulas.</li>
+<li><strong>IsHtmlString</strong> Indicates whether the data contains HTML tags. If we set the value to true, HTML formatting will remain preserved while exporting data to an Excel document.</li>
+<li><strong>NumberFormats</strong> Gets or sets the number formats</li>
+<li><strong>ShiftFirstRowDown</strong> Indicates whether the first row should be shifted down when inserting rows.</li>
+<li><strong>TotalColumns</strong> Gets or sets total columns’ count to export from a data source. -1 means all columns of the given data source.</li>
+<li><strong>TotalRows</strong> Gets or sets total rows’ count to export from the data source. -1 means all rows of the given data source.</li>
+</ul>
+<p>In the following example, we are exporting data from a collection of objects to a worksheet containing merged cells. We are setting the value of <a href="https://apireference.aspose.com/net/cells/aspose.cells/importtableoptions/properties/checkmergedcells">ImportTableOptions.CheckMergedCells</a> property to true as the Excel document contains merged cells.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --> <!-- raw HTML omitted -->Export Data to an Excel Document Containing Merged Cells<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="Copy-Rows-and-Columns">Copies Rows and Columns from one Excel file to Another in C#</h2>
+<p>We can programmatically copy rows and columns from one Excel document to another. When a row (or column) is copied, the data contained in it, including formulas – with updated references – and values, comments, formatting, hidden cells, images, and other drawing objects are also copied. We can also copy rows and columns within the same worksheet or across different worksheets in an Excel document. Aspose.Cells provides the following methods to copy rows and columns.</p>
+<ul>
+<li><a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/copyrow">CopyRow(Cells sourceCells, int sourceRowIndex, int destinationRowIndex)</a> Copies data of a single row.</li>
+<li><a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/copyrows">CopyRows(Cells sourceCells, int sourceRowIndex, int destinationRowIndex, int rowNumber)</a> Copies data of multiple rows.</li>
+<li><a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/copycolumn">CopyColumn(Cells sourceCells, int sourceColumnIndex, int destinationColumnIndex)</a> Copies data of a single column.</li>
+<li><a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/copycolumns">CopyColumns(Cells sourceCells, int sourceColumnIndex, int destinationColumnIndex, int columnNumber)</a> Copies data of multiple columns.</li>
+</ul>
+<p>The following example code shows how to copy rows from one Excel document to another in C#.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>The following example code shows how to copy specific rows of one Excel document to another.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --> <!-- raw HTML omitted --></p>
+<p>We can similarly copy columns’ data from one Microsoft Excel document to another using <a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/copycolumn">CopyColumn</a> or <a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/copycolumns">CopyColumns</a> method.</p>
+<h2 id="Export-from-DataTable-to-Excel">Export DataTable to Excel in C#</h2>
+<p>Data from ADO.NET objects such as <a href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/dataset-datatable-dataview/datatables">DataTable</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.data.datacolumn?view=netcore-3.1">DataColumn</a>, and <a href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/dataset-datatable-dataview/dataviews">DataView</a> can be exported to Excel worksheets. To export data from a DataTable, we call the <a href="https://apireference.aspose.com/cells/net/aspose.cells.cells/importdata/methods/1">ImportData</a> method of Cells collection. There are many overloaded versions of the <a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/importdata/index">ImportData</a> method but we use the following:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>The description of the parameters is given below:</p>
+<ul>
+<li><strong>table</strong> The <!-- raw HTML omitted -->DataTable<!-- raw HTML omitted --> object to be exported.</li>
+<li><strong>firstRow</strong> The row number of the first cell to export to.</li>
+<li><strong>firstColumn</strong> The column number of the first cell to export to.</li>
+<li><strong>optionsType</strong> <a href="https://apireference.aspose.com/cells/net/aspose.cells/importtableoptions">ImportTableOptions</a> object.</li>
+</ul>
+<p>In the following code sample, we are creating a DataTable object that has three columns and two rows. And exporting it to an Excel worksheet.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --> <!-- raw HTML omitted -->Export DataTable to Excel<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h3 id="Export-Data-of-Selective-DataColumns">Export Data of Selective DataColumns to Excel in C#</h3>
+<p>We can export selective DataColumns of a DataTable or DataView to an Excel document. As discussed earlier, the <a href="https://apireference.aspose.com/cells/net/aspose.cells.cells/importdata/methods/1">ImportData</a> method accepts an argument of type <a href="https://apireference.aspose.com/net/cells/aspose.cells/importtableoptions">ImportTableOptions</a>. The <a href="https://apireference.aspose.com/net/cells/aspose.cells/importtableoptions">ImportTableOptions</a> class has a <a href="https://apireference.aspose.com/net/cells/aspose.cells/importtableoptions/properties/columnindexes">ColumnIndexes</a> property that accepts an array of columns indexes (zero-based) that we want to export. In the following code sample, we are exporting only two DataColumns of a DataTable to an Excel Worksheet.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --> <!-- raw HTML omitted --><em>The output of DataColumns to Excel</em><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h3 id="Export-Data-from-DataView-to-Excel">Export Data from DataView to Excel in C#</h3>
+<p>A <a href="https://docs.microsoft.com/en-us/dotnet/api/system.data.dataview?view=netcore-3.1">DataView</a> is a view on a DataTable that can be customized to present a subset of data from the DataTable. We use the following overloaded version of the <a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/importdata/index">ImportData</a> method to export data from DataView to an Excel document.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>We know there are two ways to create a <a href="https://docs.microsoft.com/en-us/dotnet/api/system.data.dataview">DataView</a>. We can use the <strong>DataView</strong> constructor, or we can create a reference to the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.data.datatable.defaultview">DefaultView</a> property of the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.data.datatable">DataTable</a>. In the following code sample, we are using the later way to create a DataView.</p>
+<!-- raw HTML omitted -->
+<h2 id="Export-Data-from-DataGrid-and-GridView">Export Data from DataGrid and GridView to Excel in C#</h2>
+<p><a href="https://products.aspose.com/cells">Aspose.Cells</a> library allows us to export data from Microsoft Grid controls such as DataGrid and GridView to an Excel worksheet. It provides <a href="https://apireference.aspose.com/net/cells/aspose.cells/cells/methods/importdatagrid/index">ImportDataGrid</a> method, to export data from a DataGrid and <a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/importgridview">ImportGridView</a> method to export data from a GridView.</p>
+<p>There are many overloaded versions of the <a href="https://apireference.aspose.com/net/cells/aspose.cells/cells/methods/importdatagrid/index">ImportDataGrid</a> method but a typical overload takes the following parameters:</p>
+<ul>
+<li><strong>dataGrid</strong>, the <em>DataGrid</em> object that we’re exporting content from.</li>
+<li><strong>firstRow</strong>, the row number of the first cell that the data will be exported to.</li>
+<li><strong>firstColumn</strong>, the column number of the first cell that the data will be exported to.</li>
+<li><strong>insertRows</strong>, a Boolean property that indicates whether extra rows should be added to the worksheet to fit data.</li>
+<li><strong>importStyle</strong>, a Boolean property that indicates whether cell style should be exported.</li>
+</ul>
+<p>The following code example shows how to export data from DataGrid to an Excel file in C#.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="Export-HTML-formatted-Data-to-Excel">Export HTML formatted Data to Excel in C#</h2>
+<p><a href="https://docs.aspose.com/cells/net/">Aspose.Cells</a> lets you export HTML formatted data to an Excel worksheet. The API parses HTML formatted text while exporting data and convert the HTML into formatted cell values. In the following sample code, DataTable contains HTML formatted text and we are exporting it to an Excel Document using <a href="https://apireference.aspose.com/cells/net/aspose.cells.cells/importdata/methods/1">ImportData</a> method.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --> <!-- raw HTML omitted -->The output of HTML Exported Data to an Excel Document<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h3 id="Export-HTML-File-to-Excel">Export HTML File to Excel in C#</h3>
+<p>Aspose.Cells allows us to export an HTML file to Excel. The HTML file should be Microsoft Excel oriented, i.e., MS-Excel should be able to open it.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="Export-JSON-Data-to-Excel">Export JSON Data to Excel in C#</h2>
+<p>Sometimes we have a need to export JSON Data to an Excel document. With <a href="https://docs.aspose.com/cells/net/">Aspose.Cells</a> we can easily do this with a few lines of code. Aspose.Cells provides a <a href="https://apireference.aspose.com/net/cells/aspose.cells.utility/jsonutility">JsonUtility</a> class that has an <a href="https://apireference.aspose.com/net/cells/aspose.cells.utility/jsonutility/methods/importdata">ImportData</a> method for exporting JSON data to an Excel document. The <a href="https://apireference.aspose.com/net/cells/aspose.cells.utility/jsonutility/methods/importdata">ImportData</a> method accepts <a href="https://apireference.aspose.com/net/cells/aspose.cells.utility/jsonlayoutoptions">JsonLayoutOptions</a> object as a parameter. The <a href="https://apireference.aspose.com/net/cells/aspose.cells.utility/jsonlayoutoptions">JsonLayoutOptions</a> class represents the options of JSON layout and has the following properties.</p>
+<ul>
+<li><a href="https://apireference.aspose.com/net/cells/aspose.cells.utility/jsonlayoutoptions/properties/arrayastable">ArrayAsTable</a>: Indicates whether the array should be processed as a table.</li>
+<li><a href="https://apireference.aspose.com/net/cells/aspose.cells.utility/jsonlayoutoptions/properties/convertnumericordate">ConvertNumericOrDate</a>: Gets or sets a value that indicates whether the string in JSON is to be converted to numeric or date.</li>
+<li><a href="https://apireference.aspose.com/net/cells/aspose.cells.utility/jsonlayoutoptions/properties/dateformat">DateFormat</a>: Gets and sets the format of the date value.</li>
+<li><a href="https://apireference.aspose.com/net/cells/aspose.cells.utility/jsonlayoutoptions/properties/ignorearraytitle">IgnoreArrayTitle</a>: Indicates whether to ignore the title if the property of the object is an array.</li>
+<li><a href="https://apireference.aspose.com/net/cells/aspose.cells.utility/jsonlayoutoptions/properties/ignorenull">IgnoreNull</a>: Indicates whether the null value should be ignored.</li>
+<li><a href="https://apireference.aspose.com/net/cells/aspose.cells.utility/jsonlayoutoptions/properties/ignoreobjecttitle">IgnoreObjectTitle</a>: Indicates whether to ignore the title if the property of the object is an object.</li>
+<li><a href="https://apireference.aspose.com/net/cells/aspose.cells.utility/jsonlayoutoptions/properties/numberformat">NumberFormat</a>: Gets and sets the format of the numeric value.</li>
+<li><a href="https://apireference.aspose.com/net/cells/aspose.cells.utility/jsonlayoutoptions/properties/titlestyle">TitleStyle</a>: Gets and sets the style of the title.</li>
+</ul>
+<p>In the following example code, we are exporting JSON data to an Excel file in C#.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --> <!-- raw HTML omitted -->Export JSON Data to Excel<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="Export-CSV-Data-to-Excel">Export CSV Data to Excel in C#</h2>
+<p>A comma-separated values (CSV) file is a delimited text file that uses a comma to separate values. A CSV file typically stores tabular data (numbers and text) in plain text, in which case each line will have the same number of fields.</p>
+<p>The following code sample shows how we can open a CSV file and save it as an Excel file using Aspose.Cells library.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --> <!-- raw HTML omitted -->CSV to an Excel Document<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this post, you have seen how easily you can export data to Excel in C# from Array, DataTable, DataView, DataGrid and GridView. You have also seen how to export HTML, JSON, CSV Data to an Excel worksheet. Please check the <a href="https://docs.aspose.com/cells/net/">documentation</a> to learn more about these and several other features that Aspose.Cells API offers. If you have any questions, please feel free to contact us through our <a href="https://forum.aspose.com/">Support Forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.aspose.com/2020/01/21/create-excel-xls-xlsx-programmatically-in-csharp-net/">Create MS Excel Files Programmatically in C# without MS Office</a></li>
+<li><a href="https://blog.aspose.com/2020/04/03/import-data-from-json-to-excel-in-csharp-asp.net/">Import Data from JSON to Excel Worksheet in C# .NET</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

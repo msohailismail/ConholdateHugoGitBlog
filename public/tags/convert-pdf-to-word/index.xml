@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Convert PDF to Word on Conholdate.Total</title>
+    <link>/tags/convert-pdf-to-word/</link>
+    <description>Recent content in Convert PDF to Word on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 26 Jul 2021 15:22:27 +0000</lastBuildDate><atom:link href="/tags/convert-pdf-to-word/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Convert PDF to Word using Java</title>
+      <link>/2021/07/26/convert-pdf-to-word-using-java/</link>
+      <pubDate>Mon, 26 Jul 2021 15:22:27 +0000</pubDate>
+      
+      <guid>/2021/07/26/convert-pdf-to-word-using-java/</guid>
+      <description>As a Java developer, you can easily convert your PDF documents into Word documents (.docx or .doc) programmatically. This article will be focusing on &lt;!-- raw HTML omitted --&gt;how to convert PDF documents into Word document using Java&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>You can easily convert your PDF documents into Word documents (<em>.docx <em>or</em> .doc</em>) programmatically in your Java applications. Such conversion is useful when you need to edit the text of your PDF documents or may need to apply the text formatting. In this article, you are going to learn <strong>how to convert PDF to Word using Java</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#java-conversion-api">Java API to Convert PDF to Word</a></li>
+<li><a href="#convert-pdf-to-docx">Convert PDF to Word using Java</a></li>
+<li><a href="#convert-specific-pages-of-pdf-to-docx">Convert Specific Pages of PDF to Word</a></li>
+<li><a href="#convert-password-protected-pdf-to-docx">Load Pasword Protected PDF and Convert to Word</a></li>
+</ul>
+<h2 id="java-conversion-api">Java API to Convert PDF to Word</h2>
+<p>I will be using <a href="https://products.groupdocs.com/conversion/java">GroupDocs.Conversion for Java API</a> for the conversion of <a href="https://docs.fileformat.com/pdf/">PDF</a> to <a href="https://docs.fileformat.com/word-processing/docx/">DOCX</a>. This API provides a fast, efficient, and reliable file conversion solution into Java applications without installing any external software. It supports conversions among all popular business document formats such as PDF, HTML, Email, Word, Excel, PowerPoint, Project, Photoshop, CorelDraw, AutoCAD, raster image file formats, and many more. It also allows you to display the whole ‎document, or render it partially to speed up the process. The API is compatible with all Java versions and supports popular operating systems (Windows, Linux, macOS) that are capable to run Java runtime.</p>
+<h3 id="download-and-configure">Download and Configure</h3>
+<p>You can <a href="https://downloads.groupdocs.com/conversion/java">download</a> the JAR of the API or just add the following <strong><em>pom.xml</em></strong> configuration in your Maven-based Java application to try the below-mentioned code examples.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="convert-pdf-to-docx">Convert PDF to Word using Java</h2>
+<p>You can convert PDF documents to Word by following the simple steps given below:</p>
+<ol>
+<li>Create an instance of the <em><strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter">Converter</a></strong></em> class</li>
+<li>Provide the input file path</li>
+<li>Create an instance of <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/WordProcessingConvertOptions"><strong><em>WordProcessingConvertOptions</em></strong></a></li>
+<li>Set the start page number</li>
+<li>Provide total pages to convert</li>
+<li>Set output file format</li>
+<li>Call the _<strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions)">Convert()</a></strong> _method along with the output file path and convert options</li>
+</ol>
+<p>The following code sample shows <strong>how to convert a PDF file into a Word document using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/07/convert-pdf-to-docx.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Convert PDF to Word using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter">Converter</a> class is the main class that controls the document conversion process. It provides various methods to convert documents of supported file formats. The <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions)">Convert()</a> method of this class converts source documents and takes two input parameters, the file path to the source document and <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/ConvertOptions">ConvertOptions</a> to convert a specific source document to desired target file type.</p>
+<p>The <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/WordProcessingConvertOptions">WordProcessingConvertOptions</a> class provides options for conversion to WordProcessing file type. The <em>setPageNumber()</em> method allows setting the starting page number to start conversion. Whereas, the <em>setPagesCount()</em> method defines the total number of pages to be converted starting from the defined page number. The setFormat() method of this class enables you to set the output format of the converted document. It takes the <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.filetypes/WordProcessingFileType">WordProcessingFileType</a> enumeration type as input.</p>
+<h2 id="convert-specific-pages-of-pdf-to-docx">Convert Specific Pages of PDF to Word</h2>
+<p>You can convert specific pages of a PDF document to Word by following the simple steps given below:</p>
+<ol>
+<li>Create an instance of the <em><strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter">Converter</a></strong></em> class</li>
+<li>Provide the input file path</li>
+<li>Create an instance of <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/WordProcessingConvertOptions"><strong><em>WordProcessingConvertOptions</em></strong></a></li>
+<li>Set page numbers list to convert</li>
+<li>Call the _<strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions)">Convert()</a></strong> _method along with the output file path and convert options</li>
+</ol>
+<p>The following code sample shows <strong>how to convert specific pages from a PDF file into a Word document using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p>The <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/WordProcessingConvertOptions">WordProcessingConvertOptions</a> class provides the <em>setPages()</em> method to convert specific page numbers defined in a comma-separated list from a source document.</p>
+<h2 id="convert-password-protected-pdf-to-docx">Load Pasword Protected PDF and Convert to Word</h2>
+<p>You can convert password-protected PDF documents to Word by following the simple steps given below:</p>
+<ol>
+<li>Create <strong><em><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/PdfLoadOptions">PdfLoadOptions</a></em></strong></li>
+<li>Set password</li>
+<li>Create an instance of the <em><strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter">Converter</a></strong></em> class</li>
+<li>Provide the input file path</li>
+<li>Create an instance of <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/WordProcessingConvertOptions"><strong><em>WordProcessingConvertOptions</em></strong></a></li>
+<li>Call the _<strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions)">Convert()</a></strong> _method along with the output file path and convert options</li>
+</ol>
+<p>The following code sample shows <strong><strong>how to convert a password-protected PDF file into a Word document using Java</strong></strong>.</p>
+<!-- raw HTML omitted -->
+<p>The <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.load/PdfLoadOptions">PdfLoadOptions</a> class provides various options to load PDF documents. The <em>setPassword()</em> method of this class enables you to unprotect the protected document by providing its password.</p>
+<p>You can find more details about “<a href="https://docs.groupdocs.com/conversion/java/load-pdf-document-with-options/">Load PDF document with options</a>” in the documentation.</p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to convert PDF documents to Word</strong> using Java. You have also learned <strong>how to convert a password-protected PDF file to a Word document</strong>. Moreover, you have learned <strong>how to convert specific pages from a PDF to a Word document</strong> programmatically. You can learn even more about GroupDocs.Conversion Java API using the <a href="https://docs.groupdocs.com/conversion/java/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/conversion/11">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.conholdate.com/2021/03/31/convert-pdf-to-excel-using-csharp/"></a><a href="https://blog.groupdocs.com/2021/04/21/convert-images-to-pdf-in-java/">Convert Any Image to PDF in Java</a></li>
+<li><a href="https://blog.groupdocs.com/2021/02/15/convert-presentations-odp-pptx-ppt-to-pdf-in-java/">Convert Presentations to PDF in Java</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

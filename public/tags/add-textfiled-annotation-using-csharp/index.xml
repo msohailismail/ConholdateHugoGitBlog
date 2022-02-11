@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Add TextFiled Annotation using CSharp on Conholdate.Total</title>
+    <link>/tags/add-textfiled-annotation-using-csharp/</link>
+    <description>Recent content in Add TextFiled Annotation using CSharp on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 13 Jul 2021 18:03:57 +0000</lastBuildDate><atom:link href="/tags/add-textfiled-annotation-using-csharp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Annotate JPG Images using C#</title>
+      <link>/2021/07/13/annotate-jpg-images-using-csharp/</link>
+      <pubDate>Tue, 13 Jul 2021 18:03:57 +0000</pubDate>
+      
+      <guid>/2021/07/13/annotate-jpg-images-using-csharp/</guid>
+      <description>. You can easily annotate your JPG images and add a wide range of graphic, text, and watermark annotations in your .NET applications. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to annotate JPG images using C#&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>You can annotate images of popular image formats such as JPEG, PNG, TIFF programmatically. Annotations on the images provide additional information about an existing piece of data. You can add a wide range of graphic, text, and watermark annotations to images in your .NET applications. In this article, you will learn <strong>how to annotate JPG images using C#</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#CSharp-API-to-Annotate-Images">C# API to Annotate Images</a></li>
+<li><a href="#Annotate-JPG-Images">Annotate JPG Images using C#</a></li>
+<li><a href="#Add-Area-Annotation-to-JPG-using-CSharp">Add Area Annotation to JPG using C#</a></li>
+<li><a href="#Add-Text-Field-Annotation-to-JPG-using-CSharp">Add Text Field Annotation to JPG using C#</a></li>
+<li><a href="#Annotation-JPG-Images-with-Watermark-using-CSharp">Annotate JPG Images with Watermark using C#</a></li>
+</ul>
+<h2 id="CSharp-API-to-Annotate-Images">C# API to Annotate Images</h2>
+<p>For annotating <a href="https://docs.fileformat.com/image/jpeg/">JPG</a> images, I will be using <a href="https://products.groupdocs.com/annotation/net/">GroupDocs.Annotation for .NET</a> API. It allows to programmatically build document annotation applications in C#, ASP.NET, and other related .NET technologies. You can add popular annotation types such as area, point, text, ellipse, link, underline, polyline, arrow, distance, watermark, image, etc to your documents of all popular formats. The API also enables you to export documents after adding annotations, comments, or highlighted notes back to their original format.</p>
+<p>You can either <a href="https://downloads.groupdocs.com/annotation/net">download</a> the DLL of the API or install it using <a href="https://www.nuget.org/packages/GroupDocs.Annotation">NuGet</a>.</p>
+<!-- raw HTML omitted -->
+<h2 id="Annotate-JPG-Images">Annotate JPG Images using C#</h2>
+<p>You can add multiple annotations to annotate your JPG images by following the steps given below:.</p>
+<ul>
+<li>Create an instance of the <em><strong><a href="https://apireference.groupdocs.com/annotation/net/groupdocs.annotation/annotator">Annotator</a></strong></em> class</li>
+<li>Provide the input file path</li>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/annotation/net/groupdocs.annotation.models.annotationmodels/arrowannotation"><em><strong>ArrowAnnotation</strong></em></a> class</li>
+<li>Set various properties for <em>ArrowAnnotation</em> such as Color, Opacity, Style etc.</li>
+<li>Add <em>ArrowAnnotation</em> to Annotations List</li>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/annotation/net/groupdocs.annotation.models.annotationmodels/distanceannotation"><em><strong>DistanceAnnotation</strong></em></a> class</li>
+<li>Set various properties for <em>DistanceAnnotation</em> such as Color, Opacity, Style etc.</li>
+<li>Add <em>DistanceAnnotation</em> to Annotations List</li>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/annotation/net/groupdocs.annotation.models.annotationmodels/ellipseannotation"><em><strong>EllipseAnnotation</strong></em></a> class</li>
+<li>Set various properties for <em>EllipseAnnotation</em> such as Color, Opacity, Style etc.</li>
+<li>Add <em>EllipseAnnotation</em> to Annotations List</li>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/annotation/net/groupdocs.annotation.models.annotationmodels/pointannotation"><em><strong>PointAnnotation</strong></em></a> class</li>
+<li>Set various properties for <em>PointAnnotation</em> such as box size and location</li>
+<li>Add <em>PointAnnotation</em> to Annotations List</li>
+<li>Call the <a href="https://apireference.groupdocs.com/annotation/net/groupdocs.annotation.annotator/add/methods/1"><em>Add()</em></a> method to add annotations to the Annotator</li>
+<li>Call the <em><a href="https://apireference.groupdocs.com/annotation/net/groupdocs.annotation.annotator/save/methods/4">Save()</a></em> method and save the resultant file</li>
+</ul>
+<p>The following code sample shows <strong>how to annotate a JPG image using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/07/Add-Multiple-Annotations-to-JPG-Images.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Annotate JPG Images using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.groupdocs.com/annotation/net/groupdocs.annotation/annotator">Annotator</a> class is the main class that controls the document annotating process. It provides various methods to add, update or remove annotations. The <a href="https://apireference.groupdocs.com/annotation/net/groupdocs.annotation.annotator/save/methods/4">Save()</a> method of this class saves the annotated file at the given path.</p>
+<p>The API provides various specific classes to define various types of annotations such as:</p>
+<ul>
+<li>The ArrowAnnotation class provides properties to define arrow annotation</li>
+<li>The DistanceAnnotation class facilities to define distance annotation</li>
+<li>The EllipseAnnotation class can be used to define an Ellipse annotation</li>
+<li>The PointAnnotation class provides properties to define a point annotation</li>
+</ul>
+<h2 id="Add-Area-Annotation-to-JPG-using-CSharp">Add Area Annotation to JPG using C#</h2>
+<p>You can add area annotation to your JPG images programmatically by following the steps given below:.</p>
+<ul>
+<li>Create an instance of the <em><strong><a href="https://apireference.groupdocs.com/annotation/net/groupdocs.annotation/annotator">Annotator</a></strong></em> class</li>
+<li>Provide the input file path</li>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/annotation/net/groupdocs.annotation.models.annotationmodels/areaannotation"><em><strong>AreaAnnotation</strong></em></a> class</li>
+<li>Set various properties for <em>AreaAnnotation</em> such as Position, Color, Message, Opacity, Style etc.</li>
+<li>Call the <a href="https://apireference.groupdocs.com/annotation/net/groupdocs.annotation/annotator/methods/add"><em>Add()</em></a> method to add <em>AreaAnnotation</em> to the Annotator</li>
+<li>Call the <em><a href="https://apireference.groupdocs.com/annotation/net/groupdocs.annotation.annotator/save/methods/4">Save()</a></em> method and save the resultant file</li>
+</ul>
+<p>The following code sample shows <strong>how to add area annotation to a JPG image using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/07/Add-Area-Annotation-to-JPG.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Add Area Annotation to JPG using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="Add-Text-Field-Annotation-to-JPG-using-CSharp">Add Text Field Annotation to JPG using C#</h2>
+<p>You can add text field annotation to your JPG images by following the steps given below:.</p>
+<ul>
+<li>Create an instance of the <em><strong><a href="https://apireference.groupdocs.com/annotation/net/groupdocs.annotation/annotator">Annotator</a></strong></em> class</li>
+<li>Provide the input file path</li>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/annotation/net/groupdocs.annotation.models.annotationmodels/textfieldannotation"><em><strong>TextFieldAnnotation</strong></em></a> class</li>
+<li>Set various properties for <em>TextFieldAnnotation</em> such as Text, Color, Opacity, Style, Font, etc.</li>
+<li>Call the <a href="https://apireference.groupdocs.com/annotation/net/groupdocs.annotation/annotator/methods/add"><em>Add()</em></a> method to add <em>TextFieldAnnotation</em> to the Annotator</li>
+<li>Call the <em><a href="https://apireference.groupdocs.com/annotation/net/groupdocs.annotation.annotator/save/methods/4">Save()</a></em> method and save the resultant file</li>
+</ul>
+<p>The following code sample shows <strong>how to add text field annotation to a JPG image using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/07/Add-Text-Field-Annotation-to-JPG.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Add Text Field Annotation to JPG using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="Annotation-JPG-Images-with-Watermark-using-CSharp">Annotation JPG Images with Watermark using C#</h2>
+<p>You can annotate your JPG images with watermark text by following the steps given below:.</p>
+<ul>
+<li>Create an instance of the <em><strong><a href="https://apireference.groupdocs.com/annotation/net/groupdocs.annotation/annotator">Annotator</a></strong></em> class</li>
+<li>Provide the input file path</li>
+<li>Create an instance of <a href="https://apireference.groupdocs.com/annotation/net/groupdocs.annotation.models.annotationmodels/watermarkannotation"><em><strong>WatermarkAnnotation</strong></em></a> class</li>
+<li>Set various properties for <em>WatermarkAnnotation</em> such as Text, Color, Font Size, Alignment, etc.</li>
+<li>Call the <a href="https://apireference.groupdocs.com/annotation/net/groupdocs.annotation/annotator/methods/add"><em>Add()</em></a> method to add WatermarkAnnotation to the Annotator</li>
+<li>Call the <em><a href="https://apireference.groupdocs.com/annotation/net/groupdocs.annotation.annotator/save/methods/4">Save()</a></em> method and save the resultant file</li>
+</ul>
+<p>The following code sample shows <strong>how to annotate a JPG image with watermark text using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/07/Annotation-JPG-Images-with-Watermark.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Annotation JPG Images with Watermark using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to annotate JPG images using C#</strong>. You have also learned <strong>how to add multiple annotations to JPG images</strong>. Moreover, you have learned <strong>how to add area, text field, and watermark annotations to the JPG images</strong> programmatically in C#. You can learn more about GroupDocs.Annotation for .NET API using the <a href="https://docs.groupdocs.com/annotation/net/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/annotation/">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.groupdocs.com/2021/06/23/annotate-word-documents-using-csharp/">Add or Remove Annotations or Markup Word files using C#</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

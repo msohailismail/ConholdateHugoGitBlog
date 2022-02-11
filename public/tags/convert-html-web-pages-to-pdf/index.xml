@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Convert HTML Web Pages to PDF on Conholdate.Total</title>
+    <link>/tags/convert-html-web-pages-to-pdf/</link>
+    <description>Recent content in Convert HTML Web Pages to PDF on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Sep 2021 13:37:34 +0000</lastBuildDate><atom:link href="/tags/convert-html-web-pages-to-pdf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Convert HTML to PDF using Java</title>
+      <link>/2021/09/10/convert-html-to-pdf-using-java/</link>
+      <pubDate>Fri, 10 Sep 2021 13:37:34 +0000</pubDate>
+      
+      <guid>/2021/09/10/convert-html-to-pdf-using-java/</guid>
+      <description>As a Java developer, you can easily convert HTML files or HTML web pages from live URLs into PDF documents. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to convert HTML to PDF using Java&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>As a Java developer, you can easily convert HTML files or web pages from live web URLs into PDF documents programmatically in your Java applications. In this article, you will learn <strong>how to convert HTML to PDF using Java</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#HTML-to-PDF-Conversion-Java-API">HTML to PDF Conversion Java API</a></li>
+<li><a href="#Convert-HTML-to-PDF-using-Java">Convert HTML to PDF using Java</a></li>
+<li><a href="#Convert-HTML-to-PDF-with-Advanced-Options-using-Java">Convert HTML to PDF with Advanced Options</a></li>
+<li><a href="#HTML-to-PDF-Conversion-from-a-URL">HTML to PDF Conversion from a URL</a></li>
+<li><a href="#Convert-Specific-Page-Range-of-HTML-to-PDF-using-Java">Convert Specific Page Range of HTML to PDF</a></li>
+<li><a href="#Convert-HTML-to-PDF-and-Add-Watermark-using-Java">Convert HTML to PDF and Add Watermark</a></li>
+</ul>
+<h2 id="HTML-to-PDF-Conversion-Java-API">HTML to PDF Conversion Java API</h2>
+<p>For converting <a href="https://docs.fileformat.com/web/html/">HTML</a> to <a href="https://docs.fileformat.com/pdf/">PDF</a>, I will be using <a href="https://products.groupdocs.com/conversion/java">GroupDocs.Conversion for Java API</a>. It is a fast, efficient, and reliable file conversion solution for your Java applications without installing any external software. You can convert among all popular business document formats such as PDF, HTML, Email, Word, Excel, PowerPoint, Project, raster image file formats, and many more. It also allows you to display the whole ‎document, or render it partially to speed up the process. The API is compatible with all Java versions and supports popular operating systems (Windows, Linux, macOS) that are capable to run Java runtime.</p>
+<p>You can <a href="https://downloads.groupdocs.com/conversion/java">download</a> the JAR of the API or just add the following <strong><em>pom.xml</em></strong> configuration in your Maven-based Java application to try the below-mentioned code examples.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="Convert-HTML-to-PDF-using-Java">Convert HTML to PDF using Java</h2>
+<p>You can easily convert HTML files to PDF documents by following the simple steps given below:</p>
+<ol>
+<li>Create an instance of the <em><strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter">Converter</a></strong></em> class with the input file path</li>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/PdfConvertOptions"><strong><em>PdfConvertOptions</em></strong></a></li>
+<li>Call the _<strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions)">convert()</a></strong> _method with the output file path and convert options</li>
+</ol>
+<p>The following code sample shows <strong>how to convert an HTML document to a PDF document using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/09/Convert-HTML-to-PDF-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Convert HTML to PDF using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter">Converter</a> class is the main class that controls the document conversion process. It provides various methods to fulfill the conversion requests. The <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions)">convert()</a> method of this class converts the source document into the specified target format and saves the converted document at the given file path. It provides several overloaded <em>convert()</em> methods to convert supported file formats.</p>
+<h2 id="Convert-HTML-to-PDF-with-Advanced-Options-using-Java">Convert HTML to PDF with Advanced Options</h2>
+<p>You can use some advanced settings while converting the HTML files to PDF documents by following the steps given below:</p>
+<ol>
+<li>Create an instance of the <em><strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter">Converter</a></strong></em> class with the input file path</li>
+<li>Create an instance of <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/PdfConvertOptions"><strong><em>PdfConvertOptions</em></strong></a></li>
+<li>Set various options such as <em>Rotation</em>, <em>Dpi</em>, <em>Width</em>, <em>Height</em>, etc.</li>
+<li>Call the _<strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions)">convert()</a></strong> _method with the output file path and convert options</li>
+</ol>
+<p>The following code sample shows <strong>how to convert an HTML file to a PDF document with advanced settings.</strong></p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/09/Convert-HTML-to-PDF-with-Advanced-Options-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Convert HTML to PDF with Advanced Options using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/PdfConvertOptions">PdfConvertOptions</a> class provides several options to convert specified input files to PDF documents. I have used the following options:</p>
+<ul>
+<li><a href="https://apireference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/PdfConvertOptions#setWidth(int)">Width</a> — the setWidth() property sets the image width after conversion</li>
+<li><a href="https://apireference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/PdfConvertOptions#setHeight(int)">Height</a> — the setHeight() property sets the desired image height after conversion</li>
+<li><a href="https://apireference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/PdfConvertOptions#setDpi(double)">Dpi</a> — the setDpi() property sets the desired page DPI after conversion</li>
+<li><a href="https://apireference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/PdfConvertOptions#setPassword(java.lang.String)">Password</a> — the setPassword() property protects the converted document with a password</li>
+<li><a href="https://apireference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/PdfConvertOptions#setRotate(com.groupdocs.conversion.options.convert.Rotation)">Rotate</a> — the setRotate() property allows page rotation with the following available options: <em>None, On90, On180, On270</em></li>
+</ul>
+<p>You can find more details about “<a href="https://docs.groupdocs.com/conversion/java/convert-to-pdf-with-advanced-options/">Convert to PDF with Advanced Options</a>” in the documentation.</p>
+<h2 id="HTML-to-PDF-Conversion-from-a-URL">HTML to PDF Conversion from a URL</h2>
+<p>You can convert the HTML web pages from the live URLs to the PDF documents by following the steps given below:</p>
+<ol>
+<li>Provide URL to an input stream object and open the stream</li>
+<li>Create an instance of the <em><strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter">Converter</a></strong></em> class with the input stream object</li>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/PdfConvertOptions"><strong><em>PdfConvertOptions</em></strong></a></li>
+<li>Call the _<strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions)">convert()</a></strong> _method with the output file path and convert options</li>
+</ol>
+<p>The following code sample shows <strong>how to convert HTML from a web URL to a PDF document using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<h2 id="Convert-Specific-Page-Range-of-HTML-to-PDF-using-Java">Convert Specific Page Range of HTML to PDF</h2>
+<p>You can convert specific pages from multipage HTML documents to PDF documents by following the steps given below:</p>
+<ol>
+<li>Create an instance of the <em><strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter">Converter</a></strong></em> class with the input file path</li>
+<li>Create an instance of <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/PdfConvertOptions"><strong><em>PdfConvertOptions</em></strong></a></li>
+<li>Set page number to start conversion from</li>
+<li>Set pages count to convert total number of pages</li>
+<li>Call the _<strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions)">convert()</a></strong> _method with the output file path and convert options</li>
+</ol>
+<p>The following code sample shows <strong>how to convert specific pages from HTML to a PDF document using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<h2 id="Convert-HTML-to-PDF-and-Add-Watermark-using-Java">Convert HTML to PDF and Add Watermark</h2>
+<p>You can convert HTML files to watermarked PDF documents by following the steps given below:</p>
+<ol>
+<li>Create an instance of the <em><strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter">Converter</a></strong></em> class</li>
+<li>Provide the input file path to the constructor</li>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/PdfConvertOptions"><strong><em>PdfConvertOptions</em></strong></a></li>
+<li>Create an instance of the <strong><em><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/WatermarkOptions">WatermarkOptions</a></em></strong></li>
+<li>Set various options such as <em>Text</em>, <em>Color</em>, <em>Width</em>, <em>Height</em>, <em>RotatationAngle</em>, etc.</li>
+<li>Call the _<strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions)">convert()</a></strong> _method with the output file path and convert options</li>
+</ol>
+<p>The following code sample shows <strong>how to convert an HTML document to a watermarked PDF document using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/09/Convert-HTML-to-PDF-and-Add-Watermark-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Convert HTML to PDF and Add Watermark using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/WatermarkOptions">WatermarkOptions</a> class provides several options to add watermark to the converted documents. It enables you to add text or image watermarks to the converted documents.</p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to convert HTML to PDF documents</strong> using Java. You have also learned <strong>how to add watermarks to the converted PDF documents</strong>. Moreover, you have learned <strong>how to convert HTML using advanced PDF convert options</strong> programmatically. This article also explained <strong>how to convert HTML webpages from a live URL to a PDF document</strong> using Java. You can learn more about GroupDocs.Conversion Java API using the <a href="https://docs.groupdocs.com/conversion/java/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/conversion/11">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.conholdate.com/2021/07/26/convert-pdf-to-word-using-java/">Convert PDF to Word using Java</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

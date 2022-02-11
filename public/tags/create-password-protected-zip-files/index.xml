@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Create Password-Protected ZIP Files on Conholdate.Total</title>
+    <link>/tags/create-password-protected-zip-files/</link>
+    <description>Recent content in Create Password-Protected ZIP Files on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 18 Sep 2021 17:42:25 +0000</lastBuildDate><atom:link href="/tags/create-password-protected-zip-files/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create Encrypted ZIP Files using C#</title>
+      <link>/2021/09/18/create-encrypted-zip-files-using-csharp/</link>
+      <pubDate>Sat, 18 Sep 2021 17:42:25 +0000</pubDate>
+      
+      <guid>/2021/09/18/create-encrypted-zip-files-using-csharp/</guid>
+      <description>As a C# developer, you can easily create encrypted or password-protected ZIP archives programmatically using C# in your .NET applications. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to create encrypted ZIP archives using C#&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>ZIP files are the most common types of archive files that are used to keep compressed files and folders into a single container. As a C# developer, you can easily create encrypted or password-protected ZIP archives programmatically using C# in your .NET applications. In this article, you will learn <strong>how to create encrypted ZIP files using C#</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#CSharp-API-to-Create-Encrypted-ZIP-Files">C# API to Create Encrypted ZIP Files</a></li>
+<li><a href="#Create-Password-Protected-ZIP-Files">Create Password-Protected ZIP Files</a></li>
+<li><a href="#Create-Encrypted-ZIP-Files-with-AES-Encryption">Create Encrypted ZIP Files with AES Encryption</a></li>
+<li><a href="#Encrypt-Folders-in-ZIP-Files">Encrypt Folders in ZIP Files</a></li>
+<li><a href="#Encrypt-Specific-Files-in-ZIP-Archives">Encrypt Specific Files in ZIP Archives</a></li>
+<li><a href="#Create-Encrypted-ZIP-Files-with-Mixed-Encryption">Create Encrypted ZIP Files with Mixed Encryption</a></li>
+</ul>
+<h2 id="CSharp-API-to-Create-Encrypted-ZIP-Files">C# API to Create Encrypted ZIP Files</h2>
+<p>For creating encrypted <a href="https://docs.fileformat.com/compression/zip/">ZIP</a> archives, I will be using <a href="https://products.aspose.com/zip/net">Aspose.ZIP for .NET API</a>. It enables you to compress files and folders and add them to ZIP archives. It also allows you to decompress archives of supported types such as ZIP, TAR, GZIP, BZ2, 7Zip, RAR, etc. The API provides protection via user-defined passwords and traditional encryption techniques using AES encryption such as AES128, AES192, and AES256.</p>
+<p>You can either <a href="https://downloads.aspose.com/zip/net">download</a> the DLL of the API or install it using <a href="https://www.nuget.org/packages/Aspose.Zip/">NuGet</a>.</p>
+<!-- raw HTML omitted -->
+<h2 id="Create-Password-Protected-ZIP-Files">Create Password-Protected ZIP Files</h2>
+<p>You can easily create password-protected ZIP archives programmatically by following the steps given below:</p>
+<ol>
+<li>Create an instance of the_<strong> </strong><em>**</em><a href="https://apireference.aspose.com/zip/net/aspose.zip/archive">Archive</a>_** class with the <em><strong><a href="https://apireference.aspose.com/zip/net/aspose.zip.saving/archiveentrysettings">ArchiveEntrySettings</a></strong></em> object.</li>
+<li>Set password using the <a href="https://apireference.aspose.com/zip/net/aspose.zip.saving/traditionalencryptionsettings"><em><strong>TraditionalEncryptionSettings</strong></em></a> object.</li>
+<li>Call the <strong><em><a href="https://apireference.aspose.com/zip/net/aspose.zip.archive/createentry/methods/3">CreatEntry()</a></em></strong> method with the input file path to add to the archive.</li>
+<li>Repeat the above step to add multiple files.</li>
+<li>Call the <em><strong><a href="https://apireference.aspose.com/zip/net/aspose.zip.archive/save/methods/1">Save()</a></strong></em> method with the output file path to save the output file.</li>
+</ol>
+<p>The following code sample shows <strong>how to create a password-protected ZIP file using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/09/Create-Password-Protected-ZIP-Archives.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Create Password-Protected ZIP Archives<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <strong>Archive</strong> class represents a ZIP archive file. It provides several methods to create, compose, extract, or update ZIP archives. The <strong>CreatEntry()</strong> method of this class creates a single entry of a file within the archive. It takes the name of the file and the fully qualified file path as input parameters. This class also provides overloaded <em><strong><a href="https://apireference.aspose.com/zip/net/aspose.zip/archive/methods/createentry/index">CreatEntry()</a></strong></em> methods to add files from stream or <em>FileInfo</em>. The <strong>Save()</strong> method of this class saves the ZIP archive at the specified file path.</p>
+<p>The <strong>ArchiveEntrySettings</strong> class provides settings to compress or decompress the entries. The <strong>TraditionalEncryptionSetings</strong> class provides settings for the traditional <strong>ZipCrypto</strong> algorithm. It is a ZIP password-protection algorithm. The <strong><em>Password</em></strong> property of this class allows getting or setting a password for encryption or decryption of files and folders in a ZIP archive.</p>
+<h2 id="Create-Encrypted-ZIP-Files-with-AES-Encryption">Create Encrypted ZIP Files with AES Encryption</h2>
+<p>You can encrypt your ZIP archives with AES encryption programmatically by following the steps given below:</p>
+<ol>
+<li>Create an instance of the_** <strong>_</strong><em><a href="https://apireference.aspose.com/zip/net/aspose.zip/archive">Archive</a></em>** class with the <em><strong><a href="https://apireference.aspose.com/zip/net/aspose.zip.saving/archiveentrysettings">ArchiveEntrySettings</a></strong></em> object.</li>
+<li>Set password using the <a href="https://apireference.aspose.com/zip/net/aspose.zip.saving/aesecryptionsettings"><em><strong>AesEcryptionSettings</strong></em></a> class. Pass the password string and the <a href="https://apireference.aspose.com/zip/net/aspose.zip.saving/encryptionmethod"><strong><em>EncryptionMethod</em></strong></a> as arguments to the constructor.</li>
+<li>Call the <strong><em><a href="https://apireference.aspose.com/zip/net/aspose.zip.archive/createentry/methods/3">CreatEntry()</a></em></strong> method with the input file path to add to the archive.</li>
+<li>Repeat the above step to add multiple files.</li>
+<li>Call the <em><strong><a href="https://apireference.aspose.com/zip/net/aspose.zip.archive/save/methods/1">Save()</a></strong></em> method with the output file path to save the output file.</li>
+</ol>
+<p>The following code sample shows <strong>how to create a ZIP file encrypted with AES encryption using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p>The <strong>AesEncryptionSettings</strong> class provides settings for AES encryption or decryption algorithm. The Advanced Encryption Standard (AES) is a symmetric encryption or decryption block cipher algorithm.</p>
+<p>You can use the following types of encryption methods:</p>
+<ul>
+<li>Traditional — Traditional PKWARE encryption</li>
+<li>AES128 — Advanced Encryption Standard with key length 128 bits</li>
+<li>AES192 — Advanced Encryption Standard with key length 192 bits</li>
+<li>AES256 — Advanced Encryption Standard with key length 256 bits</li>
+</ul>
+<h2 id="Encrypt-Folders-in-ZIP-Files">Encrypt Folders in ZIP Files</h2>
+<p>You can add password-protected folders to ZIP files programmatically by following the steps given below:</p>
+<ol>
+<li>Create an instance of the_<strong> </strong><em>**</em><a href="https://apireference.aspose.com/zip/net/aspose.zip/archive">Archive</a>_** class with the <em><strong><a href="https://apireference.aspose.com/zip/net/aspose.zip.saving/archiveentrysettings">ArchiveEntrySettings</a></strong></em> object.</li>
+<li>Set password using the <a href="https://apireference.aspose.com/zip/net/aspose.zip.saving/traditionalencryptionsettings"><em><strong>TraditionalEncryptionSettings</strong></em></a> object.</li>
+<li>Call the <strong><em><a href="https://apireference.aspose.com/zip/net/aspose.zip.archive/createentries/methods/1">CreatEntries()</a></em></strong> method with the folder path to add to the archive.</li>
+<li>Repeat the above step to add multiple folders.</li>
+<li>Call the <em><strong><a href="https://apireference.aspose.com/zip/net/aspose.zip.archive/save/methods/1">Save()</a></strong></em> method with the output file path to save the output file.</li>
+</ol>
+<p>The following code sample shows <strong>how to add an <strong>encrypted</strong> folder to the ZIP file using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<h2 id="Encrypt-Specific-Files-in-ZIP-Archives">Encrypt Specific Files in ZIP Archives</h2>
+<p>You can encrypt specific files in the ZIP archives programmatically by following the steps given below:</p>
+<ol>
+<li>Create an instance of the <strong><em><a href="https://apireference.aspose.com/zip/net/aspose.zip/archive">Archive</a></em></strong> class.</li>
+<li>Call the <strong><em><a href="https://apireference.aspose.com/zip/net/aspose.zip.archive/createentry/methods/3">CreatEntry()</a></em></strong> method with the input file path to add to the archive.</li>
+<li>Set password for the file using the <em><strong>ArchiveEntrySettings</strong></em> with the <em>**</em><strong>TraditionalEncryptionSettings</strong><em>**</em>.</li>
+<li>Call the <strong><em><a href="https://apireference.aspose.com/zip/net/aspose.zip.archive/createentry/methods/3">CreatEntry()</a></em></strong> method with the input file path to add another file to the archive.</li>
+<li>Repeat above steps to add more files.</li>
+<li>Call the <em><strong><a href="https://apireference.aspose.com/zip/net/aspose.zip.archive/save/methods/1">Save()</a></strong></em> method with the output file path to save the output file.</li>
+</ol>
+<p>The following code sample shows <strong>how to encrypt specific files in the ZIP archive using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/09/Encrypt-Specific-Files-in-ZIP-Archives.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Encrypt Specific Files in ZIP archives<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="Create-Encrypted-ZIP-Files-with-Mixed-Encryption">Create Encrypted ZIP Files with Mixed Encryption</h2>
+<p>You can create ZIP archives containing files and folders protected with mixed encryption techniques varying for each file and folder programmatically by following the steps given below:</p>
+<ol>
+<li>Create an instance of the_<strong> </strong><em>**</em><a href="https://apireference.aspose.com/zip/net/aspose.zip/archive">Archive</a>_** class.</li>
+<li>Call the <strong><em><a href="https://apireference.aspose.com/zip/net/aspose.zip.archive/createentry/methods/3">CreatEntry()</a></em></strong> method with the input file path to add to the archive.</li>
+<li>Set password for the file using the <em><strong>ArchiveEntrySettings</strong></em> with the <em><strong>AesEcryptionSettings</strong></em>.</li>
+<li>Call the <strong><em><a href="https://apireference.aspose.com/zip/net/aspose.zip.archive/createentry/methods/3">CreatEntry()</a></em></strong> method with the input file path to add another file to the archive.</li>
+<li>Set password for the file using the <em><strong>ArchiveEntrySettings</strong></em> with the <em>**</em><strong>TraditionalEncryptionSettings</strong><em>**</em>.</li>
+<li>Call the <strong><em><a href="https://apireference.aspose.com/zip/net/aspose.zip.archive/createentry/methods/3">CreatEntry()</a></em></strong> method with the input file path to add another file to the archive.</li>
+<li>Call the <strong><em><a href="https://apireference.aspose.com/zip/net/aspose.zip.archive/createentries/methods/1">CreateEntries()</a></em></strong> method with the folder path to add to the archive.</li>
+<li>Save the output file using the <em><strong><a href="https://apireference.aspose.com/zip/net/aspose.zip.archive/save/methods/1">Save()</a></strong></em> method with the output file path.</li>
+</ol>
+<p>The following code sample shows <strong>how to create a ZIP file with mixed encryption techniques using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/09/Create-Encrypted-ZIP-Archives-with-Mixed-Encryption.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Create Encrypted ZIP File with Mixed Encryption<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.aspose.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong><strong>how to <strong>create encrypted ZIP</strong></strong> files **using C#</strong>**. You have also learned <strong>how to <strong>create a password-protected ZIP</strong> file</strong> programmatically. Moreover, you have learned <strong>how to encrypt specific files in the ZIP archives</strong>. Furthermore, you have learned <strong>how to add password-protected folders to ZIP files</strong>. This article also explained <strong>how to create a ZIP file</strong> <strong>encrypted with mixed encryption techniques</strong> using C#. You can learn more about Aspose.ZIP for .NET API using the <a href="https://docs.aspose.com/zip/net/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.aspose.com/c/zip/37">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.conholdate.com/2021/07/06/render-zip-archives-using-csharp/">Render ZIP Archives using C#</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

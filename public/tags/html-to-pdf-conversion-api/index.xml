@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>HTML to PDF conversion API on Conholdate.Total</title>
+    <link>/tags/html-to-pdf-conversion-api/</link>
+    <description>Recent content in HTML to PDF conversion API on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Sep 2021 13:37:34 +0000</lastBuildDate><atom:link href="/tags/html-to-pdf-conversion-api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Convert HTML to PDF using Java</title>
+      <link>/2021/09/10/convert-html-to-pdf-using-java/</link>
+      <pubDate>Fri, 10 Sep 2021 13:37:34 +0000</pubDate>
+      
+      <guid>/2021/09/10/convert-html-to-pdf-using-java/</guid>
+      <description>As a Java developer, you can easily convert HTML files or HTML web pages from live URLs into PDF documents. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to convert HTML to PDF using Java&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>As a Java developer, you can easily convert HTML files or web pages from live web URLs into PDF documents programmatically in your Java applications. In this article, you will learn <strong>how to convert HTML to PDF using Java</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#HTML-to-PDF-Conversion-Java-API">HTML to PDF Conversion Java API</a></li>
+<li><a href="#Convert-HTML-to-PDF-using-Java">Convert HTML to PDF using Java</a></li>
+<li><a href="#Convert-HTML-to-PDF-with-Advanced-Options-using-Java">Convert HTML to PDF with Advanced Options</a></li>
+<li><a href="#HTML-to-PDF-Conversion-from-a-URL">HTML to PDF Conversion from a URL</a></li>
+<li><a href="#Convert-Specific-Page-Range-of-HTML-to-PDF-using-Java">Convert Specific Page Range of HTML to PDF</a></li>
+<li><a href="#Convert-HTML-to-PDF-and-Add-Watermark-using-Java">Convert HTML to PDF and Add Watermark</a></li>
+</ul>
+<h2 id="HTML-to-PDF-Conversion-Java-API">HTML to PDF Conversion Java API</h2>
+<p>For converting <a href="https://docs.fileformat.com/web/html/">HTML</a> to <a href="https://docs.fileformat.com/pdf/">PDF</a>, I will be using <a href="https://products.groupdocs.com/conversion/java">GroupDocs.Conversion for Java API</a>. It is a fast, efficient, and reliable file conversion solution for your Java applications without installing any external software. You can convert among all popular business document formats such as PDF, HTML, Email, Word, Excel, PowerPoint, Project, raster image file formats, and many more. It also allows you to display the whole ‎document, or render it partially to speed up the process. The API is compatible with all Java versions and supports popular operating systems (Windows, Linux, macOS) that are capable to run Java runtime.</p>
+<p>You can <a href="https://downloads.groupdocs.com/conversion/java">download</a> the JAR of the API or just add the following <strong><em>pom.xml</em></strong> configuration in your Maven-based Java application to try the below-mentioned code examples.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="Convert-HTML-to-PDF-using-Java">Convert HTML to PDF using Java</h2>
+<p>You can easily convert HTML files to PDF documents by following the simple steps given below:</p>
+<ol>
+<li>Create an instance of the <em><strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter">Converter</a></strong></em> class with the input file path</li>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/PdfConvertOptions"><strong><em>PdfConvertOptions</em></strong></a></li>
+<li>Call the _<strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions)">convert()</a></strong> _method with the output file path and convert options</li>
+</ol>
+<p>The following code sample shows <strong>how to convert an HTML document to a PDF document using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/09/Convert-HTML-to-PDF-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Convert HTML to PDF using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter">Converter</a> class is the main class that controls the document conversion process. It provides various methods to fulfill the conversion requests. The <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions)">convert()</a> method of this class converts the source document into the specified target format and saves the converted document at the given file path. It provides several overloaded <em>convert()</em> methods to convert supported file formats.</p>
+<h2 id="Convert-HTML-to-PDF-with-Advanced-Options-using-Java">Convert HTML to PDF with Advanced Options</h2>
+<p>You can use some advanced settings while converting the HTML files to PDF documents by following the steps given below:</p>
+<ol>
+<li>Create an instance of the <em><strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter">Converter</a></strong></em> class with the input file path</li>
+<li>Create an instance of <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/PdfConvertOptions"><strong><em>PdfConvertOptions</em></strong></a></li>
+<li>Set various options such as <em>Rotation</em>, <em>Dpi</em>, <em>Width</em>, <em>Height</em>, etc.</li>
+<li>Call the _<strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions)">convert()</a></strong> _method with the output file path and convert options</li>
+</ol>
+<p>The following code sample shows <strong>how to convert an HTML file to a PDF document with advanced settings.</strong></p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/09/Convert-HTML-to-PDF-with-Advanced-Options-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Convert HTML to PDF with Advanced Options using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/PdfConvertOptions">PdfConvertOptions</a> class provides several options to convert specified input files to PDF documents. I have used the following options:</p>
+<ul>
+<li><a href="https://apireference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/PdfConvertOptions#setWidth(int)">Width</a> — the setWidth() property sets the image width after conversion</li>
+<li><a href="https://apireference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/PdfConvertOptions#setHeight(int)">Height</a> — the setHeight() property sets the desired image height after conversion</li>
+<li><a href="https://apireference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/PdfConvertOptions#setDpi(double)">Dpi</a> — the setDpi() property sets the desired page DPI after conversion</li>
+<li><a href="https://apireference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/PdfConvertOptions#setPassword(java.lang.String)">Password</a> — the setPassword() property protects the converted document with a password</li>
+<li><a href="https://apireference.groupdocs.com/java/conversion/com.groupdocs.conversion.options.convert/PdfConvertOptions#setRotate(com.groupdocs.conversion.options.convert.Rotation)">Rotate</a> — the setRotate() property allows page rotation with the following available options: <em>None, On90, On180, On270</em></li>
+</ul>
+<p>You can find more details about “<a href="https://docs.groupdocs.com/conversion/java/convert-to-pdf-with-advanced-options/">Convert to PDF with Advanced Options</a>” in the documentation.</p>
+<h2 id="HTML-to-PDF-Conversion-from-a-URL">HTML to PDF Conversion from a URL</h2>
+<p>You can convert the HTML web pages from the live URLs to the PDF documents by following the steps given below:</p>
+<ol>
+<li>Provide URL to an input stream object and open the stream</li>
+<li>Create an instance of the <em><strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter">Converter</a></strong></em> class with the input stream object</li>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/PdfConvertOptions"><strong><em>PdfConvertOptions</em></strong></a></li>
+<li>Call the _<strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions)">convert()</a></strong> _method with the output file path and convert options</li>
+</ol>
+<p>The following code sample shows <strong>how to convert HTML from a web URL to a PDF document using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<h2 id="Convert-Specific-Page-Range-of-HTML-to-PDF-using-Java">Convert Specific Page Range of HTML to PDF</h2>
+<p>You can convert specific pages from multipage HTML documents to PDF documents by following the steps given below:</p>
+<ol>
+<li>Create an instance of the <em><strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter">Converter</a></strong></em> class with the input file path</li>
+<li>Create an instance of <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/PdfConvertOptions"><strong><em>PdfConvertOptions</em></strong></a></li>
+<li>Set page number to start conversion from</li>
+<li>Set pages count to convert total number of pages</li>
+<li>Call the _<strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions)">convert()</a></strong> _method with the output file path and convert options</li>
+</ol>
+<p>The following code sample shows <strong>how to convert specific pages from HTML to a PDF document using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<h2 id="Convert-HTML-to-PDF-and-Add-Watermark-using-Java">Convert HTML to PDF and Add Watermark</h2>
+<p>You can convert HTML files to watermarked PDF documents by following the steps given below:</p>
+<ol>
+<li>Create an instance of the <em><strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter">Converter</a></strong></em> class</li>
+<li>Provide the input file path to the constructor</li>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/PdfConvertOptions"><strong><em>PdfConvertOptions</em></strong></a></li>
+<li>Create an instance of the <strong><em><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/WatermarkOptions">WatermarkOptions</a></em></strong></li>
+<li>Set various options such as <em>Text</em>, <em>Color</em>, <em>Width</em>, <em>Height</em>, <em>RotatationAngle</em>, etc.</li>
+<li>Call the _<strong><a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion/Converter#convert(java.lang.String,%20com.groupdocs.conversion.options.convert.ConvertOptions)">convert()</a></strong> _method with the output file path and convert options</li>
+</ol>
+<p>The following code sample shows <strong>how to convert an HTML document to a watermarked PDF document using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/09/Convert-HTML-to-PDF-and-Add-Watermark-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Convert HTML to PDF and Add Watermark using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.groupdocs.com/conversion/java/com.groupdocs.conversion.options.convert/WatermarkOptions">WatermarkOptions</a> class provides several options to add watermark to the converted documents. It enables you to add text or image watermarks to the converted documents.</p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to convert HTML to PDF documents</strong> using Java. You have also learned <strong>how to add watermarks to the converted PDF documents</strong>. Moreover, you have learned <strong>how to convert HTML using advanced PDF convert options</strong> programmatically. This article also explained <strong>how to convert HTML webpages from a live URL to a PDF document</strong> using Java. You can learn more about GroupDocs.Conversion Java API using the <a href="https://docs.groupdocs.com/conversion/java/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/conversion/11">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.conholdate.com/2021/07/26/convert-pdf-to-word-using-java/">Convert PDF to Word using Java</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Convert HTML to PDF using C# .NET API</title>
+      <link>/2021/04/08/convert-html-to-pdf-using-csharp-net-api/</link>
+      <pubDate>Thu, 08 Apr 2021 17:54:18 +0000</pubDate>
+      
+      <guid>/2021/04/08/convert-html-to-pdf-using-csharp-net-api/</guid>
+      <description>The PDF (Portable Document Format) is one of the widely used document formats for cross-platform data and information sharing. One of its unique capabilities includes that a document’s fidelity stays intact when viewing on any platform using the application as per Adobe specifications. Furthermore, the HTML (HyperText Markup Language) is also a leading file format for web page development and most web browsers support this format. However, PDF is widely accepted as it can be easily viewed on any device without losing document formatting.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>The <a href="https://docs.fileformat.com/pdf/">PDF</a> (<em>Portable Document Format</em>) is one of the widely used document formats for cross-platform data and information sharing. One of its unique capabilities includes that a document’s fidelity stays intact when viewing on any platform using the application as per Adobe specifications. Furthermore, the <a href="https://docs.fileformat.com/web/html/">HTML</a> (<em>HyperText Markup Language</em>) is also a leading file format for web page development and most web browsers support this format. However, PDF is widely accepted as it can be easily viewed on any device without losing document formatting. Therefore, in this article, we are going to discuss steps on how to convert the <a href="https://docs.fileformat.com/web/html/">HTML</a> file to <a href="https://docs.fileformat.com/pdf/">PDF</a> format using .NET API.</p>
+<ul>
+<li><a href="#C--API-to-Convert-HTML-to-PDF">C# API to Convert HTML to PDF</a></li>
+<li><a href="#Convert-HTML-to-PDF-in-C-">Convert HTML to PDF in C#</a></li>
+<li><a href="#Embed-fonts-during-conversion">Embed fonts during conversion</a></li>
+<li><a href="#Convert-Web-page-to-PDF">Convert Web pages to PDF</a></li>
+<li><a href="#Render-complete-HTML-on-a-single-page">Render complete HTML on a single page</a></li>
+</ul>
+<h2 id="C--API-to-Convert-HTML-to-PDF">C# API to Convert HTML to PDF</h2>
+<p>In order to perform the conversion operation, first, we need to install <a href="https://products.aspose.com/pdf/net">Aspose.PDF for .NET</a> on the system. The API is available on the <a href="https://www.nuget.org/packages/Aspose.PDF/">NuGet</a> library. Please run the following command on Package Manager Console to install it:</p>
+<!-- raw HTML omitted -->
+<p>Once the installation is complete, the Aspose.PDF for .NET will appear under the Packages folder in solution explorer.</p>
+<h2 id="Convert-HTML-to-PDF-in-C-">Convert HTML to PDF in C#</h2>
+<p>Given below are the steps on how you can Convert HTML to PDF using C#</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="Embed-fonts-during-conversion">Embed fonts during conversion</h2>
+<p>Most HTML pages often use fonts (i.g. fonts from local folders, Google Fonts, etc), and in order to preserve the layout of pages, the same fonts shall be embedded during the rendering process. So in order to control the embedding of fonts in the resultant document, we need to use <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/htmlloadoptions/properties/isembedfonts">IsEmbedFonts</a> property.</p>
+<!-- raw HTML omitted -->
+<p>The unit of measurement in Aspose.PDF is Points. And, we know that A3 measures 297 × 420 millimeters or 11.69 × 16.54 inches. So, the dimensions are rounded off to 842 × 1190 points. In the following code snippet, we are adjusting the page size of the resultant document as A3 and page orientation as Landscape.</p>
+<!-- raw HTML omitted -->
+<h2 id="Convert-Web-page-to-PDF">Convert Web page to PDF</h2>
+<p>Other than the conversion of HTML files, we may also have a requirement to directly convert a web page to PDF format. So in order to accomplish this requirement, first we will fetch the remote Web page contents using the HttpClient instance, create a Stream object and then pass the Stream instance to the Document object. The reason we need the content in Stream is that the Document instance only accepts files or steam objects.</p>
+<p>The following section explains the steps on how to convert a Web page to PDF using C#</p>
+<ol>
+<li>Read the contents of the page using an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclient?view=net-5.0">HttpClient</a> object</li>
+<li>Instantiate the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/htmlloadoptions"></a><a href="https://apireference.aspose.com/pdf/net/aspose.pdf/htmlloadoptions">HtmlLoadOptions</a> object and set the base URL</li>
+<li>Initialize a <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/document">Document</a> object and pass the stream object and <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/htmlloadoptions">HtmlLoadOptions</a> instance as arguments</li>
+<li>Call the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.document/save/methods/4">Save(String)</a> method from the Document class to generate the output</li>
+</ol>
+<!-- raw HTML omitted -->
+<h2 id="Render-complete-HTML-on-a-single-page">Render complete HTML on a single page</h2>
+<p>During the HTML to PDF conversion, the length of the resultant file is according to the content length of an input HTML document. Therefore, if the input HTML is comprised of multiple pages, then the resultant file will also span over multiple pages. However, we may confine the output to a single PDF page. In order to accomplish this requirement, the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/htmlloadoptions/properties/isrendertosinglepage">IsRenderToSinglePage</a> property of HtmlLoadOptions class can be used.</p>
+<p>Given below is the code snippet for rendering the complete HTML content on a single PDF page using C#.</p>
+<!-- raw HTML omitted -->
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You may request <!-- raw HTML omitted -->a free temporary license<!-- raw HTML omitted --> to try the API without any evaluation limitations.</p>
+<h2 id="Conclusion">Conclusion</h2>
+<p>In this article, we have learned about the approach of converting HTML files to PDF format using .NET API. If you are further interested to learn about other exciting features being offered by Aspose.PDF for .NET, please visit the <a href="https://docs.aspose.com/pdf/net/key-features/">Key features</a> page. A complete set of examples can be found over the <a href="https://github.com/aspose-pdf/Aspose.Pdf-for-.NET">GitHub repository</a>.</p>
+<h2 id="quick-tip">Quick Tip</h2>
+<p>We have also developed free online applications to quickly check the features being offered by our APIs. So you may check the <a href="https://products.aspose.app/pdf/conversion">Aspose.PDF Conversion App</a> to transform HTML file to PDF format. Furthermore, you may also use various other file formats and accomplish your conversion requirements.</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sign Documents using Java on Conholdate.Total</title>
+    <link>/tags/sign-documents-using-java/</link>
+    <description>Recent content in Sign Documents using Java on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 23 Apr 2021 07:09:03 +0000</lastBuildDate><atom:link href="/tags/sign-documents-using-java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sign Documents with Digital Signatures using Java</title>
+      <link>/2021/04/23/sign-documents-with-digital-signatures-using-java/</link>
+      <pubDate>Fri, 23 Apr 2021 07:09:03 +0000</pubDate>
+      
+      <guid>/2021/04/23/sign-documents-with-digital-signatures-using-java/</guid>
+      <description>Sign your PDF or Word documents with digital certificates programmatically in your Java application. This article will be focusing on &lt;!-- raw HTML omitted --&gt;how to electronically sign documents with digital signatures using Java&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>A digital signature is a mathematical technique to verify the document’s authenticity. For documents, the digital signature is represented by certificate with private and public keys. As a Java developer, you can easily sign your documents with digital certificates programmatically. This article will be focusing on <strong>how to electronically sign documents with digital signatures using Java</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#api-for-signing-documents">Java API for Signing Documents</a></li>
+<li><a href="#sign-pdf-documents">Sign PDF Documents with Digital Signatures using Java</a></li>
+<li><a href="#sign-word-documents">Sign Word Documents with Digital Signatures using Java</a></li>
+</ul>
+<h2 id="api-for-signing-documents">Java API for Signing Documents</h2>
+<p>I will be using <a href="https://products.groupdocs.com/signature/java">GroupDocs.Signature for Java</a> API for signing documents with the digital certificate. It helps you develop Java applications to electronically sign digital documents of <a href="https://docs.groupdocs.com/signature/java/supported-document-formats/">supported formats</a>. It also allows signing images and documents with Image, QR-Code, Barcode, Metadata, Text &amp; Stamp Type electronic signatures.</p>
+<h3 id="download-and-configure">Download and Configure</h3>
+<p>You can <a href="https://downloads.groupdocs.com/signature/java">download</a> the JAR of the API or just add the following <strong><em>pom.xml</em></strong> configuration in your Maven-based Java applications to try the below-mentioned code examples.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="sign-pdf-documents">Sign PDF Documents with Digital Signatures using Java</h2>
+<p>You can electronically sign your PDF documents with digital signatures by following the simple steps mentioned below:</p>
+<ul>
+<li>Create an instance of the _<a href="https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#Signature(java.lang.String)">Signature</a> _class</li>
+<li>Provide path of the PDF document</li>
+<li>Create an instance of the _<a href="https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/DigitalSignOptions#DigitalSignOptions(java.lang.String)">DigitalSignOptions</a> _class</li>
+<li>Provide the certificate file path</li>
+<li>Set the image file path</li>
+<li>Set required sign options such as position (Top, Left etc.)</li>
+<li>Then call the <a href="https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#sign(java.lang.String,%20com.groupdocs.signature.options.sign.SignOptions)"><em>Sign</em></a> method to sign the document</li>
+</ul>
+<p>The following code sample shows how to sign the PDF documents with the certificate using Java.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/04/Signed-PDF.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Sign PDF Document with Digital Certificate using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature">Signature</a> class is the main class that controls the document signing process. This class provides various methods to sign, verify, update and search signatures.</p>
+<p>The <a href="https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/DigitalSignOptions">DigitalSignOptions</a> class provides various methods to set and get sign options to represent digital signatures.</p>
+<h2 id="sign-word-documents">Sign Word Documents with Digital Signatures using Java</h2>
+<p>You can electronically sign your Word documents with digital signatures by following the simple steps mentioned below:</p>
+<ul>
+<li>Create an instance of the _<a href="https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#Signature(java.lang.String)">Signature</a> _class</li>
+<li>Provide path of the Word file</li>
+<li>Create an instance of the _<a href="https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/DigitalSignOptions#DigitalSignOptions(java.lang.String)">DigitalSignOptions</a> _class</li>
+<li>Provide the certificate file path</li>
+<li>Set the image file path</li>
+<li>Set required sign options such as position (Top, Left etc.)</li>
+<li>Then call the _<a href="https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#sign(java.lang.String,%20com.groupdocs.signature.options.sign.SignOptions)">Sign</a> _method to sign the document</li>
+</ul>
+<p>The following code sample shows how to sign the DOCX file with the certificate using Java.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/04/Sign-DOCX.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Sign Word documents with digital certificates using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to <strong>electronically</strong></strong> <strong>sign documents with digital signatures</strong> using Java. You can learn more about GroupDocs.Signature for Java API using the <a href="https://docs.groupdocs.com/signature/java/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/signature/">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.groupdocs.com/2021/03/11/sign-documents-with-digital-certificate-using-csharp/">Sign Documents with Digital Certificate using C#</a></li>
+<li><a href="https://blog.groupdocs.com/2021/02/19/generate-qr-codes-in-java-to-sign-documents-and-images/">Generate QR Codes in Java | Sign Documents and Images</a></li>
+<li><a href="https://blog.groupdocs.cloud/2021/03/06/sign-pdf-documents-with-qr-code-using-python/">Sign PDF Documents with QR Code using REST API in Python</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

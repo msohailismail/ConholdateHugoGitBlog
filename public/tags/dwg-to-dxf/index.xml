@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>DWG to DXF on Conholdate.Total</title>
+    <link>/tags/dwg-to-dxf/</link>
+    <description>Recent content in DWG to DXF on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 28 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/dwg-to-dxf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Convert DWG to DXF in C#</title>
+      <link>/conholdate.total/dwg-to-dxf-csharp/</link>
+      <pubDate>Tue, 28 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/conholdate.total/dwg-to-dxf-csharp/</guid>
+      <description>DWG files are technical drawings often used by engineers, architects, or other construction-related professionals. They are used to create 2D or 3D designs. In certain situations, you might need to convert a DWG file to a DXF file. DXF files are used for exchanging drawing information between different CAD-related applications. Moreover, these file formats are commonly used for product designs. This article covers how to convert DWG to DXF image programmatically using C#.</description>
+      <content:encoded><![CDATA[<p><img loading="lazy" src="images/DWG-to-DXF-1.jpg#center" alt="Convert DWG to DXF in C#"  title="Convert DWG to DXF in C#"  />
+</p>
+<p><a href="https://docs.fileformat.com/cad/dwg/">DWG</a> files are technical drawings often used by engineers, architects, or other construction-related professionals. They are used to create 2D or 3D designs. In certain situations, you might need to convert a DWG file to a <a href="https://docs.fileformat.com/cad/dxf/">DXF</a> file. DXF files are used for exchanging drawing information between different CAD-related applications. Moreover, these file formats are commonly used for product designs. This article covers how to convert DWG to DXF image programmatically using C#.</p>
+<ul>
+<li><a href="#dwg-to-dxf-conversion-csharp-api-installation">DWG to DXF Conversion – C# API Installation</a></li>
+<li><a href="#convert-dwg-to-dxf-programmatically-using-csharp">Convert DWG to DXF Programmatically using C#</a></li>
+</ul>
+<h2 id="dwg-to-dxf-conversion-csharp-api-installation">DWG to DXF Conversion – C# API Installation</h2>
+<p><a href="https://products.aspose.com/cad/net/">Aspose.CAD for .NET</a> API supports creating, editing, or manipulating DWG and several other <a href="https://docs.aspose.com/cad/net/supported-file-formats/">file formats</a>. You can install the API by downloading the DLL file from the <a href="https://downloads.aspose.com/cad/net">New Releases</a> section, or with the following <a href="https://www.nuget.org/packages/Aspose.CAD/">NuGet</a> installation command:</p>
+<p><code>PM&gt; Install-Package Aspose.CAD</code></p>
+<h2 id="convert-dwg-to-dxf-programmatically-using-csharp">Convert DWG to DXF Programmatically in C#</h2>
+<p>DWG to DXF conversion includes a few simple operations. You can convert DWG to DXF with the following steps:</p>
+<ol>
+<li>Load the input DWG file with the <a href="https://apireference.aspose.com/cad/net/aspose.cad/image">Image</a> class.</li>
+<li>Save the output DXF file.</li>
+</ol>
+<p>The following code snippet demonstrates how to convert a DWG file to DXF in C#:</p>
+<script type="application/javascript" src="https://gist.github.com/aspose-com-gists/e836590bf14ae7c350aeadb6d0c67526.js?file=Convert%20DWG%20to%20DXF%20csharp.cs"></script>
+
+<h2 id="explore-more-features">Explore More Features</h2>
+<p>You can check many other features of the API by going through the <a href="https://docs.aspose.com/cad/net/">documentation</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned how to convert DWG to a DXF file. DXF files are popular because they are open-source. Therefore, they can be created or manipulated without depending upon Autodesk programs. You can integrate this feature in your .NET framework or .NET Core based applications. Furthermore, you do not need to install any other tool or application to perform the conversion. Please let us know your feedback or queries via the <a href="https://forum.aspose.com/c/cad">forum</a>. We look forward to assisting you.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.aspose.com/2021/11/04/convert-ifc-png-jpg-image-csharp/">Convert IFC to JPG or PNG Image using C#</a></li>
+<li><a href="https://blog.aspose.com/2021/10/07/convert-dgn-to-png-jpeg-tiff-csharp/">Convert DGN to JPEG, PNG, or TIFF Image in C#</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hide Rows in Excel on Conholdate.Total</title>
+    <link>/tags/hide-rows-in-excel/</link>
+    <description>Recent content in Hide Rows in Excel on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 28 Sep 2021 05:53:10 +0000</lastBuildDate><atom:link href="/tags/hide-rows-in-excel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hide and Show Rows or Columns in Excel using C#</title>
+      <link>/2021/09/28/hide-and-show-rows-or-columns-in-excel-using-csharp/</link>
+      <pubDate>Tue, 28 Sep 2021 05:53:10 +0000</pubDate>
+      
+      <guid>/2021/09/28/hide-and-show-rows-or-columns-in-excel-using-csharp/</guid>
+      <description>As a C# developer, you can easily hide and show the rows or columns in the Excel worksheets programmatically. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to hide and show rows or columns of an Excel sheet using C#&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>As a C# developer, you can easily hide and show the rows or columns in the Excel worksheets programmatically. In this article, you will learn <strong>how to hide and show rows or columns of an Excel sheet using C#</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#CSharp-API-to-Hide-and-Show-Rows-or-Columns">C# API to Hide and Show Rows or Columns</a></li>
+<li><a href="#Hide-Rows-and-Columns-using-CSharp">Hide Rows and Columns using C#</a></li>
+<li><a href="#Show-Hidden-Rows-and-Columns-using-CSharp">Show Hidden Rows and Columns using C#</a></li>
+<li><a href="#Hide-Multiple-Rows-and-Columns-using-CSharp">Hide Multiple Rows and Columns using C#</a></li>
+<li><a href="#Show-All-Hidden-Rows-and-Columns-using-CSharp">Show All Hidden Rows and Columns using C#</a></li>
+</ul>
+<h2 id="CSharp-API-to-Hide-and-Show-Rows-or-Columns">C# API to Hide and Show Rows or Columns</h2>
+<p>For hiding and showing the rows and columns in an <a href="https://docs.fileformat.com/spreadsheet/xlsx/">Excel</a> sheet, I will be using <a href="https://products.aspose.com/cells/net/">Aspose.Cells for .NET API</a>. It is a well-known spreadsheet manipulation API that lets you create and process Excel files from within your .NET applications. The API allows you to hide any of the rows and columns in the Excel files or show the hidden rows and columns programmatically.</p>
+<p>You can either <a href="https://downloads.aspose.com/cells/net">download</a> the DLL of the API or install it using <a href="https://www.nuget.org/packages/aspose.cells">NuGet</a>.</p>
+<!-- raw HTML omitted -->
+<h2 id="Hide-Rows-and-Columns-using-CSharp">Hide Rows and Columns using C#</h2>
+<p>You can hide rows and columns in Excel sheets programmatically by following the steps mentioned below:</p>
+<ul>
+<li>Create an instance of the <a href="https://apireference.aspose.com/cells/net/aspose.cells/workbook">Workbook</a> class with the input file path.</li>
+<li>Create an instance of the <a href="https://apireference.aspose.com/cells/net/aspose.cells/worksheet">Worksheet</a> class.</li>
+<li>Access the worksheet from <a href="https://apireference.aspose.com/cells/net/aspose.cells/workbook/properties/worksheets">Worksheets</a> collection by its index.</li>
+<li>Hide the row by calling the <a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/hiderow">HideRow()</a> method and pass the row index to hide.</li>
+<li>Hide the column by calling the <a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/hidecolumn">HideColumn()</a> method and pass the column index to hide.</li>
+<li>Call the <em><a href="https://apireference.aspose.com/cells/net/aspose.cells.workbook/save/methods/2">Save()</a></em> method with the output file path.</li>
+</ul>
+<p>The following code sample shows <strong>how to hide the rows and columns in an Excel sheet using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/09/Hide-Rows-and-Columns-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Hide Rows and Columns using C#.<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.aspose.com/cells/net/aspose.cells/workbook">Workbook</a> class represents an Excel workbook and provides several properties and methods to work with the workbook. The <a href="https://apireference.aspose.com/cells/net/aspose.cells/workbook/properties/worksheets">Worksheets</a> property of this class represents the collection of available worksheets. The <a href="https://apireference.aspose.com/cells/net/aspose.cells/worksheet">Worksheet</a> class represents a single worksheet of an Excel workbook. It exposes several properties and methods to perform various operations on the worksheet. The <a href="https://apireference.aspose.com/cells/net/aspose.cells/worksheet/properties/cells">Cells</a> property of this class represents a collection of cells available in the worksheet.</p>
+<p>The <a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/hiderow">HideRow()</a> method of the <a href="https://apireference.aspose.com/cells/net/aspose.cells/cells">Cells</a> class hides a specific row. It takes a row index as an input parameter to hide that row. The Cells class also provides the <a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/hidecolumn">HideColumn()</a> method to hide a specific column based on the column index provided as an input parameter.</p>
+<p>The <a href="https://apireference.aspose.com/cells/net/aspose.cells.workbook/save/methods/2">Save()</a> method of the Workbook class saves the workbook at the specified file path provided as an input parameter.</p>
+<h2 id="Show-Hidden-Rows-and-Columns-using-CSharp">Show Hidden Rows and Columns using C#</h2>
+<p>You can show the specific hidden rows and columns in Excel sheets programmatically by following the steps mentioned below:</p>
+<ul>
+<li>Create an instance of the <a href="https://apireference.aspose.com/cells/net/aspose.cells/workbook">Workbook</a> class with the input file path.</li>
+<li>Create an instance of the <a href="https://apireference.aspose.com/cells/net/aspose.cells/worksheet">Worksheet</a> class.</li>
+<li>Access the worksheet from <a href="https://apireference.aspose.com/cells/net/aspose.cells/workbook/properties/worksheets">Worksheets</a> collection by its index.</li>
+<li>Show the hidden row by calling the <a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/unhiderow">UnhideRow()</a> method</li>
+<li>Pass the row index of the hidden row and row height to set.</li>
+<li>Show the hidden column by calling the <a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/unhidecolumn">UnhideColumn()</a> method</li>
+<li>Pass the column index of the hidden column and column width to set.</li>
+<li>Call the <em><a href="https://apireference.aspose.com/cells/net/aspose.cells.workbook/save/methods/2">Save()</a></em> method with the output file path.</li>
+</ul>
+<p>The following code sample shows <strong>how to show the specific</strong> <strong>hidden rows and columns in an Excel sheet using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/09/Show-Hidden-Rows-and-Columns-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Show Hidden Rows and Columns using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/unhiderow">UnhideRow()</a> method of the <a href="https://apireference.aspose.com/cells/net/aspose.cells/cells">Cells</a> class shows a specific hidden row in the worksheet. It takes a row index of a hidden row as an input parameter to make it visible. The Cells class also provides the <a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/unhidecolumn">unhideColumn()</a> method to show a hidden column based on the column index provided as an input parameter.</p>
+<h2 id="Hide-Multiple-Rows-and-Columns-using-CSharp">Hide Multiple Rows and Columns using C#</h2>
+<p>You can hide multiple rows and columns in Excel sheets programmatically by following the steps mentioned below:</p>
+<ul>
+<li>Create an instance of the <a href="https://apireference.aspose.com/cells/net/aspose.cells/workbook">Workbook</a> class with the input file path.</li>
+<li>Create an instance of the <a href="https://apireference.aspose.com/cells/net/aspose.cells/worksheet">Worksheet</a> class.</li>
+<li>Access the worksheet from <a href="https://apireference.aspose.com/cells/net/aspose.cells/workbook/properties/worksheets">Worksheets</a> collection by its index.</li>
+<li>Call the <a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/hiderows">HideRows()</a> method, pass the starting row index and total rows to hide.</li>
+<li>Call the <a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/hidecolumns">HideColumns()</a> method, pass the starting column index and total columns to hide.</li>
+<li>Save by calling the <em><a href="https://apireference.aspose.com/cells/net/aspose.cells.workbook/save/methods/2">Save()</a></em> method with the output file path.</li>
+</ul>
+<p>The following code sample shows <strong>how to hide multiple rows and columns in an Excel sheet using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/09/Hide-Multiple-Rows-and-Columns-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Hide Multiple Rows and Columns using C#.<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The Cells class provides the <a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/hiderows">HideRows()</a> method to hide multiple rows. You need to specify the starting row index and the total number of rows to hide as input parameters. Similarly, for hiding multiple columns, the Cells class provides the <a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/hidecolumns">HideColumns()</a> method that takes the column index and the total number of columns to hide as input parameters.</p>
+<h2 id="Show-All-Hidden-Rows-and-Columns-using-CSharp">Show All Hidden Rows and Columns using C#</h2>
+<p>You can show all the hidden rows and columns in Excel sheets programmatically by following the steps mentioned below:</p>
+<ul>
+<li>Create an instance of the <a href="https://apireference.aspose.com/cells/net/aspose.cells/workbook">Workbook</a> class with the input file path.</li>
+<li>Create an instance of the <a href="https://apireference.aspose.com/cells/net/aspose.cells/worksheet">Worksheet</a> class.</li>
+<li>Access the worksheet from <a href="https://apireference.aspose.com/cells/net/aspose.cells/workbook/properties/worksheets">Worksheets</a> collection by its index.</li>
+<li>Check <a href="https://apireference.aspose.com/cells/net/aspose.cells/row/properties/ishidden">IsHidden</a> property for all rows one by one, if true then
+<ul>
+<li>Call the <a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/unhiderow">UnhideRow()</a> method with row index and row height to set.</li>
+</ul>
+</li>
+<li>Check <a href="https://apireference.aspose.com/cells/net/aspose.cells/column/properties/ishidden">IsHidden</a> property for all columns one by one, if true then
+<ul>
+<li>Call the <a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/unhidecolumn">UnhideColumn()</a> method with column index and column width to set.</li>
+</ul>
+</li>
+<li>Call the <em><a href="https://apireference.aspose.com/cells/net/aspose.cells.workbook/save/methods/2">Save()</a></em> method with the output file path.</li>
+</ul>
+<p>The following code sample shows <strong>how to show all the hidden rows and columns in an Excel sheet using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/09/Show-All-Rows-and-Columns-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Show All Hidden Rows and Columns using C#.<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.aspose.com/cells/net/aspose.cells/row/properties/ishidden">IsHidden</a> property of the <a href="https://apireference.aspose.com/cells/net/aspose.cells/row">Row</a> class indicates whether the row is hidden. Similarly, the <a href="https://apireference.aspose.com/cells/net/aspose.cells/column/properties/ishidden">IsHidden</a> property of the <a href="https://apireference.aspose.com/cells/net/aspose.cells/column">Column</a> class indicates whether the column is hidden.</p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.aspose.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to hide columns and rows in Excel files</strong> using C#. You have also learned <strong>how to show hidden columns and rows in Excel files</strong> programmatically. Moreover, you have learned <strong>how to hide multiple rows and columns in an Excel sheet</strong>. This article also explained <strong>how to show all hidden rows and columns in Excel using C#</strong>. You can learn more about Aspose.Cells for .NET API using the <a href="https://docs.aspose.com/cells/net/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.aspose.com/c/cells/9">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.conholdate.com/2020/12/25/delete-blank-rows-and-columns-in-excel-using-csharp/">Delete Blank Rows and Columns in Excel using C#</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Compare Multiple DOCX Files on Conholdate.Total</title>
+    <link>/tags/compare-multiple-docx-files/</link>
+    <description>Recent content in Compare Multiple DOCX Files on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Oct 2021 10:14:16 +0000</lastBuildDate><atom:link href="/tags/compare-multiple-docx-files/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Compare Two or More Word Documents using C#</title>
+      <link>/2021/10/01/compare-two-or-more-word-documents-using-csharp/</link>
+      <pubDate>Fri, 01 Oct 2021 10:14:16 +0000</pubDate>
+      
+      <guid>/2021/10/01/compare-two-or-more-word-documents-using-csharp/</guid>
+      <description>As a C# developer, you can easily compare two or more Word documents or compare multiple versions of the same Word file for the differences and similarities programmatically in your .NET applications. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to compare two or more Word documents and highlight differences using C#&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>You can easily compare two or more Word documents or compare multiple versions of the same Word file for the differences and similarities programmatically in your .NET applications. In this article, you will learn <strong>how to compare two or more Word documents and highlight differences using C#</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#CSharp-API-to-Compare-DOCX-Files">C# API to Compare DOCX Files</a></li>
+<li><a href="#Compare-Word-Documents-using-CSharp">Compare Two or More Word Documents using C#</a></li>
+<li><a href="#Compare-Word-Documents-using-Stream-in-CSharp">Compare Word Documents using Stream in C#</a></li>
+<li><a href="#Get-Text-of-the-Changes-using-CSharp">Get Text of the Changes using C#</a></li>
+<li><a href="#Documents-Properties-Comparison-using-CSharp">Documents Properties Comparison using C#</a></li>
+<li><a href="#Compare-Password-Protected-Word-Documents-using-CSharp">Compare Password Protected Word Documents using C#</a></li>
+<li><a href="#Compare-Bookmarks-in-Word-Documents-using-CSharp">Compare Bookmarks in Word Documents using C#</a></li>
+</ul>
+<h2 id="CSharp-API-to-Compare-DOCX-Files">C# API to Compare DOCX Files</h2>
+<p>For comparing two or more <a href="https://docs.fileformat.com/word-processing/docx/">DOCX</a> files, I will be using <a href="https://products.groupdocs.com/comparison/net">GroupDocs.Comparison for .NET API</a>. It compares two or more documents and finds out the changes in the content of the documents for words, paragraphs, and characters. As a result, it produces a comparison document that highlights the differences and lists a summary of the differences. It also enables you to detect changes and differences in text style between similar document formats. The API supports comparing all industry-standard document formats such as PDF, HTML, Word, Excel, PowerPoint, Outlook emails, Visio diagrams, OpenDocument, AutoCAD, and images.</p>
+<p>You can either <a href="https://downloads.groupdocs.com/comparison/net">download</a> the DLL of the API or install it using <a href="https://www.nuget.org/packages/groupdocs.comparison">NuGet</a>.</p>
+<!-- raw HTML omitted -->
+<h2 id="Compare-Word-Documents-using-CSharp">Compare Two or More Word Documents using C#</h2>
+<p>You can compare two or more Word documents programmatically by following the simple steps given below:</p>
+<ol>
+<li>Create an instance of the _<strong><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison/comparer">Comparer</a> </strong>_class with the source DOCX file path</li>
+<li>Call the <strong><em><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.comparer/add/methods/2">Add()</a></em></strong> method with the target DOCX file to add to the comparison</li>
+<li>Repeat the above step to add more files in comparison</li>
+<li>Call the <em><strong><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.comparer/compare/methods/7">Compare()</a></strong></em> method with the output file path</li>
+</ol>
+<p>The following code sample shows <strong>how to compare two or more Word documents and highlights the differences using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/10/source_and_target_docx_files.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Source and Target DOCX Files<!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted --><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/10/Compare-Word-Documents-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Compare Two or More Word Documents using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The resulting document also includes a summary page at the end of the document that shows the summary of all the changes found in the comparison.</p>
+<p>The <a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison/comparer">Comparer</a>_** **_class is the main class that enables you to control and execute the comparison process. It provides several methods to compare two or more documents. The <a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.comparer/add/methods/2">Add()</a> method of this class, adds a file to the comparison process. You can easily add multiple files to the comparison by using the Add() method as shown below:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>The <a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.comparer/compare/methods/7">Compare()</a> method of the <a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison/comparer">Comparer</a> class compares the source and target documents. This method highlights the differences and saves results to the file path provided as an input parameter.</p>
+<h2 id="Compare-Word-Documents-using-Stream-in-CSharp">Compare Word Documents using Stream in C#</h2>
+<p>You can compare two or more Word documents using FileStream by following the steps given below:</p>
+<ol>
+<li>Read source file in a Stream object</li>
+<li>Read target file in another Stream object</li>
+<li>Create an instance of the _<strong><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison/comparer">Comparer</a> </strong>_class with the source Stream object</li>
+<li>Call the <strong><em><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.comparer/add/methods/2">Add()</a></em></strong> method with the target Stream object to add to the comparison</li>
+<li>Call the <em><strong><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.comparer/compare/methods/7">Compare()</a></strong></em> method with the output file path</li>
+</ol>
+<p>The following code sample shows <strong>how to compare Word documents using FileStream in C#</strong>.</p>
+<!-- raw HTML omitted -->
+<h2 id="Get-Text-of-the-Changes-using-CSharp">Get Text of the Changes using C#</h2>
+<p>You can get the text of the changes found in the comparison of Word documents programmatically by following the simple steps given below:</p>
+<ol>
+<li>Create an instance of the _<strong><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison/comparer">Comparer</a> </strong>_class with the source DOCX file path</li>
+<li>Call the <strong><em><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.comparer/add/methods/2">Add()</a></em></strong> method with the target DOCX file to add to the comparison</li>
+<li>Repeat the above step to add more files in comparison</li>
+<li>Call the <em><strong><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.comparer/compare/methods/7">Compare()</a></strong></em> method</li>
+<li>Call the <strong><em><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison/comparer/methods/getchanges">GetChanges()</a></em></strong> method to get the details of changes</li>
+<li>Show the changes</li>
+</ol>
+<p>The following code sample shows <strong>how to get the text of the changes using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>You can get a list of changes between source and target files by calling the <a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison/comparer/methods/getchanges">GetChanges()</a> method of the <a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison/comparer">Comparer</a> class. It returns a list of <a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.result/changeinfo">ChangeInfo</a> objects. The <a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.result/changeinfo">ChangeInfo</a>_ _class represents information about the changes and provides various properties to get details of the changes such as <a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.result/changeinfo/properties/text">Text</a>, <a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.result/changeinfo/properties/type">Type</a>, etc.</p>
+<h2 id="Documents-Properties-Comparison-using-CSharp">Documents Properties Comparison using C#</h2>
+<p>You can compare built-in, custom properties and variable properties of Word documents programmatically by following the steps given below:</p>
+<ol>
+<li>Create an instance of the _<strong><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison/comparer">Comparer</a> </strong>_class with the source DOCX file path</li>
+<li>Call the <strong><em><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.comparer/add/methods/2">Add()</a></em></strong> method with the target DOCX file to add to the comparison</li>
+<li>Repeat the above step to add more files in comparison</li>
+<li>Create an instance of the <strong><em><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions">CompareOptions</a></em></strong></li>
+<li>Set the <a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions/properties/comparevariableproperty">CompareVariableProperty</a> to true</li>
+<li>Set the <a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions/properties/comparedocumentproperty">CompareDocumentProperty</a> to true</li>
+<li>Call the <em><strong><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.comparer/compare/methods/8">Compare()</a></strong></em> method with the output file path and <strong><em>CompareOptions</em></strong></li>
+</ol>
+<p>The following code sample shows <strong>how to compare documents properties using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/10/Documents-Properties-Comparison-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Documents Properties Comparison using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>You can enhance your comparison process by applying various compare options. For this purpose, the <a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions"><strong>CompareOptions</strong></a> class allows setting various compare options to achieve specific results. The <a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions/properties/comparedocumentproperty">CompareDocumentProperty</a> of this class enables you to turn on the comparison of built-in and custom properties in Word format. The <a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions/properties/comparevariableproperty">CompareVariableProperty</a> allows turning on the comparison of variables properties in Word format.</p>
+<h2 id="Compare-Password-Protected-Word-Documents-using-CSharp">Compare Password Protected Word Documents using C#</h2>
+<p>You can compare two or more password-protected Word documents programmatically by following the steps given below:</p>
+<ol>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/loadoptions"><em><strong>LoadOptions</strong></em></a> class</li>
+<li>Provide the password for the source file</li>
+<li>Create an instance of the _<strong><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison/comparer">Comparer</a> </strong>_class with the source DOCX file path and <strong><em>LoadOptions</em></strong></li>
+<li>Call the <strong><em><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.comparer/add/methods/2">Add()</a></em></strong> method with the target DOCX file path and <strong><em>LoadOptions</em></strong> instance with password</li>
+<li>Repeat the above step to add more files in comparison</li>
+<li>Call the <em><strong><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.comparer/compare/methods/7">Compare()</a></strong></em> method with the output file path</li>
+</ol>
+<p>The following code sample shows <strong>how to compare password-protected Word documents using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p>The <a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/loadoptions"><strong>LoadOptions</strong></a> class enables you to specify additional options while loading a document. It provides the following properties to specify:</p>
+<ul>
+<li>FontDirectories — List of font directories to load.</li>
+<li>LoadText — Indicates that the strings passed are comparison text, not file paths (for Text Comparison only).</li>
+<li>Password — Password of document.</li>
+</ul>
+<h2 id="Compare-Bookmarks-in-Word-Documents-using-CSharp">Compare Bookmarks in Word Documents using C#</h2>
+<p>You can compare bookmarks available in Word documents programmatically by following the steps given below:</p>
+<ol>
+<li>Create an instance of the _<strong><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison/comparer">Comparer</a> </strong>_class with the source DOCX file path</li>
+<li>Call the <strong><em><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.comparer/add/methods/2">Add()</a></em></strong> method with the target DOCX file to add to the comparison</li>
+<li>Repeat the above step to add more files in comparison</li>
+<li>Create an instance of the <strong><em><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions">CompareOptions</a></em></strong></li>
+<li>Set the <a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions/properties/comparebookmarks">CompareBookmarks</a> to true</li>
+<li>Call the <em><strong><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.comparer/compare/methods/8">Compare()</a></strong></em> method with the output file path and <strong><em>CompareOptions</em></strong></li>
+</ol>
+<p>The following code sample shows <strong>how to compare bookmarks in Word documents using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/10/Compare-Bookmarks-in-Word-Documents-using-CSharp-1.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Compare Bookmarks in Word Documents using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.options/compareoptions/properties/comparebookmarks">CompareBookmarks</a> property allows you to compare the bookmarks available in the source and target documents.</p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to compare two or more Word documents and highlight</strong> <strong>differences</strong> using C#. You have also learned <strong>how to get the list of highlighted changes.</strong> Moreover, you have learned <strong>how to compare bookmarks in Word documents</strong> programmatically. Furthermore, you have learned <strong>how to compare password-protected Word documents using C#</strong>. You can learn more about GroupDocs.Comparison for .NET API using the <a href="https://docs.groupdocs.com/comparison/net/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/comparison/">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.conholdate.com/2021/04/14/compare-pdf-files-and-highlight-differences-using-csharp/">Compare PDF Files using C# and Highlight Differences</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Compare Word Documents and Highlight Differences using Java</title>
+      <link>/2021/08/03/compare-word-documents-and-highlight-differences-using-java/</link>
+      <pubDate>Tue, 03 Aug 2021 17:17:27 +0000</pubDate>
+      
+      <guid>/2021/08/03/compare-word-documents-and-highlight-differences-using-java/</guid>
+      <description>As a Java developer, you can easily compare your two or more Word documents programmatically. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to compare two or more Word documents and highlight differences using Java&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>You can easily compare two or more Word documents and highlight the differences programmatically. You may need to compare multiple versions of the same Word file or different files for the differences and similarities in your Java application. In this article, you will learn <strong>how to compare two or more Word documents and highlight differences using Java</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#java-comparison-api">Java API to Compare Word Documents</a></li>
+<li><a href="#Compare-Word-Documents-using-Java">Compare Word Documents using Java</a></li>
+<li><a href="#Get-Changes-Text-using-Java">Get Text of the Changes using Java</a></li>
+<li><a href="#Compare-Bookmarks-in-Word-Documents-using-Java">Compare Bookmarks in Word Documents</a></li>
+</ul>
+<h2 id="java-comparison-api">Java API to Compare Word Documents</h2>
+<p>I will be using <a href="https://products.groupdocs.com/comparison/java">GroupDocs.Comparison for Java API</a> for comparing the <a href="https://docs.fileformat.com/word-processing/docx/">DOCX</a> documents. It compares to detect content changes for words, paragraphs, and characters while providing a comparison document that lists a summary of differences. It also enables you to detect changes and differences in text style between similar document formats. The API supports comparing all industry-standard document formats such as PDF, HTML, Word, Excel, PowerPoint, Outlook emails, Visio diagrams, OpenDocument, AutoCAD, and images.</p>
+<p>You can <a href="https://downloads.groupdocs.com/comparison/java">download</a> the JAR of the API or just add the following <strong><em>pom.xml</em></strong> configuration in your Maven-based Java application to try the below-mentioned code examples.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="Compare-Word-Documents-using-Java">Compare Word Documents using Java</h2>
+<p>You can compare two or more Word documents by following the simple steps given below:</p>
+<ol>
+<li>Create an instance of the _<strong><a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer">Comparer</a> </strong>_class</li>
+<li>Provide the source DOCX file path to the constructor</li>
+<li><strong><em><a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#add(java.nio.file.Path)">Add</a></em></strong> target DOCX file to the comparison</li>
+<li>Call the <em><strong><a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#Comparer(java.lang.String)">Compare()</a></strong></em> method along with the output file path</li>
+</ol>
+<p>The following code sample shows <strong>how to compare Word documents and highlights the differences using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/08/source-and-target-word-documents.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Source and Target Documents<!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted --><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/08/result.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Compare Two Word Documents using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The resulting document also includes a summary page at the end of the document. It shows the summary of all the changes.</p>
+<p>The <strong><a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer">Comparer</a></strong> class is the main class that controls the documents comparison process. The <a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#Comparer(java.lang.String)">Compare()</a> method of this class compares the source and target documents. This method saves results to the file path provided as an input parameter. The <a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#add(java.nio.file.Path)">Add()</a> method of this class, adds a file to the comparison process. You can easily add multiple files to the comparison by using the Add() method as shown below:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="Get-Changes-Text-using-Java">Get Text of the Changes using Java</h2>
+<p>You can get the text of the changes programmatically by following the simple steps given below:</p>
+<ol>
+<li>Create an instance of the _<strong><a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer">Comparer</a> </strong>_class</li>
+<li>Provide the source DOCX file path to the constructor</li>
+<li><em><strong><a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#add(java.nio.file.Path)">Add</a></strong></em> target DOCX file to the comparison</li>
+<li>Call the _<strong><a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#Comparer(java.lang.String)">Compare()</a> </strong>_method</li>
+<li>Call the <strong><em><a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#getChanges()">getChanges()</a></em></strong> method and get the details of changes</li>
+<li>Show the changes</li>
+</ol>
+<p>The following code sample shows <strong>how to get the text of the changes using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>You can get a list of changes between source and target files by calling the <strong><a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#getChanges()">getChanges()</a></strong> method of the <em>Comparer</em> class. It returns a list of <a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.result/ChangeInfo">ChangeInfo</a> objects. The <em>ChangeInfo</em> class provides methods to get details of the changes such as <a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.result/ChangeInfo#getText()"><em>getText()</em></a> to get the text of a specific change.</p>
+<h2 id="Compare-Bookmarks-in-Word-Documents-using-Java">Compare Bookmarks in Word Documents</h2>
+<p>You can compare bookmarks present in Word documents programmatically by following the simple steps given below:</p>
+<ol>
+<li>Create an instance of the _**<a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer">Comparer</a> **_class</li>
+<li>Provide the source DOCX file path to the constructor</li>
+<li><strong><em><a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#add(java.nio.file.Path)">Add</a></em></strong> target DOCX file to the comparison</li>
+<li>Create an instance of the <strong><em><a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options/CompareOptions">CompareOptions</a></em></strong></li>
+<li>Set the <em><strong><a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options/CompareOptions#setCompareBookmarks(boolean)">CompareBookmarks</a></strong></em> to true</li>
+<li>Call the <a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#compare(java.lang.String,%20com.groupdocs.comparison.options.CompareOptions)"><strong><em>Compare()</em></strong></a> method along with the output file path and <em>CompareOptions</em> object</li>
+</ol>
+<p>The following code sample shows <strong>how to compare bookmarks in Word documents using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/08/Compare-Bookmarks-in-Word-Documents-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Compare Bookmarks in Word Documents using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>You can enhance your comparison process by applying various compare options. For this purpose, the <a href="https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options/CompareOptions"><strong>CompareOptions</strong></a> class enables you to set different compare options by providing various methods. The <em>setCompareBookmarks()</em> method enables you to compare the bookmarks available in the source and target documents.</p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to compare two or more Word documents and highlight</strong> <strong>differences</strong> using Java. You have also learned <strong>how to get the text of highlighted changes.</strong> Moreover, you have learned <strong>how to compare bookmarks in Word documents</strong> programmatically. You can learn more about GroupDocs.Comparison for Java API using the <a href="https://docs.groupdocs.com/comparison/java/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/comparison/">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.groupdocs.com/2021/06/16/compare-images-in-java/">Compare Images in Java to Highlight Differences</a></li>
+<li><a href="https://blog.groupdocs.com/2020/07/15/compare-text-word-pdf-files-with-java-difference-library/">Compare Text, Word, and PDF files using Java Comparison Library</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

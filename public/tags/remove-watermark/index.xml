@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>remove watermark on Conholdate.Total</title>
+    <link>/tags/remove-watermark/</link>
+    <description>Recent content in remove watermark on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 May 2021 09:39:06 +0000</lastBuildDate><atom:link href="/tags/remove-watermark/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Remove Watermarks from PDF Documents using Java</title>
+      <link>/2021/05/28/remove-watermarks-from-pdf-documents-using-java/</link>
+      <pubDate>Fri, 28 May 2021 09:39:06 +0000</pubDate>
+      
+      <guid>/2021/05/28/remove-watermarks-from-pdf-documents-using-java/</guid>
+      <description>You can easily remove watermarks from documents programmatically. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to remove watermarks from PDF documents using Java&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>The watermark image or text is used to identify the document’s author or copyright information. You can detect all the available watermarks in a document and then remove them. As a Java developer, you can easily remove watermarks from documents programmatically. In this article, you will learn <strong>how to remove watermarks from PDF documents using Java</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="https://blog.conholdate.com/2021/05/21/extract-text-from-doc-or-docx-using-csharp/#api-for-extracting-text">Java API for Watermark Removal</a></li>
+<li><a href="#Remove-All-Watermarks-from-PDF-using-Java">Remove All Watermarks from PDF using Java</a></li>
+<li><a href="#Text-Only-Watermarks-Removal-from-PDF-using-Java">Text Only Watermarks Removal from PDF using Java</a></li>
+<li><a href="#Remove-Watermark-with-Particular-Text-Formatting">Remove Watermarks with Particular Text Formatting</a></li>
+<li><a href="#Image-Only-Watermarks-Removal-from-PDF-using-Java">Image Only Watermarks Removal from PDF using Java</a></li>
+</ul>
+<h2 id="api-for-extracting-text">Java API for Watermark Removal</h2>
+<p>I will be using <a href="https://products.groupdocs.com/watermark/java">GroupDocs.Watermark for Java</a> API for removing watermarks from <a href="https://docs.fileformat.com/pdf/">PDF</a> documents. It allows performing image and text watermarking operations. It also enables you to apply new watermarks, search and delete existing watermarks in files of supported formats such as Word, Excel, Powerpoint, and PDF.</p>
+<p>You can <a href="https://downloads.groupdocs.com/watermark/java">download</a> the JAR of the API or just add the following <strong><em>pom.xml</em></strong> configuration in your Maven-based Java applications to try the below-mentioned code examples.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="Remove-All-Watermarks-from-PDF-using-Java">Remove All Watermarks from PDF using Java</h2>
+<p>You can easily remove all watermarks from your PDF documents by following the simple steps mentioned below:</p>
+<ul>
+<li>Create an instance of <em><a href="https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker">Watermarker</a></em> class</li>
+<li>Specify the path to the input PDF file</li>
+<li>Populate <em><a href="https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/PossibleWatermarkCollection">PossibleWatermarkCollection</a></em> by calling the _<a href="https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#search()">search()</a> _method</li>
+<li>Call the <a href="https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.common/RemoveOnlyListBase#clear()">clear()</a> method to remove all watermarks</li>
+<li>Save the updated file</li>
+</ul>
+<p>The following code sample shows how to remove all watermarks available in a PDF document using Java.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/05/Remove-All-Watermarks-from-PDF-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Remove All Watermarks from PDF using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker">Watermarker</a> class facilitates adding, removing, and searching watermarks in a document.</p>
+<p>The <em><a href="https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/PossibleWatermarkCollection">PossibleWatermarkCollection</a></em> class represents a collection of possible watermarks found in a content.</p>
+<p>The <a href="https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#search()">search()</a> method of the Watermarker class searches all possible watermarks in the document. It returns the result set as PossibleWatermarkCollection.</p>
+<h2 id="Text-Only-Watermarks-Removal-from-PDF-using-Java">Text Only Watermarks Removal from PDF using Java</h2>
+<p>You can easily remove all text-only watermarks from your PDF documents by following the simple steps mentioned below:</p>
+<ul>
+<li>Create an instance of <em><a href="https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker">Watermarker</a></em> class</li>
+<li>Specify the path to the input PDF file</li>
+<li>Populate <em><a href="https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/PossibleWatermarkCollection">PossibleWatermarkCollection</a></em> by calling the _<a href="https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#search()">search()</a> _method</li>
+<li>Check if getText() is not null or empty for all PossibleWatermarks</li>
+<li>Then pass the index to the <a href="https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.common/RemoveOnlyListBase#removeAt(int)"><em>removeAt()</em></a> method to remove it</li>
+<li>Save the updated file</li>
+</ul>
+<p>The following code sample shows how to remove only the text watermarks available in a PDF document using Java.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/05/Text-Only-Watermarks-Removal-from-PDF-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Text Only Watermarks Removal from PDF using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.common/RemoveOnlyListBase#removeAt(int)"><em>removeAt()</em></a> method removes the item at the specified index from the PossibleWatermarksCollection.</p>
+<h2 id="Remove-Watermark-with-Particular-Text-Formatting">Remove Watermarks with Particular Text Formatting</h2>
+<p>You can remove text watermarks available with particular formatting from your PDF documents by following the simple steps mentioned below:</p>
+<ul>
+<li>Create an instance of <em><a href="https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker">Watermarker</a></em> class</li>
+<li>Specify the path to the input PDF file</li>
+<li>Define the <em><a href="https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/TextFormattingSearchCriteria">TextFormattingSearchCriteria</a></em></li>
+<li>Populate <em><a href="https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/PossibleWatermarkCollection">PossibleWatermarkCollection</a></em> by calling the _<a href="https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#search()">search()</a> _method</li>
+<li>Call the <a href="https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.common/RemoveOnlyListBase#clear()">clear()</a> method to remove all found watermarks</li>
+<li>Save the updated file</li>
+</ul>
+<p>The following code sample shows how to remove the text watermarks with particular text formatting from a PDF document using Java.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/05/Remove-Watermarks-with-Particular-Text-Formatting.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Remove Watermarks with Particular Text Formatting<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="Image-Only-Watermarks-Removal-from-PDF-using-Java">Image Only Watermarks Removal from PDF using Java</h2>
+<p>You can easily remove all image only watermarks from your PDF documents by following the simple steps mentioned below:</p>
+<ul>
+<li>Create an instance of <em><a href="https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker">Watermarker</a></em> class</li>
+<li>Specify the path to the input PDF file</li>
+<li>Populate <em><a href="https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/PossibleWatermarkCollection">PossibleWatermarkCollection</a></em> by calling the _<a href="https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#search()">search()</a> _method</li>
+<li>Check if getImageData() is not null for all PossibleWatermarks</li>
+<li>Then pass the index to the <a href="https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.common/RemoveOnlyListBase#removeAt(int)"><em>removeAt(</em>)</a> method to remove it</li>
+<li>Save the updated file</li>
+</ul>
+<p>The following code sample shows how to remove only the image watermarks available in a PDF document using Java.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/05/Image-Only-Watermarks-Removal-from-PDF-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Image Only Watermarks Removal from PDF using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to remove text or image watermarks from a PDF document using Java</strong>. Furthermore, you have learned how to remove text-only or image-only watermarks from documents. You can learn more about GroupDocs.Watermark for Java API using the <a href="https://docs.groupdocs.com/watermark/java/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/watermark/">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.groupdocs.com/2020/11/30/find-and-remove-watermarks-from-documents-in-java/">Find and Remove Watermarks from Documents in Java</a></li>
+<li><a href="https://blog.groupdocs.cloud/2021/02/09/find-and-replace-watermark-using-rest-api/">Find and Replace Watermarks in Documents using REST API</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

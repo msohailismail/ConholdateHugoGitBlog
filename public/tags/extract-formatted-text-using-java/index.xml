@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Extract Formatted Text using Java on Conholdate.Total</title>
+    <link>/tags/extract-formatted-text-using-java/</link>
+    <description>Recent content in Extract Formatted Text using Java on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 13 Oct 2021 03:52:00 +0000</lastBuildDate><atom:link href="/tags/extract-formatted-text-using-java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Extract Text from Word Documents using Java</title>
+      <link>/2021/10/13/extract-text-from-word-documents-using-java/</link>
+      <pubDate>Wed, 13 Oct 2021 03:52:00 +0000</pubDate>
+      
+      <guid>/2021/10/13/extract-text-from-word-documents-using-java/</guid>
+      <description>As a Java developer, you can easily extract text from your Word (DOC or DOCX) files programmatically. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to extract text from Word documents using Java&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>In certain cases, you may need to extract text from your Word documents for various purposes. As a Java developer, you can easily extract text from <a href="https://docs.fileformat.com/word-processing/doc/">DOC</a> or <a href="https://docs.fileformat.com/word-processing/docx/">DOCX</a> files programmatically. In this article, you will learn <strong>how to extract text from Word documents using Java</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#Java-API-to-Extract-Text-from-Word-Documents">Java API to Extract Text from Word Documents</a></li>
+<li><a href="#Extract-Text-from-Word-Documents-using-Java">Extract Text from Word Documents using Java</a></li>
+<li><a href="#Extract-Text-from-Specific-Pages-of-a-Document-using-Java">Extract Text from Specific Pages of a Word Document using Java</a></li>
+<li><a href="#Get-Highlight-from-Documents-using-Java">Get Highlight from Word Documents using Java</a></li>
+<li><a href="#Extract-Formatted-Text-from-DOCX-using-Java">Extract Formatted Text from DOCX using Java</a></li>
+<li><a href="#Extract-Text-by-Table-of-Contents-using-Java">Extract Text by Table of Contents using Java</a></li>
+</ul>
+<h2 id="Java-API-to-Extract-Text-from-Word-Documents">Java API to Extract Text from Word Documents</h2>
+<p>For extracting text from the DOC or DOCX files, we will be using <a href="https://products.groupdocs.com/parser/net">GroupDocs.Parser for Java</a> API. It allows extracting text, metadata, and images from popular file formats of <a href="https://docs.fileformat.com/word-processing/">Word</a>, <a href="https://docs.fileformat.com/pdf/">PDF</a>, <a href="https://docs.fileformat.com/spreadsheet/">Excel</a>, and <a href="https://docs.fileformat.com/presentation/">PowerPoint</a>. It also supports the extraction of raw, formatted, and structured text from the files of <a href="https://docs.groupdocs.com/parser/java/supported-document-formats/">supported formats</a>.</p>
+<p>You can <a href="https://downloads.groupdocs.com/parser/java">download</a> the JAR of the API or just add the following <strong><em>pom.xml</em></strong> configuration in your Maven-based Java application to try the below-mentioned code examples.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="Extract-Text-from-Word-Documents-using-Java">Extract Text from Word Documents using Java</h2>
+<p>You can parse any Word document and extract text by following the simple steps mentioned below:</p>
+<ul>
+<li>Firstly, load the DOCX file using the <a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser/Parser">Parser</a> class.</li>
+<li>Then, call the _<a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser/Parser#getText()">Parser.getText()</a> _method to extract text from the loaded document.</li>
+<li>Get results of the _<a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser/Parser#getText()">Parser.getText()</a> <em>method in the </em><a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/TextReader">TextReader</a> _class object.</li>
+<li>Finally, call the <!-- raw HTML omitted --><!-- raw HTML omitted -->TextReader.readToEnd()<!-- raw HTML omitted --><!-- raw HTML omitted -->_ _method to read all characters from the current position to the end of the text reader and return them as one string.</li>
+</ul>
+<p>The following code sample shows how to extract text from a DOCX file using Java.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/10/Extract-Text-from-Word-Documents-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Extract Text from Word Documents using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="Extract-Text-from-Specific-Pages-of-a-Document-using-Java">Extract Text from Specific Pages of a Word Document using Java</h2>
+<p>You can parse a Word document and extract text from a specific page by following the simple steps mentioned below:</p>
+<ul>
+<li>Firstly, load the DOCX file using the <a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser/Parser">Parser</a> class.</li>
+<li>Then, use <a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.options/Features#isText()">Parser.getFeatures().isText()</a> to check whether the document supports text extraction feature. Read more about <a href="https://docs.groupdocs.com/parser/java/get-supported-features/">supported features</a>.</li>
+<li>Now, call the <em><a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser/Parser#getDocumentInfo()">Parser.getDocumentInfo()</a></em> method to get the general information about the document. Such as File Type, Page Count, Size, etc.</li>
+<li>Get results of the <em><a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser/Parser#getDocumentInfo()">Parser.getDocumentInfo()</a></em> method in the <a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.options/IDocumentInfo">IDocumentInfo</a> interface object.</li>
+<li>Then, check if the <em><a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.options/IDocumentInfo#getPageCount()">IDocumentInfo.getPageCount()</a></em> is not zero. This method returns the total number of document pages.</li>
+<li>Iterate over all the pages and call the <a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser/Parser#getFormattedText(com.groupdocs.parser.options.FormattedTextOptions)">Parser.getText()</a> method for each page index to extract text and get results in <a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/TextReader">TextReader</a> class object.</li>
+<li>Finally, show results by calling the <a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/TextReader#readToEnd()">TextReader.readToEnd()</a> method to read the extracted text.</li>
+</ul>
+<p>The following code sample shows how to extract text from pages one by one using Java.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/10/Get-Text-from-Pages-using-Java-1.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Extract Text from Specific Pages of a Document using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="Get-Highlight-from-Documents-using-Java">Get Highlight from Word Documents using Java</h2>
+<p>A highlight is a part of the text which is usually used to explain the context of the found text in the search functionality. You can extract a highlight from a document by following the simple steps mentioned below:</p>
+<ul>
+<li>Firstly, load the DOCX file using the <a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser/Parser">Parser</a> class.</li>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.options/HighlightOptions">HighlightOptions</a> class object and pass maximum length as an input parameter to its constructor to extract a fixed-length highlight.</li>
+<li>Then, call the <a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser/Parser#getHighlight(int,%20boolean,%20com.groupdocs.parser.options.HighlightOptions)">Parser.getHighlight()</a> method with start position and <a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.options/HighlightOptions">HighlightOptions</a> class object to extract a highlight from the document as an object of the <a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/HighlightItem">HighlightItem</a> class.</li>
+<li>Finally, call the <a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/HighlightItem#getPosition()">Highlight.getPosition()</a> and the <a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/HighlightItem#getText()">HighlightItem.getText()</a> methods to get the position and text of the highlight.</li>
+</ul>
+<p>The following code sample shows how to extract a highlight from a document using Java.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="Extract-Formatted-Text-from-DOCX-using-Java">Extract Formatted Text from DOCX using Java</h2>
+<p>You can parse Word documents and extract text without losing the style formatting by following the simple steps mentioned below:</p>
+<ul>
+<li>Firstly, load the DOCX file using the <a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser/Parser">Parser</a> class.</li>
+<li>Define the <em><a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.options/FormattedTextOptions">FormattedTextOptions</a></em> and set the <em><a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.options/FormattedTextMode">FormattedTextMode</a></em> to HTML. It enables you to extract an HTML formatted text from the document.</li>
+<li>Then, call the <a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser/Parser#getFormattedText(com.groupdocs.parser.options.FormattedTextOptions)">Parser.getFormattedText()</a> method to extract formatted text.</li>
+<li>Get results of the _<a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser/Parser#getText()">Parser.getText()</a> <em>method in the </em><a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/TextReader">TextReader</a> _class object.</li>
+<li>Finally, call the <a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/TextReader#readToEnd()">TextReader.readToEnd()</a> method to read all the text.</li>
+</ul>
+<p>The following code sample shows how to extract formatted text from a DOCX file using Java.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/10/Extract-Formatted-Text-from-DOCX-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Extract Formatted Text from DOCX using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="Extract-Text-by-Table-of-Contents-using-Java">Extract Text by Table of Contents using Java</h2>
+<p>You can extract text from the document by the table of contents by following the simple steps mentioned below:</p>
+<ul>
+<li>Firstly, load the DOCX file using the <a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser/Parser">Parser</a> class.</li>
+<li>Then, call the <a href="https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getToc()">Parser.getToc()</a> method to extract a table of contents as a collection of <a href="https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TocItem">TocItem</a> class objects. The <a href="https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TocItem">TocItem</a> represents the item which is used in the table of contents extraction functionality.</li>
+<li>Now, check if the collection is not <em>null</em>.</li>
+<li>Then, iterate over TocItem’s collection and call the <a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/TocItem#extractText()">TocItem.extractText()</a> method to extract text from the document to which the <a href="https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TocItem">TocItem</a> object refers.</li>
+<li>Get results in the <a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/TextReader">TextReader</a> class object.</li>
+<li>Finally, call the <a href="https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/TextReader#readToEnd()">TextReader.readToEnd()</a> method to read all the text.</li>
+</ul>
+<p>The following code sample shows how to extract text by the table of contents from Word documents using Java.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/10/Extract-Text-by-Table-of-Contents-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Extract Text by Table of Contents using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to extract text from Word documents using Java</strong>. Moreover, you have seen <strong>how to extract formatted text from a DOCX file</strong> programmatically. This article also explained <strong>how to extract text by the table of contents</strong> and extract a highlight from a document. Besides, you can learn more about GroupDocs.Parser for Java API using the <a href="https://docs.groupdocs.com/parser/java/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/parser/">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.groupdocs.com/2021/01/22/extract-data-from-invoices-or-receipts-in-java/">Extract Data from Invoices or Receipts in Java</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

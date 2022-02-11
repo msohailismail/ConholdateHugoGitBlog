@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>asp.net pdf editor on Conholdate.Total</title>
+    <link>/tags/asp.net-pdf-editor/</link>
+    <description>Recent content in asp.net pdf editor on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Jul 2020 23:31:48 +0000</lastBuildDate><atom:link href="/tags/asp.net-pdf-editor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create ASP.NET PDF Editor with Barcode Features</title>
+      <link>/2020/07/10/create-asp.net-pdf-editor-with-barcode-features/</link>
+      <pubDate>Fri, 10 Jul 2020 23:31:48 +0000</pubDate>
+      
+      <guid>/2020/07/10/create-asp.net-pdf-editor-with-barcode-features/</guid>
+      <description>The PDF (Portable Document Format) has become one of the widely used formats in the world of digital documents. Various industries are using PDF format to generate their reports, invoices, bills, and other types of business documents. The barcode, on the other hand, has become an essential part of the business that contains information in a machine-readable form. These days, you may even find a barcode on your bills and invoices.</description>
+      <content:encoded><![CDATA[<p>The <a href="https://docs.fileformat.com/pdf/">PDF</a> (Portable Document Format) has become one of the widely used formats in the world of digital documents. Various industries are using PDF format to generate their reports, invoices, bills, and other types of business documents. The barcode, on the other hand, has become an essential part of the business that contains information in a machine-readable form. These days, you may even find a barcode on your bills and invoices. In this article, I’ll present a use case where you need to create a PDF file and embed a barcode on it, for example, when generating an invoice. For the demonstration, I’ll create an ASP.NET PDF Editor using which you will be able to generate the PDF files and barcodes using C# within ASP.NET Core web application.</p>
+<p>This ASP.NET web application will have the following features:</p>
+<ul>
+<li>A WYSIWYG editor to write the content of the PDF document.</li>
+<li>Option to generate a barcode based on provided text.</li>
+<li>Option to set the desired symbology of the barcode.</li>
+</ul>
+<h2 id="prerequisites-for-generating-pdfs-having-barcode-in-aspnet">Prerequisites for Generating PDFs having Barcode in ASP.NET</h2>
+<p>The following are the tools and APIs that you would need to create the ASP.NET PDF Editor having barcode features.</p>
+<ul>
+<li>Visual Studio 2017 or later.</li>
+<li><a href="https://products.aspose.com/pdf/net">Aspose.PDF for .NET</a> – A .NET PDF API.</li>
+<li><a href="https://products.aspose.com/barcode/net">Aspose.BarCode for .NET</a> – .NET Barcode Generator and Scanner API.</li>
+</ul>
+<h2 id="create-aspnet-pdf-editor-with-barcode-features">Create ASP.NET PDF Editor with Barcode Features</h2>
+<p>Let’s begin our journey and see how to create our ASP.NET PDF Editor that will let to generate PDF and embed barcode with a single click.</p>
+<ul>
+<li>Create a new <strong>ASP.NET Core Web Application</strong> in Visual Studio. <!-- raw HTML omitted --></li>
+</ul>
+<p><!-- raw HTML omitted --> <!-- raw HTML omitted --></p>
+<ul>
+<li>Select <strong>Web Application (Model-View-Controller)</strong> from the templates.<!-- raw HTML omitted --></li>
+</ul>
+<p><!-- raw HTML omitted --> <!-- raw HTML omitted --></p>
+<ul>
+<li>Install the packages of <strong>Aspose.PDF</strong>, <strong>Aspose.BarCode</strong> and <strong>CKEditor</strong>.<!-- raw HTML omitted --></li>
+</ul>
+<p><!-- raw HTML omitted --> <!-- raw HTML omitted --></p>
+<ul>
+<li>
+<p>Download the CKEditor’s <a href="https://ckeditor.com/ckeditor-4/download/">package</a>, extract it, and copy/paste the folder in <strong>wwwroot</strong> directory. You can also integrate any of your favorite WYSIWYG HTML editors based on your requirement.</p>
+</li>
+<li>
+<p>Add the following script in <strong>Views/Home/index.cshtml</strong> view.</p>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<ul>
+<li>Add the following methods in <strong>Controllers/HomeController.cs</strong>.</li>
+</ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<ul>
+<li>Build the application and run it in your favorite browser. <!-- raw HTML omitted --></li>
+</ul>
+<p><!-- raw HTML omitted --> <!-- raw HTML omitted --></p>
+<h2 id="generating-a-pdf-with-aspnet-pdf-editor">Generating a PDF with ASP.NET PDF Editor</h2>
+<p>The following are the steps as well as the demonstration of how to generate a PDF file and embed a barcode with a single click.</p>
+<ul>
+<li>Write or copy/paste the content of the PDF document in the editor area.</li>
+<li>Set the code text to generate the barcode.</li>
+<li>Select your desired barcode symbology (see all <a href="https://docs.aspose.com/display/barcodenet/Barcode+Supported+Symbologies">supported barcode symbologies</a>).</li>
+<li>Click the <strong>Generate PDF</strong> button to create the PDF having a barcode on it.<!-- raw HTML omitted --></li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="download-source-code">Download Source Code</h2>
+<p>You can download the complete source code of this ASP.NET PDF Editor from <a href="https://github.com/usman-aziz/ASP.NET-PDF-Editor-with-Barcode">here</a>.</p>
+<h2 id="try-aspose-apis-for-free">Try Aspose APIs for Free</h2>
+<p>Get your <a href="https://purchase.conholdate.com/temporary-license">temporary license</a> and try our APIs for free for one month.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.conholdate.com/2020/06/22/build-your-own-google-docs-like-app/">Create your own Google Docs like application in ASP.NET</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

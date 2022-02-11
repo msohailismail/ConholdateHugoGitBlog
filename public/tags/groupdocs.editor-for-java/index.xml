@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>GroupDocs.Editor for Java on Conholdate.Total</title>
+    <link>/tags/groupdocs.editor-for-java/</link>
+    <description>Recent content in GroupDocs.Editor for Java on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Jun 2021 10:47:00 +0000</lastBuildDate><atom:link href="/tags/groupdocs.editor-for-java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Edit Word Documents using Java</title>
+      <link>/2021/06/07/edit-word-documents-using-java/</link>
+      <pubDate>Mon, 07 Jun 2021 10:47:00 +0000</pubDate>
+      
+      <guid>/2021/06/07/edit-word-documents-using-java/</guid>
+      <description>You can easily edit Word documents (DOC, DOCX or DOTM) programmatically. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to edit Word documents using Java&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>You can programmatically edit all the Word processing document formats such as DOC, DOCX, or DOTM easily. As a Java developer, you can edit Word documents in your Java applications. In this article, you will learn <strong>how to edit word documents using Java</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#api-for-editing-word-documents">Java API for Editing Word Documents</a></li>
+<li><a href="#Edit-DOCX-using-Java">Edit Word Documents using Java</a></li>
+</ul>
+<h2 id="api-for-editing-word-documents">Java API for Editing Word Documents</h2>
+<p>For editing <a href="https://docs.fileformat.com/word-processing/docx/">DOCX</a> files, I will be using <a href="https://products.groupdocs.com/editor/java">GroupDocs.Editor for Java</a> API. It allows you to programmatically edit Word processing documents, Excel sheets, or documents of other supported formats. The API enables you to load documents and convert them into HTML. It provides HTML to external UI for editing and then save HTML to the original document after manipulation.</p>
+<p>You can <a href="https://downloads.groupdocs.com/editor/java">download</a> the JAR of the API or just add the following <strong><em>pom.xml</em></strong> configuration in your Maven-based Java applications to try the below-mentioned code examples.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="Edit-DOCX-using-Java">Edit Word Documents using Java</h2>
+<p>You can easily edit Word documents programmatically by following the simple steps mentioned below:</p>
+<ul>
+<li>Define <strong><em><a href="https://apireference.groupdocs.com/editor/java/com.groupdocs.editor.options/WordProcessingLoadOptions">WordProcessingLoadOptions</a></em></strong></li>
+<li>Create an instance of the <strong><em><a href="https://apireference.groupdocs.com/editor/java/com.groupdocs.editor/Editor">Editor</a></em></strong> class</li>
+<li>Specify the path to the input DOCX file</li>
+<li>Define <strong><em><a href="https://apireference.groupdocs.com/editor/java/com.groupdocs.editor.options/wordprocessingeditoptions">WordProcessingEditOptions</a></em></strong></li>
+<li>Call the <strong><em><a href="https://apireference.groupdocs.com/editor/java/com.groupdocs.editor/Editor#edit()">edit()</a></em></strong> method and get the <strong><em><a href="https://apireference.groupdocs.com/editor/java/com.groupdocs.editor/EditableDocument">EditableDocument</a></em></strong> object</li>
+<li>Grab document content and associated resources from <strong><em>EditableDocument</em></strong></li>
+<li>Call the <a href="https://apireference.groupdocs.com/editor/java/com.groupdocs.editor/EditableDocument#getEmbeddedHtml()"><em><strong>getEmbeddedHtml()</strong></em></a> method to get the document as a single base64-encoded String</li>
+<li>Update content by calling the <em><strong>replace()</strong></em> method</li>
+<li>Call the <strong><em><a href="https://apireference.groupdocs.com/editor/java/com.groupdocs.editor/EditableDocument#fromMarkup(java.lang.String,%20java.util.List)">fromMarkup()</a></em></strong> method and create a new EditableDocument instance</li>
+<li>Define <a href="https://apireference.groupdocs.com/editor/java/com.groupdocs.editor.options/WordProcessingSaveOptions"><strong><em>WordProcessingSaveOptions</em></strong></a></li>
+<li>Call the <strong><em><a href="https://apireference.groupdocs.com/editor/java/com.groupdocs.editor/Editor#save(com.groupdocs.editor.EditableDocument,%20java.lang.String,%20com.groupdocs.editor.options.ISaveOptions)">save()</a></em></strong> method and save the updated file</li>
+<li>Dispose of the objects</li>
+</ul>
+<p>The following code sample shows how to edit DOCX files using Java.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/06/Edit-Word-Documents-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Edit Word Documents using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.groupdocs.com/editor/java/com.groupdocs.editor.options/WordProcessingLoadOptions">WordprocessingLoadOptions</a> class provides various options for loading Word documents like DOC, DOCX, RTF, ODT, etc. into the Editor class.</p>
+<ul>
+<li>The <a href="https://apireference.groupdocs.com/editor/java/com.groupdocs.editor.options/WordProcessingLoadOptions#setPassword(java.lang.String)">setPassword</a> method allows specifying the password for opening the password-protected documents.</li>
+</ul>
+<p>The <a href="https://apireference.groupdocs.com/editor/java/com.groupdocs.editor/Editor">Editor</a> class is the main class that provides methods for loading, editing, and saving documents of all supportable formats. </p>
+<p>The <a href="https://apireference.groupdocs.com/editor/java/com.groupdocs.editor.options/wordprocessingeditoptions">WordProcesingEditOptions</a> class enables you to specify custom options for opening the Word processing documents to edit.</p>
+<ul>
+<li>The <a href="https://apireference.groupdocs.com/editor/java/com.groupdocs.editor.options/WordProcessingEditOptions#setEnableLanguageInformation(boolean)">setEnabledLanguageInformation</a> method specifies whether language information is exported to the HTML markup in a form of ‘lang’ HTML attributes.</li>
+<li>The <a href="https://apireference.groupdocs.com/editor/java/com.groupdocs.editor.options/WordProcessingEditOptions#setEnablePagination(boolean)">setEnablePagination</a> method allows to enable or disable pagination in the resultant HTML document.</li>
+</ul>
+<p>The <a href="https://apireference.groupdocs.com/editor/java/com.groupdocs.editor/EditableDocument">EditableDocument</a> class internally stores the document and provides methods for generating HTML markup and producing resources.</p>
+<p>The <a href="https://apireference.groupdocs.com/editor/java/com.groupdocs.editor.options/WordProcessingSaveOptions">WordProcessingSaveOptions</a> class provides custom options for generating and saving Word documents after editing.</p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to edit Word documents using Java</strong>. You can learn more about GroupDocs.Editor for Java API using the <a href="https://docs.groupdocs.com/editor/java/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/editor/">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.groupdocs.cloud/2021/02/12/edit-word-or-excel-documents-using-rest-api/">Edit Word Documents or Excel Sheets using REST API</a></li>
+<li><a href="https://blog.groupdocs.com/2021/03/26/edit-word-documents-in-csharp/">Edit Word Documents in C# | Build your own .NET Word Editor</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

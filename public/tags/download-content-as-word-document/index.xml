@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Download Content as Word Document on Conholdate.Total</title>
+    <link>/tags/download-content-as-word-document/</link>
+    <description>Recent content in Download Content as Word Document on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 Jun 2020 13:25:59 +0000</lastBuildDate><atom:link href="/tags/download-content-as-word-document/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Build your own Google Docs like App (Part -II)</title>
+      <link>/2020/06/29/build-your-own-google-docs-like-app-part-two/</link>
+      <pubDate>Mon, 29 Jun 2020 13:25:59 +0000</pubDate>
+      
+      <guid>/2020/06/29/build-your-own-google-docs-like-app-part-two/</guid>
+      <description>In the first blog post, we created a Google Docs like web app that has the following features:
+ Rich Text Editing (change text font, size, colour, style (boldface, italic), alignment etc.). Real-time collaborative editing of the same document. Multiple users can access the document at the same time and modify it. Upload content of an existing Word Document into an editor.  In this blog post, we will extend our web-application to include the following features:</description>
+      <content:encoded><![CDATA[<p>In the <a href="https://blog.conholdate.com/2020/06/22/build-your-own-google-docs-like-app/">first blog post</a>, we created a Google Docs like web app that has the following features:</p>
+<ul>
+<li>Rich Text Editing (change text font, size, colour, style (boldface, italic), alignment etc.).</li>
+<li>Real-time collaborative editing of the same document. Multiple users can access the document at the same time and modify it.</li>
+<li>Upload content of an existing Word Document into an editor.</li>
+</ul>
+<p>In this blog post, we will extend our web-application to include the following features:</p>
+<ul>
+<li>Download content of the editor as MS Word, PDF, TXT or HTML document.</li>
+<li>Share the URL with friends so that they can edit the document at the same time.</li>
+</ul>
+<p>The final product will look as follows:<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --> <!-- raw HTML omitted --></p>
+<ul>
+<li>Download Content of the Editor As
+<ul>
+<li><a href="#Download-Content-As-MS-Word">Microsoft Word Document</a></li>
+<li><a href="#Download-Content-As-PDF">PDF Document</a></li>
+<li><a href="#Download-Content-As-Plain-Text-Document">Plain Text Document</a></li>
+</ul>
+</li>
+<li><a href="#Share-URL-With-Friends">Share URL of an Editor with friends</a></li>
+</ul>
+<h2 id="Download-Content-As-MS-Word">Download Content of the Editor as Microsoft Word Document</h2>
+<p>First, we add an <strong><!-- raw HTML omitted --></strong> element of type <strong>submit</strong> to our <strong>form</strong> to show the “<strong>Download Document</strong>” button on the front-end. We use <strong>asp-page-handler</strong> attribute to specify the handler of the button. Our form element now looks as follows:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>You may have noticed that we have added another <strong><!-- raw HTML omitted --></strong> element of type <strong>hidden</strong>. This element is bound to <strong>DocumentContent</strong> property in <strong>Index.cshtml.cs</strong>. We will use this property to store the content of the editor as an HTML string.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><a href="https://firepad.io/docs/">Firepad</a> provides another event <strong>synced</strong> for listening. It is fired when our local client edits the document and when those edits have been successfully written to Firebase. We attach a callback to this event type in order to set the value of <strong>DocumentContent</strong> property to <strong>firepad.getHtml()</strong>. Please add the following code in the <strong>init()</strong> function in <strong>Index.cshtml</strong>.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Now we implement the functionality of <strong>OnPostDownloadDocument()</strong> handler. We use <a href="https://products.groupdocs.com/editor/net">GroupDocs.Editor</a> library to save contents of the editor as Microsoft Word document, which are stored in <strong>DocumentContent</strong> property. The handler returns the Word document as a response to the user.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><strong>UploadedDocumentPath</strong> variable is defined as a <strong>volatile</strong> <strong>string</strong> to keep the value of the uploaded document path between sessions.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Please check <a href="https://docs.groupdocs.com/display/editornet/Save+document">Save Document</a> and <a href="https://docs.groupdocs.com/display/editornet/Create+EditableDocument+from+file+or+markup">Create EditableDocument from file or markup</a> articles to learn more about GroupDocs.Editor classes.</p>
+<p>Run the project and test the following use case:</p>
+<ol>
+<li>Upload content of an existing Word document into an editor by clicking on the <strong>Upload Document</strong> button.</li>
+<li>Make desired changes in the content.</li>
+<li>Click on the <strong>Download Document</strong> button to download the updated content as a Word Document.</li>
+</ol>
+<h2 id="Download-Content-As-PDF">Download Content of the Editor as PDF Document</h2>
+<p>We need to make a few modifications in <strong>OnPostDownloadDocument()</strong> handler to return PDF document as a response. We use <a href="https://apireference.groupdocs.com/editor/net/groupdocs.editor.options/pdfsaveoptions">PdfSaveOptions</a> instead of <a href="https://apireference.groupdocs.com/editor/net/groupdocs.editor.options/wordprocessingsaveoptions">WordProcessingSaveOptions</a> and use <strong>application/pdf</strong> as a MIME type.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="Download-Content-As-Plain-Text-Document">Download Content of the Editor as Plain Text Document</h2>
+<p>In order to return a plain text document (.txt) as a response, we use <a href="https://apireference.groupdocs.com/editor/net/groupdocs.editor.options/textsaveoptions">TextSaveOptions</a> class and use <strong>text/plain</strong> as a MIME type.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="Share-URL-With-Friends">Share URL of an Editor with friends</h2>
+<p>We should provide users with a convenient way to copy the URL of an editor and share it with friends. To do this, add an <strong><!-- raw HTML omitted --></strong> element of type <strong>text</strong> in <strong>Index.cshtml</strong>.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Add the above <strong><!-- raw HTML omitted --></strong> element before <strong><!-- raw HTML omitted --></strong> tag. We set value of this text input field to URL of an editor by using the following line of code. Add this code in <strong>init()</strong> function in <strong>Index.cshtml</strong>.</p>
+<!-- raw HTML omitted -->
+<p>We will make minor changes to our CSS to ensure that the text input field is shown properly. Set top position of <strong>firepad</strong> and <strong>userlist</strong> to <strong>100px</strong>, and add a left margin to the text input field.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Run the project, you should see a text field that lets you copy the URL of the editor. Share it with your friends and edit the document simultaneously with them.</p>
+<p>Complete source code of the project is available on <a href="https://github.com/sohail-aspose/GoogleDocsLite">GitHub</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.conholdate.com/2020/06/22/build-your-own-google-docs-like-app/">https://blog.conholdate.com/2020/06/22/build-your-own-google-docs-like-app/</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Search in Documents on Conholdate.Total</title>
+    <link>/tags/search-in-documents/</link>
+    <description>Recent content in Search in Documents on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Oct 2021 06:51:13 +0000</lastBuildDate><atom:link href="/tags/search-in-documents/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Search Text in PDF Documents using C#</title>
+      <link>/2021/10/11/search-text-in-pdf-documents-using-csharp/</link>
+      <pubDate>Mon, 11 Oct 2021 06:51:13 +0000</pubDate>
+      
+      <guid>/2021/10/11/search-text-in-pdf-documents-using-csharp/</guid>
+      <description>As a C# developer, you can easily search for any text from PDF documents programmatically in your .NET applications. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to search for a word in PDF documents using C#&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>You may need to search for a piece of particular information, text phrase, or a word from your documents. As a C# developer, you can easily search for any text from PDF documents programmatically in your .NET applications. In this article, you will learn <strong>how to search text in PDF documents using C#</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#api-for-searching-text">C# API for Searching Text</a></li>
+<li><a href="#Search-Text-in-PDF-Documents-using-CSharp">Search Text in PDF Documents using C#</a></li>
+<li><a href="#Case-Sensitive-Text-Search-in-Files-using-CSharp">Case-Sensitive Text Search in PDF using C#</a></li>
+</ul>
+<h2 id="api-for-searching-text">C# API for Searching Text</h2>
+<p>For searching text in <a href="https://docs.fileformat.com/pdf/">PDF</a> documents, I will be using <a href="https://products.groupdocs.com/search/net">GroupDocs.Search for .NET</a> API. It allows you to perform text search operations in all <a href="https://docs.groupdocs.com/search/net/supported-document-formats/">popular document formats</a> such as PDF, Word, Excel, PowerPoint, and many more. It also enables you to fetch your required information from files, documents, emails, and archives. You can create and merge multiple indexes to rapidly and smartly search through them using simple, Boolean, Regular Expression (Regex), Fuzzy, and other types of queries. </p>
+<p>You can either <a href="https://downloads.groupdocs.com/search/net">download</a> the DLL of the API or install it using <a href="https://www.nuget.org/packages/groupdocs.search">NuGet</a>.</p>
+<!-- raw HTML omitted -->
+<h2 id="Search-Text-in-PDF-Documents-using-CSharp">Search Text in PDF Documents using C#</h2>
+<p>You can search for any text or a specific word in your PDF documents programmatically by following the simple steps mentioned below:</p>
+<ul>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/search/net/groupdocs.search/index">Index</a> class</li>
+<li>Specify the path to the index folder</li>
+<li>Subscribe to the <a href="https://apireference.groupdocs.com/search/net/groupdocs.search.events/eventhub/events/erroroccurred">index events</a></li>
+<li>Add PDF files to the Index by calling the <a href="https://apireference.groupdocs.com/search/net/groupdocs.search.index/add/methods/1">Add()</a> method</li>
+<li>Define a search query</li>
+<li>Perform a search using the <a href="https://apireference.groupdocs.com/search/net/groupdocs.search.index/search/methods/2">Search()</a> method with search query</li>
+<li>Use the <a href="https://apireference.groupdocs.com/search/net/groupdocs.search.results/searchresult">SearchResult</a> and print summary</li>
+<li>Highlight the searched results in the output using the <a href="https://apireference.groupdocs.com/search/net/groupdocs.search/index/methods/highlight">Highlight()</a> method</li>
+</ul>
+<p>The following code sample shows <strong>how to search text in PDF documents using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p>The above code sample will generate the following output:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/10/Search-Text-or-Word-in-PDF-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Highlighted the Searched Text in PDF Documents using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h3 id="the-index-and-index-event">The Index and Index Event</h3>
+<p>The <a href="https://apireference.groupdocs.com/search/net/groupdocs.search/index">Index</a> class is the main class that provides functionality to index the documents and search through them. An index can be created in memory or on disk by calling the constructor of this class. In the above code example, I have created the index on disk so that it can be reused.</p>
+<p>The <a href="https://apireference.groupdocs.com/search/net/groupdocs.search.events/eventhub/events/erroroccurred">ErrorOccurred</a> event shows the errors if any occurs during indexing the files. So, you need to subscribe to this in order to receive information about indexing errors.</p>
+<h3 id="add-files-to-the-index">Add Files to the Index</h3>
+<p>The <a href="https://apireference.groupdocs.com/search/net/groupdocs.search.index/add/methods/1">Add()</a> method of the Index class adds a file or all files in a specified folder or subfolders by an absolute or relative path. All the documents on the given path will be indexed.</p>
+<h3 id="perform-a-search-operation">Perform a Search Operation</h3>
+<p>The Index class provides various <a href="https://apireference.groupdocs.com/search/net/groupdocs.search.index/search/methods/2">Search</a> methods to perform the search operation. You can search by providing a simple keyword or by defining a <a href="https://apireference.groupdocs.com/search/net/groupdocs.search/SearchQuery">SearchQuery</a>.</p>
+<p>The <a href="https://apireference.groupdocs.com/search/net/groupdocs.search.results/searchresult">SearchResult</a> class provides details of a search result matching a search query. The following methods and properties of this class facilitate getting details of search results:</p>
+<ul>
+<li>The <a href="https://apireference.groupdocs.com/search/net/groupdocs.search.results/searchresult/properties/occurrencecount">OccurrenceCount</a> property shows the total number of occurrences found.</li>
+<li>The <a href="https://apireference.groupdocs.com/search/net/groupdocs.search.results/searchresult/properties/documentcount">DocumentCount</a> property provides the number of documents found in the Index.</li>
+<li>The <a href="https://apireference.groupdocs.com/search/net/groupdocs.search.results/searchresult/methods/getfounddocument">GetFoundDocument(int)</a> method returns the <a href="https://apireference.groupdocs.com/search/net/groupdocs.search.results/FoundDocument">FoundDocument</a> by its index.</li>
+<li>The <a href="https://apireference.groupdocs.com/search/net/groupdocs.search.results/founddocument/properties/occurrencecount">FoundDocument.OccurrenceCount</a> property returns the number of occurrences found in the document.</li>
+</ul>
+<h3 id="highlight-the-search-results">Highlight the Search Results</h3>
+<p>The <a href="https://apireference.groupdocs.com/search/net/groupdocs.search.highlighters/HtmlHighlighter">HtmlHighlighter</a> class highlights the search results in an entire text of the document formatted in HTML.</p>
+<p>The <a href="https://apireference.groupdocs.com/search/net/groupdocs.search/index/methods/highlight">Highlight()</a> method of the Index class generates HTML output highlighting occurrences of found terms. You can find more details about “<a href="https://docs.groupdocs.com/search/net/highlighting-search-results/">Highlighting Search Results</a>” in the documentation.</p>
+<h2 id="Case-Sensitive-Text-Search-in-Files-using-CSharp">Case-Sensitive Text Search in PDF using C#</h2>
+<p>You can search for any specific text phrase or a word considering uppercase and lowercase letters in your PDF documents programmatically by following the simple steps mentioned below:</p>
+<ul>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/search/net/groupdocs.search/index">Index</a> class</li>
+<li>Specify the path to the index folder</li>
+<li>Add PDF files to the Index by calling the <a href="https://apireference.groupdocs.com/search/net/groupdocs.search.index/add/methods/1">Add()</a> method</li>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/search/net/groupdocs.search.options/searchoptions">SearchOptions</a></li>
+<li>Set the <a href="https://apireference.groupdocs.com/search/net/groupdocs.search.options/searchoptions/properties/usecasesensitivesearch">UseCaseSensitiveSearch</a> property to true</li>
+<li>Define a search query</li>
+<li>Perform a search using the <a href="https://apireference.groupdocs.com/search/net/groupdocs.search.index/search/methods/2">Search()</a> method with search query and the SearchOptions</li>
+<li>Use the <a href="https://apireference.groupdocs.com/search/net/groupdocs.search.results/searchresult">SearchResult</a> and print summary</li>
+</ul>
+<p>The following code sample shows <strong>how to perform a <strong>case-sensitive text</strong></strong> <strong>search in a PDF document using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>The <a href="https://apireference.groupdocs.com/search/net/groupdocs.search.options/searchoptions">SearchOptions</a> class provides options to perform the search operations. The <a href="https://apireference.groupdocs.com/search/net/groupdocs.search.options/searchoptions/properties/usecasesensitivesearch">UseCaseSensitiveSearch</a> property of this class allows you to perform a case-sensitive search for a word or text.</p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to search text in a PDF document using C#</strong>. You have also learned <strong>how to perform a</strong> <strong>case-sensitive text search in a PDF document using C#</strong>. You can learn more about GroupDocs.Search for .NET API using the <a href="https://docs.groupdocs.com/search/net/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/search/">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.groupdocs.com/2020/05/29/search-text-in-word-excel-pdf-zip-document-formats-using-csharp-net/">Search Text in Word, Excel, PDF, ZIP Document Formats using C# .NET</a></li>
+<li><a href="https://blog.groupdocs.com/2019/11/22/build-your-full-text-search-solution-in-csharp/">Build your full text search solution programmatically in C#</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Search for a Word in PDF using Java</title>
+      <link>/2021/05/11/search-for-a-word-in-pdf-using-java/</link>
+      <pubDate>Tue, 11 May 2021 12:32:49 +0000</pubDate>
+      
+      <guid>/2021/05/11/search-for-a-word-in-pdf-using-java/</guid>
+      <description>Search for a word or any text in PDF documents programmatically in your Java applications. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to search for a word in PDF documents using Java&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>You may need to search for a specific text from Word or PDF documents. As a Java developer, you can search any text from PDF documents programmatically. In this article, you will learn <strong>how to search for a word in PDF documents using Java</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#api-for-searching-text">Java API for Searching Text</a></li>
+<li><a href="#search-text-from-pdf">Search Text in PDF using Java</a></li>
+</ul>
+<h2 id="api-for-searching-text">Java API for Searching Text</h2>
+<p>I will be using <a href="https://products.groupdocs.com/search/java">GroupDocs.Search for Java</a> API for searching in <a href="https://docs.fileformat.com/pdf/">PDF</a> documents. It allows you to perform text search operations in all popular document formats such as PDF, Word, Excel, PowerPoint, and many more. You can fetch your required information from files, documents, emails, and archives easily using this API. It also enables you to create and merge multiple indexes. You can use simple, Boolean, Regular Expression (Regex), Fuzzy, and other types of queries to rapidly and smartly search through indexes. </p>
+<h3 id="download-and-configure">Download and Configure</h3>
+<p>You can <a href="https://downloads.groupdocs.com/search/java">download</a> the JAR of the API or just add the following <strong><em>pom.xml</em></strong> configuration in your Maven-based Java applications to try the below-mentioned code examples.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="search-text-from-pdf">Search Text in PDF using Java</h2>
+<p>You can easily search any text or a specific word in your PDF documents by following the simple steps mentioned below:</p>
+<ul>
+<li>Create an <a href="https://apireference.groupdocs.com/search/java/com.groupdocs.search/Index">Index</a></li>
+<li>Specify the path to the index folder</li>
+<li>Subscribe to <a href="https://apireference.groupdocs.com/search/java/com.groupdocs.search.events/EventHub#ErrorOccurred">index events</a></li>
+<li>Add files to Index by calling the <a href="https://apireference.groupdocs.com/search/java/com.groupdocs.search/Index#add(java.lang.String)">add</a> method</li>
+<li>Perform a search using the <a href="https://apireference.groupdocs.com/search/java/com.groupdocs.search/Index#search(java.lang.String)">search</a> method</li>
+<li>Use <a href="https://apireference.groupdocs.com/search/java/com.groupdocs.search.results/SearchResult">SearchResult</a> and print summary</li>
+<li>Highlight the searched results in the output using the <a href="https://apireference.groupdocs.com/search/java/com.groupdocs.search/Index#highlight(com.groupdocs.search.results.FoundDocument,%20com.groupdocs.search.highlighters.Highlighter)">highlight</a> method</li>
+</ul>
+<p>The following code sample shows how to search a word from a PDF document using Java.</p>
+<!-- raw HTML omitted -->
+<p>The above code sample shall generate the following output:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/05/Search-word-in-PDF-1.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Search for a word in PDF document using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h3 id="the-index-and-index-event">The Index and Index Event</h3>
+<p>The <a href="https://apireference.groupdocs.com/search/java/com.groupdocs.search/Index">Index</a> class is the main class for indexing documents and search through them. An index can be created in memory or on disk by calling the constructor of this class. I have created it on disk so that it can be reused.</p>
+<p>To receive information about indexing errors, I have subscribed to the <a href="https://apireference.groupdocs.com/search/java/com.groupdocs.search.events/EventHub#ErrorOccurred">ErrorOccurred</a> event. It will show the errors if any occurred during indexing the files.</p>
+<h3 id="add-files-to-index">Add Files to Index</h3>
+<p>The <a href="https://apireference.groupdocs.com/search/java/com.groupdocs.search/Index#add(java.lang.String)">add</a> method of the Index class adds a file or all files in a folder or subfolders by an absolute or relative path. All the documents on the given path will be indexed.</p>
+<h3 id="perform-a-search-operation">Perform a Search Operation</h3>
+<p>The Index class provides various <a href="https://apireference.groupdocs.com/search/java/com.groupdocs.search/Index#search(java.lang.String)">search</a> methods to perform the search operation. You can search by simple keyword or by defining a <a href="https://apireference.groupdocs.com/search/java/com.groupdocs.search/SearchQuery">SearchQuery</a>.</p>
+<p>The <a href="https://apireference.groupdocs.com/search/java/com.groupdocs.search.results/SearchResult">SearchResult</a> class provides details of a search result matching a search query. Some of the methods are described here:</p>
+<ul>
+<li>The <a href="https://apireference.groupdocs.com/search/java/com.groupdocs.search.results/SearchResult#getOccurrenceCount()">getOccurrenceCount</a>() method returns the total number of occurrences found</li>
+<li>The getDocumentCount() method provides the number of documents found in the Index</li>
+<li>The <a href="https://apireference.groupdocs.com/search/java/com.groupdocs.search.results/SearchResult#getFoundDocument(int)">getFoundDocument(int)</a> method returns the <a href="https://apireference.groupdocs.com/search/java/com.groupdocs.search.results/FoundDocument">FoundDocument</a></li>
+<li>The <a href="https://apireference.groupdocs.com/search/java/com.groupdocs.search.results/FoundDocument#getOccurrenceCount()">FoundDocument.getOccurrenceCount()</a> method returns the number of occurrences found in the document</li>
+</ul>
+<h3 id="highlight-the-search-results">Highlight the Search Results</h3>
+<p>The <a href="https://apireference.groupdocs.com/search/java/com.groupdocs.search.highlighters/HtmlHighlighter">HtmlHighlighter</a> class facilitates highlighting the search results in an entire document text formatted in HTML.</p>
+<p>The <a href="https://apireference.groupdocs.com/search/java/com.groupdocs.search/Index#highlight(com.groupdocs.search.results.FoundDocument,%20com.groupdocs.search.highlighters.Highlighter)">highlight</a> method of the Index class generates HTML output highlighting occurrences of found terms. You can find more details about “<a href="https://docs.groupdocs.com/search/java/highlighting-search-results/">Highlighting Search Results</a>” in the documentation.</p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to search for a word in a PDF document using Java</strong>. You can learn more about GroupDocs.Search for Java API using the <a href="https://docs.groupdocs.com/search/java/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/search/">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.groupdocs.com/2020/05/29/search-text-in-word-excel-pdf-zip-document-formats-using-csharp-net/">Search Text in Word, Excel, PDF, ZIP Document Formats using C# .NET</a></li>
+<li><a href="https://blog.groupdocs.com/2019/11/22/build-your-full-text-search-solution-in-csharp/">Build your full text search solution programmatically in C#</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Classify Documents for Taxonomy on Conholdate.Total</title>
+    <link>/tags/classify-documents-for-taxonomy/</link>
+    <description>Recent content in Classify Documents for Taxonomy on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Jul 2021 05:17:59 +0000</lastBuildDate><atom:link href="/tags/classify-documents-for-taxonomy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Classify PDF Documents using C#</title>
+      <link>/2021/07/01/classify-pdf-documents-using-csharp/</link>
+      <pubDate>Thu, 01 Jul 2021 05:17:59 +0000</pubDate>
+      
+      <guid>/2021/07/01/classify-pdf-documents-using-csharp/</guid>
+      <description>You can easily classify your PDF documents programmatically in .NET applications. This article will be focusing on &lt;!-- raw HTML omitted --&gt;how to classify PDF documents using C#&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>You can classify documents using pre-defined tags or categories within IAB-2, Documents, and Sentiment taxonomies programmatically. The classification of documents makes it easier to find the relevant information at the right time. It also helps to manage and sort the documents for searching and retrieving the information that matters. In this article, you will learn <strong>how to classify PDF documents using C#</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#api-for-pdf-classification">C# API for PDF Classification</a></li>
+<li><a href="#Classify-PDF-Documents-with-IAB-2-Taxonomy">Classify PDF Documents with IAB-2 Taxonomy using C#</a></li>
+<li><a href="#PDF-Classification-with-Documents-Taxonomy">PDF Classification with Documents Taxonomy using C#</a></li>
+<li><a href="#PDF-Document-Classification-from-Stream">PDF Document Classification from Stream using C#</a></li>
+<li><a href="#Classify-Password-Protected-PDF-using-CSharp">Classify Password Protected PDF Files using C#</a></li>
+</ul>
+<h2 id="api-for-pdf-classification">C# API for PDF Classification</h2>
+<p>I will be using <a href="https://products.groupdocs.com/classification/net">GroupDocs.Classification for .NET</a> API for the classification of the <a href="https://docs.fileformat.com/pdf">PDF</a> files. It offers an advanced document and text classification ‎in predefined categories. The API supports different types of taxonomies such as IAB-2, Documents, and Sentiment taxonomy. It analyzes the text and shows classification information including the best class with its probability score. You can classify a variety of industry-standard document formats such as PDF, Word, OpenDocument, RTF, and TXT. The API also offers Sentiment analysis with auto-detection of language and supports English, Chinese, Spanish, and German languages. It can be used to develop applications in any development environment that targets the .NET platform.</p>
+<p>You can either <a href="https://downloads.groupdocs.com/classification/net">download</a> the DLL of the API or install it using the <a href="https://www.nuget.org/packages/GroupDocs.Classification">NuGet</a>.</p>
+<!-- raw HTML omitted -->
+<h2 id="Classify-PDF-Documents-with-IAB-2-Taxonomy">Classify PDF Documents with IAB-2 Taxonomy using C#</h2>
+<p>You can easily classify PDF documents with IAB-2 taxonomy programmatically by following the simple steps given below:</p>
+<ul>
+<li>Create an instance of the <em><a href="https://apireference.groupdocs.com/classification/net/groupdocs.classification/classifier"><strong>Classifier</strong></a></em> class</li>
+<li>Call the <em><a href="https://apireference.groupdocs.com/classification/net/groupdocs.classification.classifier/classify/methods/2"><strong>Classifier.Classify()</strong></a></em> method with the file path</li>
+<li>Set the <em>bestClassesCount</em> and <em>Taxonomy</em> as input</li>
+<li>Get results in the <em><strong><a href="https://apireference.groupdocs.com/classification/net/groupdocs.classification.dto/classificationresponse">ClassificationResponse</a></strong></em> class object</li>
+</ul>
+<p>The following code sample shows <strong>how to classify PDF with IAB-2 taxonomy using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/06/Classify-PDF-Documents-with-IAB-2-Taxonomy.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Classify PDF Documents with IAB-2 Taxonomy using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <strong><a href="https://apireference.groupdocs.com/classification/net/groupdocs.classification/classifier">Classifier</a></strong> class is the main class that provides various <a href="https://apireference.groupdocs.com/classification/net/groupdocs.classification/classifier/methods/index">methods</a> to classify the documents. The <em>Classify()</em> method of this class classifies documents by file name and directory name. The <em>bestClassesCount</em> parameter defines the count of the best matching classes to return. In the above code example, I used <a href="https://docs.groupdocs.com/classification/net/taxonomies/#iab-2-taxonomy">Taxonomy.IAB2</a> taxonomy for classification.</p>
+<p>The <em><strong><a href="https://apireference.groupdocs.com/classification/net/groupdocs.classification.dto/classificationresponse">ClassificationResponse</a></strong></em> class provides properties and methods to show the retrieved classification information.</p>
+<h2 id="PDF-Classification-with-Documents-Taxonomy">PDF Classification with Documents Taxonomy using C#</h2>
+<p>You can classify PDF documents with Documents taxonomy programmatically by following the easy steps given below:</p>
+<ul>
+<li>Create an instance of the <em><a href="https://apireference.groupdocs.com/classification/net/groupdocs.classification/classifier"><strong>Classifier</strong></a></em> class</li>
+<li>Call the <em><a href="https://apireference.groupdocs.com/classification/net/groupdocs.classification.classifier/classify/methods/2"><strong>Classifier.Classify()</strong></a></em> method with the file path</li>
+<li>Set the bestClassesCount, Taxonomy, and <em>PrecisionRecallBalance</em> as input</li>
+<li>Get results in the <em><strong><a href="https://apireference.groupdocs.com/classification/net/groupdocs.classification.dto/classificationresponse">ClassificationResponse</a></strong></em> class object</li>
+</ul>
+<p>The following code sample shows <strong>how to classify PDF with Documents taxonomy using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/06/Classify-PDF-Documents-with-Document-Taxonomy.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Classify PDF with Documents Taxonomy using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="PDF-Document-Classification-from-Stream">PDF Document Classification from Stream using C#</h2>
+<p>You can classify PDF documents from file stream programmatically by following the few steps given below:</p>
+<ul>
+<li>Read a file in the FileStream instance</li>
+<li>Create an instance of the <em><a href="https://apireference.groupdocs.com/classification/net/groupdocs.classification/classifier"><strong>Classifier</strong></a></em> class</li>
+<li>Call the <em><a href="https://apireference.groupdocs.com/classification/net/groupdocs.classification/classifier/methods/classify"><strong>Classifier.Classify()</strong></a></em> method with FileStream instance</li>
+<li>Set <em>bestClassesCount</em> and <em>Taxonomy</em> as input</li>
+<li>Get results in the <em><strong><a href="https://apireference.groupdocs.com/classification/net/groupdocs.classification.dto/classificationresponse">ClassificationResponse</a></strong></em> class object</li>
+</ul>
+<p>The following code sample shows <strong>how to classify PDF from document stream using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<h2 id="Classify-Password-Protected-PDF-using-CSharp">Classify Password Protected PDF Files using C#</h2>
+<p>You can easily classify password-protected PDF documents programmatically by following the simple steps given below:</p>
+<ul>
+<li>Create an instance of the <em><a href="https://apireference.groupdocs.com/classification/net/groupdocs.classification/classifier"><strong>Classifier</strong></a></em> class</li>
+<li>Call the <em><a href="https://apireference.groupdocs.com/classification/net/groupdocs.classification.classifier/classify/methods/2"><strong>Classifier.Classify()</strong></a></em> method with the file path</li>
+<li>Set the <em>bestClassesCount</em> and <em>Password</em> of the file as input</li>
+<li>Get results in the <em><strong><a href="https://apireference.groupdocs.com/classification/net/groupdocs.classification.dto/classificationresponse">ClassificationResponse</a></strong></em> class object</li>
+</ul>
+<p>The following code sample shows <strong>how to classify password protected PDF file using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to classify PDF documents using C#</strong>. You have also learned how to classify documents with IAB-2 taxonomy and Documents taxonomy. Moreover, you have learned how to classify documents while loading them using file stream instead of the file path in C#. You can learn more about GroupDocs.Classification for .NET API using the <a href="https://docs.groupdocs.com/classification/net/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/classification/">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.groupdocs.com/2020/06/17/classify-customers-feedback-using-sentiment-analysis-in-csharp/">Customer Feedback Sentiment Analysis in C#</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

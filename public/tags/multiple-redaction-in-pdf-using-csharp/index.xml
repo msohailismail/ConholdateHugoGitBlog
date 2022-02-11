@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Multiple Redaction in PDF using CSharp on Conholdate.Total</title>
+    <link>/tags/multiple-redaction-in-pdf-using-csharp/</link>
+    <description>Recent content in Multiple Redaction in PDF using CSharp on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Jun 2021 05:04:20 +0000</lastBuildDate><atom:link href="/tags/multiple-redaction-in-pdf-using-csharp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Redact PDF Documents using C#</title>
+      <link>/2021/06/25/redact-pdf-documents-using-csharp/</link>
+      <pubDate>Fri, 25 Jun 2021 05:04:20 +0000</pubDate>
+      
+      <guid>/2021/06/25/redact-pdf-documents-using-csharp/</guid>
+      <description>You can easily redact your PDF documents programmatically using C# in your .NET applications. This article will be focusing on &lt;!-- raw HTML omitted --&gt;how to redact PDF documents using C#&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>You can redact PDF documents programmatically without installing any external applications. As a C# developer, you can easily redact your PDF documents in your .NET applications. This article will be focusing on <strong>how to redact PDF documents using C#</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#api-for-pdf-redaction">C# API for PDF Redaction</a></li>
+<li><a href="#Redact-Text-in-PDF">Redact Text in PDF using C#</a></li>
+<li><a href="#Redact-Metadata-in-PDF">Metadata Redaction in PDF using C#</a></li>
+<li><a href="#Redact-Images-in-PDF">Redact Images in PDF using C#</a></li>
+<li><a href="#Apply-Multiple-Redactions-in-PDF">Apply Multiple Redactions in PDF using C#</a></li>
+</ul>
+<h2 id="api-for-pdf-redaction">C# API for PDF Redaction</h2>
+<p>For redaction in <a href="https://docs.fileformat.com/pdf/">PDF</a> documents, I will be using <a href="https://products.groupdocs.com/redaction/net">GroupDocs.Redaction for .NET</a> API. It allows you to redact PDF, Word, Excel, PowerPoint, and image files. It also enables you to remove the classified information from over 30 types of supported formats. You can apply various types of redaction such as text redaction, metadata ‎redaction, annotation redaction, and tabular document redaction.</p>
+<p>You can either <a href="https://downloads.groupdocs.com/redaction/net">download</a> the DLL of the API or install it using the <a href="https://www.nuget.org/packages/GroupDocs.Redaction">NuGet</a>.</p>
+<!-- raw HTML omitted -->
+<h2 id="Redact-Text-in-PDF">Redact Text in PDF using C#</h2>
+<p>You can easily apply text redaction in PDF documents by following the simple steps mentioned below:</p>
+<ul>
+<li>Create an instance of the <em><a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction/redactor"><strong>Redactor</strong></a></em> class with the input file path</li>
+<li>Create the <strong><em><a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction.redactions/exactphraseredaction">ExactPhraseRedaction</a></em></strong> class instance with <em>SearchPhrase</em> and the <em><strong><a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction.redactions/replacementoptions">ReplacementOptions</a></strong></em></li>
+<li>Call the <em><a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction/redactor/methods/apply">Redactor.Apply()</a></em> method</li>
+<li>Get results in the <em><strong><a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction/redactorchangelog">RedactorChangeLog</a></strong></em> class object</li>
+<li>Call the <a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction/redactor/methods/save">Redactor.Save()</a> method</li>
+</ul>
+<p>The following code sample shows <strong>how to redact text in a PDF document using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/06/Redact-Text-in-PDF-using-csharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Redact Text in PDF using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction/redactor">Redactor</a> is the main class provides various methods to perform the document redaction process. It also enables you to open, redact and save documents. The <em>Apply()</em> method of this class applies the defined redaction to the document. Moreover, the <em>Save()</em> method of this class saves the document to a file.</p>
+<p>The <a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction.redactions/exactphraseredaction">ExactPhraseRedaction</a> provides methods to perform a text redaction to replace an exact phrase in the document. It also allows to search case sensitive data by setting the <em>IsCaseSensitive</em> to true.</p>
+<p>The <a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction.redactions/replacementoptions">ReplacementOptions</a> represents options for matched text replacement.</p>
+<p>The <a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction/redactorchangelog">RedactorChangeLog</a> class represents results for a list of redactions, passed to Apply() method of <a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction/redactor">Redactor</a> class.</p>
+<h2 id="Redact-Metadata-in-PDF">Metadata Redaction in PDF using C#</h2>
+<p>You can apply metadata redaction in PDF documents by following the simple steps mentioned below:</p>
+<ul>
+<li>Create an instance of the <em><a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction/redactor"><strong>Redactor</strong></a></em> class with the input file path</li>
+<li>Create the <strong><em><a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction.redactions/metadatasearchredaction">EraseMetadataRedaction</a></em></strong> class instance with <strong><em><a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction.redactions/metadatafilters">MetadataFilter</a></em></strong> to include</li>
+<li>Call the <em><a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction/redactor/methods/apply">Redactor.Apply()</a></em> method</li>
+<li>Call the <a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction/redactor/methods/save">Redactor.Save()</a> method</li>
+</ul>
+<p>The following code sample shows <strong>how to redact metadata in a PDF document using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/06/Redact-Metadata-in-PDF-using-csharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Redact Metadata in PDF using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction.redactions/erasemetadataredaction">EraseMetadataRedaction</a> class provides methods to erase all the metadata. It also enable to erase metadata matching specific MetadataFilters from the document.</p>
+<p>The <a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction.redactions/metadatafilters">MetadataFilters</a> is a list of the most common types of document metadata such as Author, Comments, Company.</p>
+<h2 id="Redact-Images-in-PDF">Redact Images in PDF using C#</h2>
+<p>You can apply image redaction in PDF documents by following the simple steps mentioned below:</p>
+<ul>
+<li>Create an instance of the <em><a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction/redactor"><strong>Redactor</strong></a></em> class with the input file path</li>
+<li>Define drawing points and size</li>
+<li>Create the <strong><em><a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction.redactions/imagearearedaction">ImageAreaRedaction</a></em></strong> class instance with drawing points and <strong><em><a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction.redactions/regionreplacementoptions">RegionReplacementOptions</a></em></strong></li>
+<li>Call the <em><a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction/redactor/methods/apply">Redactor.Apply()</a></em> method</li>
+<li>Call the <a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction/redactor/methods/save">Redactor.Save()</a> method</li>
+</ul>
+<p>The following code sample shows <strong>how to redact images in a PDF document using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/06/Redact-Images-in-PDF-using-csharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Redact Images in PDF using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction.redactions/imagearearedaction">ImageAreaRedaction</a> class allows to place a colored rectangle in given area of an image document.</p>
+<p>The <a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction.redactions/regionreplacementoptions">RegionReplacementOption</a> class represents the color and area parameters for a region to be replaced with image.</p>
+<h2 id="Apply-Multiple-Redactions-in-PDF">Apply Multiple Redactions in PDF using C#</h2>
+<p>You can apply multiple redactions in PDF documents by following the simple steps mentioned below:</p>
+<ul>
+<li>Create an instance of the <em><a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction/redactor"><strong>Redactor</strong></a></em> class with the input file path</li>
+<li>Create the <strong><em><a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction.redactions/exactphraseredaction">ExactPhraseRedaction</a></em></strong>, <strong><em><a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction.redactions/regexredaction">RegexRedaction</a></em></strong>, and <strong><em><a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction.redactions/erasemetadataredaction">EraseMetadataRedaction</a></em></strong></li>
+<li>Add created redactions to the redaction list</li>
+<li>Call the <em><a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction.redactor/apply/methods/1">Redactor.Apply()</a></em> method</li>
+<li>Call the <a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction/redactor/methods/save">Redactor.Save()</a> method, show errors if failed</li>
+</ul>
+<p>The following code sample shows <strong>how to apply multiple redactions in a PDF document using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/06/Apply-Multiple-Redactions-in-PDF-using-csharp-1.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Apply Multiple Redactions in PDF using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.groupdocs.com/redaction/net/groupdocs.redaction.redactions/regexredaction">RegexRedaction</a> class allows to perform a text redaction. You can search and replace any text in the document by matching a text using regular expression.</p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to redaction PDF documents using C#</strong>. You have also learned how to redact Text, Metadata and Images in PDF documents. Moreover, you have learned how to apply multiple redactions in PDF using C#. You can learn more about GroupDocs.Redaction for .NET API using the <a href="https://docs.groupdocs.com/redaction/net/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/redaction/">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.groupdocs.com/2019/09/20/find-and-replace-text-in-word-excel-powerpoint-pdf-documents-net-api/">Find and Replace Text in Documents Programmatically using C#</a></li>
+<li><a href="https://blog.groupdocs.com/2019/12/05/how-to-redact-in-word/">How to Redact in Word Processing Documents Using C# or Java</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

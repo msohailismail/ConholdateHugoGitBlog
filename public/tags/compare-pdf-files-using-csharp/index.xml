@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Compare PDF Files using CSharp on Conholdate.Total</title>
+    <link>/tags/compare-pdf-files-using-csharp/</link>
+    <description>Recent content in Compare PDF Files using CSharp on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Apr 2021 07:04:18 +0000</lastBuildDate><atom:link href="/tags/compare-pdf-files-using-csharp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Compare PDF Files and Highlight Differences using C#</title>
+      <link>/2021/04/14/compare-pdf-files-and-highlight-differences-using-csharp/</link>
+      <pubDate>Wed, 14 Apr 2021 07:04:18 +0000</pubDate>
+      
+      <guid>/2021/04/14/compare-pdf-files-and-highlight-differences-using-csharp/</guid>
+      <description>Compare two or more PDF files and highlight the differences in a separate PDF file programmatically. Compare password protected files using C# in your .NET application. In this article, you are going to learn &lt;!-- raw HTML omitted --&gt;how to compare two or more PDF documents and highlight differences using C#&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>In certain cases, you may need to compare two or more PDF documents in your .NET application. You can easily compare and highlight the differences programmatically. In this article, you will learn <strong>how to compare two or more PDF files and highlight differences using C#</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#csharp-comparison-api">C# API to Compare PDF Documents</a></li>
+<li><a href="#Compare-Two-PDF-Files-using-Csharp">Compare Two PDF Files using C#</a></li>
+<li><a href="#Compare-Password-Protected-PDF-Files-using-Csharp">Compare Password Protected PDF Files using C#</a></li>
+</ul>
+<h2 id="csharp-comparison-api">C# API to Compare PDF Documents</h2>
+<p>For comparing <a href="https://docs.fileformat.com/pdf/">PDF</a> documents, I will be using <a href="https://products.groupdocs.com/comparison/net">GroupDocs.Comparison for .NET API</a>. It compares to detect content changes for words, paragraphs, and characters while providing a comparison document that lists a summary of differences. The .NET compare library supports checking differences in both, content as well as the text style of popular image and document formats such as PDF, HTML, Outlook email, Microsoft Office Word documents, Excel spreadsheets, PowerPoint presentations, OneNote, Visio diagrams, text, and images. It can be used to develop applications in any development environment that targets the .NET platform.</p>
+<p>You can either <a href="https://downloads.groupdocs.com/comparison/net">download</a> the DLL of the API or install it using <a href="https://www.nuget.org/packages/GroupDocs.Comparison">NuGet</a>.</p>
+<!-- raw HTML omitted -->
+<h2 id="Compare-Two-PDF-Files-using-Csharp">Compare Two PDF Files using C#</h2>
+<p>You can compare two PDF documents by following the simple steps given below:</p>
+<ol>
+<li>Create an instance of the <em><strong><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison/comparer">Comparer</a></strong></em> class</li>
+<li>Provide the source PDF file path to the constructor</li>
+<li><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.comparer/add/methods/2">Add</a> target PDF file to the comparison</li>
+<li>Call the <em><strong><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.comparer/compare/methods/7">Compare</a></strong></em> method along with the output file path</li>
+</ol>
+<p>The following code sample shows <strong>how to compare two PDF documents and highlight the differences using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/04/ComparePDFFilesUsingC.png"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Compare Two PDF Files using C#<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The resulting document includes a summary page at the end of the document showing the summary of changes as shown below:<!-- raw HTML omitted --></p>
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/04/image.png"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Summary of Changes<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>If you want to compare multiple PDF files then you just need to add multiple target PDF files to the comparison as shown below:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="Compare-Password-Protected-PDF-Files-using-Csharp">Compare Password Protected PDF Files using C#</h2>
+<p>You can compare password-protected PDF documents by following the simple steps given below:</p>
+<ol>
+<li>Create an instance of the <em><strong><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison/comparer">Comparer</a></strong></em> class</li>
+<li>Provide the source PDF file path to the constructor</li>
+<li>Provide a password for the source file using <em>LoadOptions</em></li>
+<li>Add target PDF file to the comparison</li>
+<li>Provide a password for the target file using <em>LoadOptions</em></li>
+<li>Call the <em><strong><a href="https://apireference.groupdocs.com/comparison/net/groupdocs.comparison.comparer/compare/methods/7">Compare</a></strong></em> method along with the output file path</li>
+</ol>
+<p>The following code sample shows <strong>how to compare password-protected PDF documents using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how <strong>to compare two or more PDF documents and highlight differences</strong></strong> using C#. You can learn even more about GroupDocs.Comparison .NET API using the <a href="https://docs.groupdocs.com/comparison/net/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/comparison/">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.conholdate.com/2021/04/07/render-visio-diagrams-in-html-pdf-and-image-using-java/">Render Visio Diagrams in HTML, PDF, and Image using Java</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

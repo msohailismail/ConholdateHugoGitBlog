@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Read Custom XMP Metadata on Conholdate.Total</title>
+    <link>/tags/read-custom-xmp-metadata/</link>
+    <description>Recent content in Read Custom XMP Metadata on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 21 Oct 2021 04:53:36 +0000</lastBuildDate><atom:link href="/tags/read-custom-xmp-metadata/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Add or Remove Custom XMP Metadata from GIF using Java</title>
+      <link>/2021/10/21/add-or-remove-custom-xmp-metadata-from-gif-using-java/</link>
+      <pubDate>Thu, 21 Oct 2021 04:53:36 +0000</pubDate>
+      
+      <guid>/2021/10/21/add-or-remove-custom-xmp-metadata-from-gif-using-java/</guid>
+      <description>As a Java developer, you can easily add a custom XMP metadata package to your images programmatically. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to add or remove custom XMP metadata from GIF using Java&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>The Extensible Metadata Platform (XMP) data model can be used to store any set of metadata properties in the form of name/value pair encoded as <a href="https://docs.fileformat.com/web/xml/">XML</a>-formatted text. As a Java developer, you can easily add a custom XMP metadata package to your images programmatically. In this article, you will learn <strong>how to add or remove custom XMP metadata from GIF using Java</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#Java-API-to-Add-or-Remove-Custom-XMP-Metadata">Java API to Add or Remove Custom XMP Metadata</a></li>
+<li><a href="#Add-Custom-XMP-Metadata-Package-to-GIF-using-Java">Add Custom XMP Metadata Package to GIF using Java</a></li>
+<li><a href="#Read-Custom-XMP-Package-Metadata-Properties-using-Java">Read Custom XMP Metadata Package Properties using Java</a></li>
+<li><a href="#Remove-Custom-XMP-Package-using-Java">Remove Custom XMP Metadata Package using Java</a></li>
+</ul>
+<h2 id="Java-API-to-Add-or-Remove-Custom-XMP-Metadata">Java API to Add or Remove Custom XMP Metadata</h2>
+<p>For adding or removing the custom <a href="https://en.wikipedia.org/wiki/Extensible_Metadata_Platform">XMP</a> metadata package from <a href="https://docs.fileformat.com/image/gif/">GIF</a> images, we will be using <a href="https://products.groupdocs.com/metadata/java">GroupDocs.Metadata for Java</a> API. It allows you to add, edit, retrieve, and remove metadata properties from the <a href="https://docs.groupdocs.com/metadata/java/supported-document-formats/">supported documents and image file formats</a>. The API works with the most notable metadata standards such as built-in metadata properties e.g., author, created date, format-specific metadata properties e.g., XMP, <a href="https://docs.fileformat.com/image/exif/">EXIF</a>, <a href="https://iptc.org/standards/photo-metadata/">IPTC</a>, Image Resource Blocks, ID3, and custom metadata properties.</p>
+<p>You can <a href="https://downloads.groupdocs.com/metadata/java">download</a> the JAR of the API or just add the following <strong><em>pom.xml</em></strong> configuration in your Maven-based Java application to try the below-mentioned code examples.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="Add-Custom-XMP-Metadata-Package-to-GIF-using-Java">Add Custom XMP Metadata Package to GIF using Java</h2>
+<p>You can create and add a fully custom XMP package with user-defined properties by following the simple steps given below:</p>
+<ul>
+<li>Firstly, load the GIF image using the <em><a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata/Metadata">Metadata</a></em> class.</li>
+<li>Then, call the <a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata/Metadata#getRootPackage()">Metadata.getRootPackage()</a> as <a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata.core/IXmp">IXmp</a> standard to get the root package.</li>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata.core/XmpPackage">XmpPackage</a> class to create a new package.</li>
+<li>Now, set various properties to define the package such as <a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata.core/XmpPackage#getPrefix()">Prefix</a>, and <a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata.core/XmpPackage#getNamespaceUri()">NamespaceUri</a>.</li>
+<li>Then, call the <a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata.core/XmpPackage#set(java.lang.String,%20java.lang.String)">Set()</a> method to set user-defined metadata properties in Name/ Value pair.</li>
+<li>Create an instance of the <a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata.core/XmpPacketWrapper">XmpPacketWrapper</a> class which contains serialized XMP package.</li>
+<li>Now, call the <a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata.core/XmpPacketWrapper#addPackage(com.groupdocs.metadata.core.XmpPackage)">XmpPacketWrapper.AddPackage()</a> method to add the created custom XmpPackage.</li>
+<li>Use the <a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata.core/IXmp#setXmpPackage(com.groupdocs.metadata.core.XmpPacketWrapper)">IXmp.setXmpPackage()</a> method to set the XMP metadata package.</li>
+<li>Finally, save the output file using the <a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata/Metadata#save(java.lang.String)">Metadata.save()</a> method.</li>
+</ul>
+<p>The following code sample shows how to create and add a custom XMP metadata package to a GIF image using Java.</p>
+<!-- raw HTML omitted -->
+<p>The above code sample shall add the XMP metadata package to the input image. Please find below the output generated by the <a href="https://exiftool.org/">ExifTool</a>.<!-- raw HTML omitted --></p>
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/10/Add-Custom-XMP-Metadata-Package-to-GIF-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Add Custom XMP Metadata Package to GIF using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="Read-Custom-XMP-Package-Metadata-Properties-using-Java">Read Custom XMP Package Metadata Properties using Java</h2>
+<p>You can read all the user-defined properties of the custom XMP package by following the steps given below:</p>
+<ul>
+<li>Firstly, load the GIF image using the <em><a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata/Metadata">Metadata</a></em> class.</li>
+<li>Then, call the <a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata/Metadata#getRootPackage()">Metadata.getRootPackage()</a> as <a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata.core/IXmp">IXmp</a> standard to get the root package. It provides access to all metadata properties extracted from the file.</li>
+<li>Call the <a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata.core/IXmp#getXmpPackage()">IXmp.getXmpPackage()</a> method to check if <a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata.core/XmpPackage">XmpPackage</a> exist.</li>
+<li>Now, get array of XmpPackage by calling the <a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata.core/XmpPacketWrapper#getPackages()">IXmp.getXmpPackage().getPackages()</a> method</li>
+<li>Iterate over all the packages and call the <a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata.core/XmpPackage#getNamespaceUri()">XmpPackage.getNamespaceUri()</a> and <a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata.core/XmpPackage#getPrefix()">XmpPackage.getPrefix()</a> methods to show package Namespace URI and the prefix for each package</li>
+<li>Loop through all the keys returned by <a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata.core/MetadataPackage#getKeys()">XmpPackage.getKeys()</a> method to print metadata value</li>
+<li>Finally, call the <a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata/Metadata#findProperties(com.groupdocs.metadata.search.Specification)">XmpPackage.findProperties()</a> method for each package Key to recursively search and find the metadata property matching the package key.</li>
+</ul>
+<p>The following code sample shows how to read all the properties defined in the custom XMP package using Java.</p>
+<!-- raw HTML omitted -->
+<p>The above code sample shall produce the following output:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="Remove-Custom-XMP-Package-using-Java">Remove Custom XMP Package using Java</h2>
+<p>You can remove the XMP package from GIF images by following the steps given below:</p>
+<ul>
+<li>Firstly, load the GIF image using the <em><a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata/Metadata">Metadata</a></em> class.</li>
+<li>Then, call the <a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata/Metadata#getRootPackage()">Metadata.getRootPackage()</a> as <a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata.core/IXmp">IXmp</a> standard to get the root package.</li>
+<li>Now, use the <a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata.core/IXmp#setXmpPackage(com.groupdocs.metadata.core.XmpPacketWrapper)">IXmp.setXmpPackage()</a> to set the XmpPackege as null</li>
+<li>Finally, save the output file using the <a href="https://apireference.groupdocs.com/metadata/java/com.groupdocs.metadata/Metadata#save(java.lang.String)">Metadata.save()</a> method</li>
+</ul>
+<p>The following code sample shows how to remove the XMP metadata package from a GIF image using Java.</p>
+<!-- raw HTML omitted -->
+<p>The above code sample shall remove the XMP metadata package from the input image. The ExifTool read the following metadata from the generated output GIF image.<!-- raw HTML omitted --></p>
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/10/Remove-Custom-XMP-Package-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Remove Custom XMP Package using Java.<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to add custom XMP package metadata to GIF images using Java</strong>. Moreover, you have seen <strong>how to read XMP package properties and remove them from a GIF image</strong> programmatically. You can learn more about GroupDocs.Metadata for Java API using the <a href="https://docs.groupdocs.com/metadata/java">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/metadata/">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.groupdocs.com/2021/05/10/xmp-and-exif-data-of-heif-heic-images-using-java/">Handle XMP and EXIF Data of HEIF HEIC Images in Java</a></li>
+<li><a href="https://blog.groupdocs.com/2021/03/22/extract-riff-info-and-metadata-of-wav-files-in-java/">Extract RIFF INFO and Metadata of WAV files in Java</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

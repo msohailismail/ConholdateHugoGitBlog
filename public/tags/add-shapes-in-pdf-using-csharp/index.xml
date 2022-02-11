@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Add Shapes in PDF using CSharp on Conholdate.Total</title>
+    <link>/tags/add-shapes-in-pdf-using-csharp/</link>
+    <description>Recent content in Add Shapes in PDF using CSharp on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 11 Nov 2021 05:04:14 +0000</lastBuildDate><atom:link href="/tags/add-shapes-in-pdf-using-csharp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Add Shapes in PDF Documents using C#</title>
+      <link>/2021/11/11/add-shapes-in-pdf-documents-using-csharp/</link>
+      <pubDate>Thu, 11 Nov 2021 05:04:14 +0000</pubDate>
+      
+      <guid>/2021/11/11/add-shapes-in-pdf-documents-using-csharp/</guid>
+      <description>As a C# developer, you can add drawing shapes in PDF documents programmatically. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to add shapes in PDF documents using C#&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>You may need to add various types of graphs or shapes to your PDF files to present data or information interactively. As a C# developer, you can add drawing shapes in PDF documents programmatically. In this article, you will learn <strong>how to add shapes in PDF documents using C#</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<!-- raw HTML omitted -->
+<h2 id="CSharp-API-to-Draw-Shapes-in-PDF-Documents">C# API to Draw Shapes in PDF Documents</h2>
+<p>For adding shapes in <a href="https://docs.fileformat.com/pdf/">PDF</a> files, we will be using <a href="https://products.aspose.com/pdf/net/">Aspose.PDF for .NET API</a>. It allows you to generate, modify, convert, render, secure and print <a href="https://docs.aspose.com/pdf/net/supported-file-formats/">supported documents</a> without using Adobe Acrobat. It also provides compression options, table creation &amp; manipulation, graph &amp; image functions, stamp and watermark tasks, extended security controls, and custom font handling.</p>
+<p>You can either <a href="https://downloads.aspose.com/pdf/net">download</a> the DLL of the API or install it using <a href="https://www.nuget.org/packages/aspose.pdf">NuGet</a>.</p>
+<!-- raw HTML omitted -->
+<h2 id="Create-Filled-Rectangle-in-PDF-Documents-using-CSharp">Create Filled Rectangle in PDF Documents using C#</h2>
+<p>You can create a filled rectangle in PDF documents programmatically by following the steps given below:</p>
+<ul>
+<li>Firstly, create a new document using the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/document">Document</a> class.</li>
+<li>Now, call the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/pagecollection/methods/add">Document.Pages.Add()</a> method to add an empty page to pages collection of the PDF file.</li>
+<li>Create an instance of the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.drawing/graph">Graph</a> class with height and width for the graph.</li>
+<li>Then, call the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/paragraphs/methods/add">Page.Paragraphs.Add()</a> method to add graph object to paragraphs collection of the page instance.</li>
+<li>Now, create an instance of the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.drawing/rectangle">Rectangle</a> class and set its left and bottom position, along with its width and height.</li>
+<li>Optionally, specify the fill color for <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/graphinfo">the Graph object</a>.</li>
+<li>Then, add the rectangle object to <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.drawing/graph/properties/shapes">the shape collection</a> of the Graph object.</li>
+<li>Finally, call the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.document/save/methods/4">Document.Save()</a> method with output file path to save the file.</li>
+</ul>
+<p>The following code sample shows <strong>how to create a filled rectangle in PDF documents using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/11/Create-Filled-Rectangle-in-PDF-Documents-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Create Filled Rectangle in PDF Documents using C#.<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="Add-Circle-in-PDF-Documents-using-CSharp">Add Circle in PDF Documents using C#</h2>
+<p>You can add a circle in PDF documents programmatically by following the steps given below:</p>
+<ul>
+<li>Firstly, create a new document using the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/document">Document</a> class.</li>
+<li>Now, call the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/pagecollection/methods/add">Document.Pages.Add()</a> method to add an empty page to pages collection of the PDF file.</li>
+<li>Create an instance of the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.drawing/graph">Graph</a> class with height and width for the graph.</li>
+<li>Then, call the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/paragraphs/methods/add">Page.Paragraphs.Add()</a> method to add graph object to paragraphs collection of the page instance.</li>
+<li>Now, create an instance of the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.drawing/circle">Circle</a> class and set its X and Y position, along with its radius.</li>
+<li>Then, set the color and fill color for the circle.</li>
+<li>Add the circle object to <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.drawing/graph/properties/shapes">the shape collection</a> of the Graph object.</li>
+<li>Finally, call the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.document/save/methods/4">Document.Save()</a> method with output file path to save the file.</li>
+</ul>
+<p>The following code sample shows <strong>how to add a circle in PDF documents using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/11/Add-Circle-in-PDF-Documents-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Add Circle in PDF Documents using C#.<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="Draw-Lines-Across-the-Page-in-PDF-Documents-using-CSharp">Draw Lines Across the Page in PDF Documents using C#</h2>
+<p>You can draw lines across the page in PDF documents programmatically by following the steps given below:</p>
+<ul>
+<li>Firstly, create a new document using the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/document">Document</a> class.</li>
+<li>Now, call the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/pagecollection/methods/add">Document.Pages.Add()</a> method to add an empty page to pages collection of the PDF file.</li>
+<li>Then, set page margins on all sides as 0.</li>
+<li>Create an instance of the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.drawing/graph">Graph</a> class with page width and page height.</li>
+<li>Now, create an instance of the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.drawing/line">Line</a> class with line position array to create a line starting from lower-left to top-right corner of the page.</li>
+<li>Then, add the line object to <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.drawing/graph/properties/shapes">the shape collection</a> of the Graph object.</li>
+<li>Now, create another instance of the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.drawing/line">Line</a> class with line position array to draw a line from top-left corner of the page to bottom-right corner of the page.</li>
+<li>Then, add the second instance of the line object to <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.drawing/graph/properties/shapes">the shape collection</a> of the Graph object.</li>
+<li>Call the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/paragraphs/methods/add">Page.Paragraphs.Add()</a> method to add graph object to paragraphs collection of the page instance.</li>
+<li>Finally, call the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.document/save/methods/4">Document.Save()</a> method with output file path to save the file.</li>
+</ul>
+<p>The following code sample shows <strong>how to draw lines across the page in PDF documents using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/11/Draw-Line-Across-the-Page-in-PDF-Documents-using-CSharp.png"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Draw a Line Across the Page in PDF Documents using C#.<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="Add-Ellipse-in-PDF-Documents-using-CSharp">Add Ellipse in PDF Documents using C#</h2>
+<p>You can add an ellipse with text inside in PDF documents programmatically by following the steps given below:</p>
+<ul>
+<li>Firstly, create a new document using the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/document">Document</a> class.</li>
+<li>Now, call the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/pagecollection/methods/add">Document.Pages.Add()</a> method to add an empty page to pages collection of the PDF file.</li>
+<li>Create an instance of the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.drawing/graph">Graph</a> class with height and width for the graph.</li>
+<li>Create an instance of the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.text/textfragment">TextFragment</a> class with the text value to show inside the graph object.</li>
+<li>Then, set font and size for the text.</li>
+<li>Now, create an instance of the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.drawing/ellipse">Ellipse</a> class and set its left and bottom position, along with its width and height.</li>
+<li>Then, set the color, fill color and assign the TextFragment object to its text property.</li>
+<li>Now, add the ellipse object to <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.drawing/graph/properties/shapes">the shape collection</a> of the Graph object.</li>
+<li>Then, call the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/paragraphs/methods/add">Page.Paragraphs.Add()</a> method to add graph object to paragraphs collection of the page instance.</li>
+<li>Finally, call the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.document/save/methods/4">Document.Save()</a> method with output file path to save the file.</li>
+</ul>
+<p>The following code sample shows <strong>how to create an ellipse with text in PDF documents using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/11/Add-Ellipse-in-PDF-Documents-using-CSharp.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Add Ellipse in PDF Documents using C#.<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to add shapes in PDF documents using C#</strong>. Particularly, you have seen how to add a filled rectangle, circle, line, and ellipse in PDF documents programmatically. Similarly, you can create an arc and a curve in PDF files. You can learn more about Aspose.PDF for .NET API using the <a href="https://docs.aspose.com/pdf/net/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.aspose.com/c/pdf">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.conholdate.com/2021/09/23/convert-pdf-to-images-using-csharp/">Convert PDF to Images using C#</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

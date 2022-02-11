@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>convert jpg to png on Conholdate.Total</title>
+    <link>/tags/convert-jpg-to-png/</link>
+    <description>Recent content in convert jpg to png on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 17 Apr 2021 00:54:23 +0000</lastBuildDate><atom:link href="/tags/convert-jpg-to-png/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Convert JPG to PNG or PDF in C#</title>
+      <link>/2021/04/17/convert-jpg-to-png-or-pdf-in-csharp/</link>
+      <pubDate>Sat, 17 Apr 2021 00:54:23 +0000</pubDate>
+      
+      <guid>/2021/04/17/convert-jpg-to-png-or-pdf-in-csharp/</guid>
+      <description>JPEG and PNG are among the popular raster image formats and are popular for their methods of lossy compression. You get the option to adjust the compression level to achieve the desired quality level and at the same time reduce the storage size. However, sometimes your system only accepts a particular format, so you need to load your existing set of images and save them to the desired output. Instead of using conventional applications with limited features and incurring manual provision of input files, programming APIs stay one step ahead due to their flexibility and the capabilities to perform all the operations in a batch format.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p><a href="https://wiki.fileformat.com/image/jpeg/">JPEG</a> and <a href="https://wiki.fileformat.com/image/png/">PNG</a> are among the popular raster image formats and are popular for their methods of lossy compression. You get the option to adjust the compression level to achieve the desired quality level and at the same time reduce the storage size. However, sometimes your system only accepts a particular format, so you need to load your existing set of images and save them to the desired output. Instead of using conventional applications with limited features and incurring manual provision of input files, programming APIs stay one step ahead due to their flexibility and the capabilities to perform all the operations in a batch format.</p>
+<ul>
+<li><a href="#Image-processing-API">Image processing API</a></li>
+<li><a href="#Convert-JPG-to-PNG-in-C-">Convert JPG to PNG in C#</a></li>
+<li><a href="#JPG-to-PDF-conversion-in-Csharp">JPG to PDF conversion in C#</a></li>
+</ul>
+<h2 id="Image-processing-API">Image processing API</h2>
+<!-- raw HTML omitted -->
+<p>Aspose.Imaging for .NET is an amazing programming API offering the capabilities to create, manipulate and convert <a href="https://docs.aspose.com/imaging/net/supported-file-formats/">supported file formats</a>. It functions independently of other graphics applications and does not require any image editor to be installed on the machine. It can be used with ASP.NET web applications or Windows desktop applications. <a href="https://products.aspose.com/imaging/net">Aspose.Imaging for .NET</a> is bundled inside <a href="https://products.conholdate.com/total/net">Conholdate.Total for .NET</a> suite. So if you have purchased a subscription for <a href="https://products.conholdate.com/total/net">Conholdate.Total for .NET</a>, then you definitely can perform all the image processing operations using <a href="https://products.aspose.com/imaging/net">Aspose.Imaging for .NET</a> API.</p>
+<p>In order to use the API, the first step is its installation. You may follow either of the steps to perform the installation.</p>
+<ul>
+<li>Download <a href="https://downloads.aspose.com/imaging/net">DLL files</a> and manually reference them in your project</li>
+<li>Open <a href="https://www.nuget.org/packages/Aspose.Imaging/">NuGet</a> package manager, search for <strong>Aspose.Imaging</strong> and install it.</li>
+<li>Run the following command from the NuGet Package Manager Console</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="Convert-JPG-to-PNG-in-C-">Convert JPG to PNG in C#</h2>
+<p>The API is robust enough to identify the format of the input image and you only need to specify the source image either in the form of a Stream instance or by providing the path to the file on the local system. In the following steps, we are going to explain how to load a <a href="https://docs.fileformat.com/image/jpeg/">JPEG</a> image and save the output in <a href="https://docs.fileformat.com/image/png/">PNG</a> format.</p>
+<ol>
+<li>First of all, we need to create an instance of <a href="https://apireference.aspose.com/imaging/net/aspose.imaging/license">Aspose.Imaging.License</a> object. Call the <a href="https://apireference.aspose.com/imaging/net/aspose.imaging.license/setlicense/methods/1">SetLicense(…)</a> and provide the path of Conholdate.Total.NET.lic file as an argument</li>
+<li>Secondly, create an object of <a href="https://apireference.aspose.com/imaging/net/aspose.imaging/image">Image</a> class which is a base class of all image types, and pass the result of Aspose.Imaging.Image.Load(..) method which takes the Steam or string path of an image file to be loaded</li>
+<li>Create an instance of PngOptions class</li>
+<li>Finally, call the <a href="https://apireference.aspose.com/imaging/net/aspose.imaging.datastreamsupporter/save/methods/2">Save(String)</a> method of the <a href="https://apireference.aspose.com/imaging/net/aspose.imaging/image">Image</a> class and pass the location where you want to save the resultant <a href="https://docs.fileformat.com/image/png/">PNG</a> file</li>
+</ol>
+<!-- raw HTML omitted -->
+<p>The PngOptions class also provides various properties and in the example below, we have specified to generate the color type of resultant image as Grayscale. Also, the compression level for a resultant image is specified as 4. Please note that the <strong>CompressionLevel</strong> property accepts values between 0-9 where 9 is maximum compression and 0 is the default value.</p>
+<!-- raw HTML omitted -->
+<p>The source file and resultant grayscale image can be downloaded from following links</p>
+<ul>
+<li><a href="https://www.dropbox.com/s/g2fobiwgjhvftfw/samsung_galaxy.jpg?dl=0">samsung_gaalxy.jpg</a></li>
+<li><a href="https://www.dropbox.com/s/zrm1oxdetnpuogc/Grayscale.png?dl=0">Grayscale.png</a></li>
+</ul>
+<h2 id="JPG-to-PDF-conversion-in-Csharp">JPG to PDF conversion in C#</h2>
+<p>Aspose.Imaging for .NET is equally capable of converting JPG images to <a href="https://docs.fileformat.com/pdf/">PDF</a> (Portable Document Format). During the conversion, you also get the capabilities to set DocumentInfo as well as <a href="https://docs.fileformat.com/pdf/a/">PDF/A</a> compliance details. The following steps explain the process of loading raster images and their conversion to <a href="https://docs.fileformat.com/pdf/">PDF</a> format.</p>
+<ol>
+<li>The first step is to create an instance of the <a href="https://apireference.aspose.com/imaging/net/aspose.imaging/license">License</a> class.</li>
+<li>Secondly, call the <a href="https://apireference.aspose.com/imaging/net/aspose.imaging.license/setlicense/methods/1">SetLicense(…)</a> method and provide the path of Conholdate.Total.NET.lic file. The license is initialized to eliminate all the restrictions which are present in the evaluation version</li>
+<li>Thirdly, create an object of <a href="https://apireference.aspose.com/imaging/net/aspose.imaging/image">Image</a> class which is a base class of all image types, and pass the output of <a href="https://apireference.aspose.com/imaging/net/aspose.imaging.image/load/methods/2">Aspose.Imaging.Image.Load(..)</a> method</li>
+<li>Now create an instance of <a href="https://apireference.aspose.com/imaging/net/aspose.imaging.imageoptions/pdfoptions">PdfOptions</a> class</li>
+<li>In order to set PDF document information such as Author, Title, Subject, etc, create an object of <a href="https://apireference.aspose.com/imaging/net/aspose.imaging.fileformats.pdf/pdfdocumentinfo">PdfDocumentInfo</a> class and pass its value to <a href="https://apireference.aspose.com/imaging/net/aspose.imaging.imageoptions/pdfoptions/properties/pdfdocumentinfo">PdfDocumentInfo</a> object of <a href="https://apireference.aspose.com/imaging/net/aspose.imaging.imageoptions/pdfoptions">PdfOptions</a> class</li>
+<li>Now in order to save the PDF file with PDF/A compliance information, please create an instance of <a href="https://apireference.aspose.com/imaging/net/aspose.imaging.fileformats.pdf/pdfcoreoptions">PdfCoreOptions</a> class and associate it with <a href="https://apireference.aspose.com/imaging/net/aspose.imaging.imageoptions/pdfoptions/properties/pdfcoreoptions">PdfCoreOptions</a> property of <a href="https://apireference.aspose.com/imaging/net/aspose.imaging.imageoptions/pdfoptions">PdfOptions</a> object</li>
+<li>Finally, call the <a href="https://apireference.aspose.com/imaging/net/aspose.imaging.datastreamsupporter/save/methods/2">Save(String)</a> method of the <a href="https://apireference.aspose.com/imaging/net/aspose.imaging/image">Image</a> class to generate the output PDF document</li>
+</ol>
+<!-- raw HTML omitted -->
+<p>The sample files used in the above example can be downloaded from the following links</p>
+<ul>
+<li><a href="https://www.dropbox.com/s/g2fobiwgjhvftfw/samsung_galaxy.jpg?dl=0">samsung_gaalxy.jpg</a></li>
+<li><a href="https://www.dropbox.com/s/pusa3gzj3umqjn6/_output.pdf?dl=0">_output.pdf</a></li>
+</ul>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You may request <!-- raw HTML omitted -->a free temporary license<!-- raw HTML omitted --> to try the API without any evaluation limitations.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, we have discussed the various capabilities of <a href="https://products.aspose.com/imaging/net">Aspose.Imaging for .NET</a> specifically to convert JPG to PNG format as well as their rendering to PDF format. Please note that <a href="https://products.aspose.com/imaging/net">Aspose.Imaging for .NET</a> is way more powerful and offers a plethora of options, comparing to what has been discussed above. It enables your .NET applications to draw as well as perform basic to advanced level processing of raster &amp; vector images.</p>
+<p>Furthermore, <a href="https://products.aspose.com/imaging/net">Aspose.Imaging for .NET</a> offers robust image compression and high processing speed through native byte access and a range of efficient algorithms. It not only manipulate, export and convert images but also lets you dynamically draw objects using pixel manipulation and Graphics Path. For more information, please explore product <a href="https://docs.aspose.com/imaging/net/">documentation</a> and in case you encounter any issue while using the API, please feel free to contact via the <a href="https://forum.aspose.com/c/imaging/14">product support forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.aspose.cloud/2021/04/04/convert-gif-to-dicom-and-jpeg-to-png-using-c-.net-rest-api/">Convert GIF to DICOM and JPEG to PNG using C# .NET REST API</a></li>
+<li><a href="https://blog.aspose.cloud/2020/07/01/object-recognition-through-images-using-java-cloud-sdk/">Object recognition through images using Java Cloud SDK</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

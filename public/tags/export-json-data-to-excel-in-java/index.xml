@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Export JSON Data to Excel in Java on Conholdate.Total</title>
+    <link>/tags/export-json-data-to-excel-in-java/</link>
+    <description>Recent content in Export JSON Data to Excel in Java on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Aug 2021 03:06:50 +0000</lastBuildDate><atom:link href="/tags/export-json-data-to-excel-in-java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Export Data to Excel in Java</title>
+      <link>/2021/08/27/export-data-to-excel-in-java/</link>
+      <pubDate>Fri, 27 Aug 2021 03:06:50 +0000</pubDate>
+      
+      <guid>/2021/08/27/export-data-to-excel-in-java/</guid>
+      <description>As a Java developer, you can easily export data from Arrays, Collection of Objects, JSON, or CSV to Excel programmatically. In this article, you will learn&lt;!-- raw HTML omitted --&gt; how to export data to Excel using Java&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>You can easily export data to Microsoft Excel from various available sources such as JSON, and CSV. As a Java developer, you can export data from Arrays, List of objects, JSON, and CSV to Excel documents programmatically. In this article, you will learn <strong>how to export data to Excel using Java</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#Java-API-for-Exporting-Data">Java API to Export Data</a></li>
+<li><a href="#Export-Array-to-Excel-in-Java">Export Array to Excel in Java</a></li>
+<li><a href="#Export-Two-Dimensional-Array-to-Excel">Export Two Dimensional Array to Excel</a></li>
+<li><a href="#Export-ArrayList-to-Excel-in-Java">ArrayList to Excel in Java</a></li>
+<li><a href="#Export-Collection-of-Custom-Objects-to-Excel-in-Java">Export Collection of Custom Objects to Excel in Java</a></li>
+<li><a href="#Export-Data-to-Excel-with-Merged-Cells-in-Java">Export Data to Excel with Merged Cells in Java</a></li>
+<li><a href="#Copy-Rows-and-Columns-from-one-Excel-file-to-Another-in-Java">Copy Rows and Columns from one Excel file to Another in Java</a></li>
+<li><a href="#Export-JSON-Data-to-Excel-in-Java">Export JSON Data to Excel in Java</a></li>
+<li><a href="#Export-CSV-Data-to-Excel-in-Java">Get CSV Data in Excel using Java</a></li>
+</ul>
+<h2 id="Java-API-for-Exporting-Data">Java API to Export Data</h2>
+<p>For exporting data to Excel, I will be using <a href="https://products.aspose.com/cells/java/">Aspose.Cells for Java API</a>. It is a powerful spreadsheet manipulation API that lets you create, edit, or convert Excel files within Java applications. The API enables you to perform Excel automation features programmatically without needing a Microsoft Excel application.</p>
+<p>You can <a href="https://downloads.aspose.com/cells/java">download</a> the JAR of the API or just add the following <strong><em>pom.xml</em></strong> configuration in your Maven-based Java application to try the below-mentioned code examples.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="Export-Array-to-Excel-in-Java">Export Array to Excel in Java</h2>
+<p>You can easily export data from a one-dimensional array or a two-dimensional array to an Excel document. The array can be of a reference type or a value type. You can export data from an array to Excel by following the simple steps mentioned below:</p>
+<ul>
+<li>Create an instance of the _<a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Workbook">Workbook</a> _class</li>
+<li>Get worksheet in an instance of the <a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Worksheet"><em>Worksheet</em></a> class</li>
+<li>Create an array containing string values</li>
+<li>Call the <a href="https://apireference.aspose.com/cells/java/com.aspose.cells/cells#importArray(java.lang.String%5B%5D,%20int,%20int,%20boolean)"><em>importArray()</em></a> method with the array</li>
+<li>Save the output file by calling the <em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/workbook#save(java.lang.String)">save()</a></em> method of the <em>Workbook</em> class</li>
+</ul>
+<p>The following code sample shows <strong>how to export an array of strings to Excel using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/08/Export-Array-to-Excel-in-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Export Array to Excel in Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Workbook">Workbook</a></strong> class of the API is the main class to create an Excel spreadsheet. It provides functionality to open and save native excel files. The <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/workbook#save(java.lang.String)"><em>save()</em></a></strong> method of this class is used to save the output file at the specified file path.</p>
+<p>The <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Worksheet">Worksheet</a></strong> class represents a single worksheet and provides functionality to work with cells and rows.</p>
+<p>The <a href="https://apireference.aspose.com/cells/java/com.aspose.cells/cells#importArray(java.lang.String%5B%5D,%20int,%20int,%20boolean)"><em>importArray()</em></a> method of the Cells class exports an array of strings to a worksheet. It takes the following input parameters:</p>
+<ul>
+<li><em><strong>stringArray</strong></em>: The array of String values</li>
+<li><em><strong>firstRow</strong></em>: The row number of the first cell to export to</li>
+<li><em><strong>firstColumn</strong></em>: The column number of the first cell to export to</li>
+<li><em><strong>isVertical</strong></em>: It specifies whether to export data vertically or horizontally</li>
+</ul>
+<p>The API also provides the overloaded versions of the <em><strong>importArray()</strong></em> method to export an array of integer or double to a worksheet.</p>
+<h2 id="Export-Two-Dimensional-Array-to-Excel">Export Two Dimensional Array to Excel</h2>
+<p>Similarly, you can export a <strong>two-dimensional array to an Excel file</strong>. The following code sample shows <strong>how to export a two-dimensional array to an Excel file in Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/08/Export-Two-Dimensional-Array-to-Excel.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Export Two Dimensional Array to Excel<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The Cells class provides <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/cells#importArray(int%5B%5D%5B%5D,%20int,%20int)">importArray()</a></strong> method to export a two-dimension array of integers to a worksheet. The API also provides the overloaded versions of this method to export a two-dimensional array of strings or double into a worksheet.</p>
+<h2 id="Export-ArrayList-to-Excel-in-Java">Export ArrayList to Excel in Java</h2>
+<p>You can export data from an ArrayList to Excel by following the steps mentioned below:</p>
+<ul>
+<li>Create an instance of the _<a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Workbook">Workbook</a> _class</li>
+<li>Get worksheet in an instance of the <a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Worksheet"><em>Worksheet</em></a> class</li>
+<li>Create an array list containing string values</li>
+<li>Call the <a href="https://apireference.aspose.com/cells/java/com.aspose.cells/cells#importArrayList(java.util.ArrayList,%20int,%20int,%20boolean)"><em>importArrayList()</em></a> method with the array list</li>
+<li>Save the output file by calling the <em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/workbook#save(java.lang.String)">save()</a></em> method of the <em>Workbook</em> class</li>
+</ul>
+<p>The following code sample shows <strong>how to export an ArrayList to Excel in</strong> <strong>Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/08/Export-ArrayList-to-Excel-in-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Export ArrayList to Excel in Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.aspose.com/cells/java/com.aspose.cells/cells#importArrayList(java.util.ArrayList,%20int,%20int,%20boolean)"><strong><em>importArrayList()</em></strong></a> method of the Cells class exports an ArrayList of data to a worksheet. It takes four parameters including the ArrayList of data. The other parameters are the <em>firstRow</em>, <em>firstColumn</em>, and <em>isVertical</em>.</p>
+<h2 id="Export-Collection-of-Custom-Objects-to-Excel-in-Java">Export Collection of Custom Objects to Excel in Java</h2>
+<p>You can export data from a collection of custom objects to Excel by following the steps mentioned below:</p>
+<ul>
+<li>Create an instance of the _<a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Workbook">Workbook</a> _class</li>
+<li>Get worksheet in an instance of the <a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Worksheet"><em>Worksheet</em></a> class</li>
+<li>Create an array list of custom objects</li>
+<li>Call the <a href="https://apireference.aspose.com/cells/java/com.aspose.cells/cells#importCustomObjects(java.util.Collection,%20java.lang.String%5B%5D,%20boolean,%20int,%20int,%20int,%20boolean,%20java.lang.String,%20boolean)"><em>importCustomObjects()</em></a> method with the array list</li>
+<li>Save the output file by calling the <em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/workbook#save(java.lang.String)">save()</a></em> method of the <em>Workbook</em> class</li>
+</ul>
+<p>The following code sample shows <strong>how to export a collection of custom objects to Excel in Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/08/Export-Collection-of-Custom-Objects-to-Excel-in-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Collection of Custom Objects to Excel in Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <a href="https://apireference.aspose.com/cells/java/com.aspose.cells/cells#importCustomObjects(java.util.Collection,%20java.lang.String%5B%5D,%20boolean,%20int,%20int,%20int,%20boolean,%20java.lang.String,%20boolean)"></a><strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/cells#importCustomObjects(java.util.Collection,%20java.lang.String%5B%5D,%20boolean,%20int,%20int,%20int,%20boolean,%20java.lang.String,%20boolean)"><em>importCustomObjects</em></a>()</strong> method of the Cells class exports a list of custom objects and takes the following parameters. The API also provides the overloaded version of this method that takes fewer parameters.</p>
+<ul>
+<li><em><strong>list</strong></em>: The collection of custom objects</li>
+<li><strong><em>propertName</em></strong>: Specify name for a specific property to export. If it is null, it will export all properties of the object</li>
+<li><strong><em>isPropertyNameShown</em></strong>: Indicates whether the property name will be exported to the first row</li>
+<li><strong><em>firstRow</em></strong>: The row number of the first cell to export</li>
+<li><strong><em>firstColumn</em></strong>: The column number of the first cell to export</li>
+<li><strong><em>rowNumber</em></strong>: Number of rows to be exported</li>
+<li><strong><em>insertRows</em></strong>: Indicates whether extra rows are added to fit data</li>
+<li><strong><em>dataFormatString</em></strong>: Date format string for cells</li>
+<li><strong><em>convertStringToNumber</em></strong>: Indicates if this method will try to convert string to number.</li>
+</ul>
+<h2 id="Export-Data-to-Excel-with-Merged-Cells-in-Java">Export Data to Excel with Merged Cells in Java</h2>
+<p>You can export data from a collection of objects to a worksheet containing merged cells by following the steps mentioned below:</p>
+<ul>
+<li>Create an instance of the _<a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Workbook">Workbook</a> _class with template file path</li>
+<li>Get worksheet in an instance of the <a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Worksheet"><em>Worksheet</em></a> class</li>
+<li>Create an array list of objects</li>
+<li>Create an instance of the <em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/ImportTableOptions">ImportTableOptions</a></em> class</li>
+<li>Call the <a href="https://apireference.aspose.com/cells/java/com.aspose.cells/cells#importCustomObjects(java.util.Collection,%20java.lang.String%5B%5D,%20boolean,%20int,%20int,%20int,%20boolean,%20java.lang.String,%20boolean)"><em>importCustomObjects()</em></a> method with the array list</li>
+<li>Save the output file by calling the <em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/workbook#save(java.lang.String)">save()</a></em> method of the <em>Workbook</em> class</li>
+</ul>
+<p>The following code sample shows how to export a collection of custom objects to an <strong>Excel worksheet with merged cells in Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/08/Export-Data-to-Excel-with-Merged-Cells-in-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Export Data to Excel with Merged Cells in Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/ImportTableOptions">ImportTableOptions</a></strong> class provides several options for exporting data into cells. The <strong><em>setCheckMergedCells</em></strong> indicates whether checking merged cells. The <strong><em>setFieldNameShown</em></strong> property indicates whether the field name should be exported or not.</p>
+<h2 id="Copy-Rows-and-Columns-from-one-Excel-file-to-Another-in-Java">Copy Rows and Columns from one Excel file to Another in Java</h2>
+<p>You can easily copy rows and columns from one Excel file to another file programmatically by following the steps mentioned below:</p>
+<ul>
+<li>Create an instance of the _<a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Workbook">Workbook</a> _class with source workbook input file</li>
+<li>Create an instance of the _<a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Workbook">Workbook</a> _class for destination workbook</li>
+<li>Get source and destination worksheets in seperate instances of the <a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Worksheet"><em>Worksheet</em></a> class</li>
+<li>Call the <em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/cells#copyRows(com.aspose.cells.Cells,%20int,%20int,%20int)">copyRows()</a></em> method of the destination worksheet with the source worksheet cells</li>
+<li>Save the destination workbook output file by calling the <em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/workbook#save(java.lang.String)">save()</a></em> method of the <em>Workbook</em> class</li>
+</ul>
+<p>The following code sample shows <strong>how to copy rows and columns from one Excel file to another using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/08/Copy-Rows-and-Columns-from-one-Excel-file-to-Another-in-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Copy Rows and Columns from one Excel file to Another in Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>You can copy specific rows from one Excel file to another. The following code sample shows <strong>how to copy specific rows from one Excel file to another using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/08/Copy-Specific-Rows-and-Columns-from-one-Excel-file-to-Another-in-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Copy Specific Rows and Columns from one Excel file to Another in Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <strong><em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/cells#copyRows(com.aspose.cells.Cells,%20int,%20int,%20int)">copyRows()</a></em></strong> method copies data and formats of whole rows. It takes the source worksheet cells to copy as input parameters along with the source row index, destination row index, and the copied row number. The API also provides the overloaded versions of this method to copy rows with <a href="https://apireference.aspose.com/cells/java/com.aspose.cells/CopyOptions">CopyOptions</a> and <a href="https://apireference.aspose.com/cells/java/com.aspose.cells/PasteOptions">PasteOptions</a>.</p>
+<p>Similarly, You can copy columns data from one Microsoft Excel document to another using the <a href="https://apireference.aspose.com/cells/java/com.aspose.cells/cells#copyColumn(com.aspose.cells.Cells,%20int,%20int)">copyColumn()</a> or <a href="https://apireference.aspose.com/cells/net/aspose.cells/cells/methods/copycolumns">copyColumns()</a> methods.</p>
+<h2 id="Export-JSON-Data-to-Excel-in-Java">Export JSON Data to Excel in Java</h2>
+<p>You can easily export data from a JSON file to Excel by following the steps mentioned below:</p>
+<ul>
+<li>Create an instance of the _<a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Workbook">Workbook</a> _class</li>
+<li>Get worksheet in an instance of the <a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Worksheet"><em>Worksheet</em></a> class</li>
+<li>Read the JSON file</li>
+<li>Create an instance of the <em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/CellsFactory">CellsFactory</a></em> class</li>
+<li>Initiate style by calling the <em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/cellsfactory#createStyle()">createStyle()</a></em> method</li>
+<li>Set various style properties such as Horizontal Alignment, Font color, etc.</li>
+<li>Create an instance of the <a href="https://apireference.aspose.com/cells/java/com.aspose.cells/JsonLayoutOptions">JsonLayoutOptions</a> class</li>
+<li>Set title style with the style object</li>
+<li>Set array as table property to true</li>
+<li>Call the <a href="https://apireference.aspose.com/cells/java/com.aspose.cells/jsonutility#importData(java.lang.String,%20com.aspose.cells.Cells,%20int,%20int,%20com.aspose.cells.JsonLayoutOptions)"><em>JsonUtility.importData()</em></a> method with the JSON input and <em>JsonLayoutOptions</em></li>
+<li>Save the output file by calling the <em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/workbook#save(java.lang.String)">save()</a></em> method of the <em>Workbook</em> class</li>
+</ul>
+<p>The following code sample shows <strong>how to export data from a JSON file to Excel using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/08/Export-JSON-Data-to-Excel-in-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Export JSON Data to Excel in Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/CellsFactory">CellsFactory</a></strong> class instantiates classes of Cells model. The <em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/cellsfactory#createStyle()"><strong>createStyle()</strong></a></em> method of this class creates a new style object of the <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Style">Style</a></strong> class. The <strong>Style</strong> class allows setting display style of Excel document, such as font, color, alignment, border, etc.</p>
+<p>The <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/JsonLayoutOptions">JsonLayoutOptions</a></strong> class provides the options of JSON layout type. The <strong><em>setTitleStyle</em></strong> method of this class is used to set the defined style of the title. The <strong><em>setArrayAsTable</em></strong> method allows processing Array as a table.</p>
+<p>The API provides <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/jsonutility">JsonUtility</a></strong> class to process the JSON. The <a href="https://apireference.aspose.com/cells/java/com.aspose.cells/jsonutility#importData(java.lang.String,%20com.aspose.cells.Cells,%20int,%20int,%20com.aspose.cells.JsonLayoutOptions)"><em><strong>importData()</strong></em></a> method of this class exports the JSON string and takes the following parameters:</p>
+<ul>
+<li><strong><em>json</em></strong>: The JSON string</li>
+<li><strong><em>cells</em></strong>: The Cells</li>
+<li><strong><em>row</em></strong>: The row index</li>
+<li><strong><em>column</em></strong>: The column index</li>
+<li><strong><em>option</em></strong>: The options to export JSON string</li>
+</ul>
+<h2 id="Export-CSV-Data-to-Excel-in-Java">Get CSV Data in Excel using Java</h2>
+<p>You can export data from a CSV file to Excel by following the simple steps mentioned below:</p>
+<ul>
+<li>Create an instance of the <em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/LoadOptions">LoadOptions</a></em> class wih <em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/LoadFormat">LoadFormat</a></em></li>
+<li>Create an instance of the <em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/Workbook">Workbook</a></em> class with CSV file path and <em>LoadOptions</em> object</li>
+<li>Call the <em><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/workbook#save(java.lang.String)">save()</a></em> method of the <em>Workbook</em> class and save the output file</li>
+</ul>
+<p>The following code sample shows <strong>how to export data from a CSV file to Excel using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/08/Export-CSV-Data-to-Excel-in-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Export CSV Data to Excel in Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/LoadOptions">LoadOptions</a></strong> class of the API provides options for loading the file. The <strong><a href="https://apireference.aspose.com/cells/java/com.aspose.cells/LoadFormat">LoadFormat</a></strong> class contains constants representing the load file formats.</p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.aspose.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to export data to Excel in Java</strong>. You have also learned <strong>how to export data from Arrays, JSON, or CSV files to Excel</strong> programmatically. Moreover, you have learned <strong>how to copy rows and columns from one Excel file to another file using Java</strong>. You can learn more about Aspose.Cells for Java API using the <a href="https://docs.aspose.com/cells/java/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.aspose.com/c/cells/9">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.aspose.com/2021/06/15/copy-rows-and-columns-in-excel-using-java/">Copy Rows and Columns in Excel using Java</a></li>
+</ul>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<!-- raw HTML omitted -->
+<pre><code>&lt;p class=&quot;schema-faq-answer&quot;&gt;
+  You can easily export data from Arrays, Collection of Objects, JSON, and CSV to an XLSX file using easy-to-integrate Aspose.Cells for Java API in your Java application.
+</code></pre>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>&lt;p class=&quot;schema-faq-answer&quot;&gt;
+  Aspose.Cells API provides JsonUtility to export data from a JSON file to Excel in Java. You can find simple steps under the &lt;a href=&quot;#Export-JSON-Data-to-Excel-in-Java&quot;&gt;&amp;#8220;Export JSON Data to Excel in Java&amp;#8221;&lt;/a&gt; section.
+</code></pre>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>&lt;p class=&quot;schema-faq-answer&quot;&gt;
+  You can simply load a CSV file and save it as XLSX using Aspose.Cells API. You can find simple steps under the &lt;a href=&quot;#Export-CSV-Data-to-Excel-in-Java&quot;&gt;&amp;#8220;Get CSV Data in Excel using Java&amp;#8221;&lt;/a&gt; section.
+</code></pre>
+<!-- raw HTML omitted -->
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

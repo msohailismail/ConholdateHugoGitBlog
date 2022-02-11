@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>GroupDocs.Assembly for Java on Conholdate.Total</title>
+    <link>/tags/groupdocs.assembly-for-java/</link>
+    <description>Recent content in GroupDocs.Assembly for Java on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 18 Aug 2021 17:20:07 +0000</lastBuildDate><atom:link href="/tags/groupdocs.assembly-for-java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Generate Reports from Excel Data in Java</title>
+      <link>/2021/08/18/generate-reports-from-excel-data-in-java/</link>
+      <pubDate>Wed, 18 Aug 2021 17:20:07 +0000</pubDate>
+      
+      <guid>/2021/08/18/generate-reports-from-excel-data-in-java/</guid>
+      <description>As a Java developer, you can easily generate customized reports programmatically from Excel data. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to generate reports from Excel data using Java&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>You can present Microsoft Excel data in the form of customized reports to your users such as clients, stakeholders, etc. As a Java developer, you can generate such reports programmatically by using Excel spreadsheets as a table of data. In this article, you will learn <strong>how to generate reports from Excel data using Java</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#java-api-for-generating-reports">Java API for Generating Report</a></li>
+<li><a href="#generate-reports-from-excel-in-java">Generate Reports from Excel Data using Java</a></li>
+</ul>
+<h2 id="java-api-for-generating-reports">Java API for Generating Reports</h2>
+<p>For generating the reports from Excel data, I will be using <a href="https://products.groupdocs.com/assembly/java">GroupDocs.Assembly for Java</a> API. It enables you to build powerful document automation and report generation applications. It fetches data from the data source as per the defined template document, assembles it, and generates reports in the specified output format. The API supports fetching data from various data sources such as XML, Excel, JSON, and CSV. You can easily generate reports in all commonly used file formats such as PDF, HTML, and Microsoft Word.</p>
+<p>You can <a href="https://downloads.groupdocs.com/assembly/java">download</a> the JAR of the API or just add the following <strong><em>pom.xml</em></strong> configuration in your Maven-based Java application to try the below-mentioned code examples.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="generate-reports-from-excel-in-java">Generate Reports from Excel Data using Java</h2>
+<p>You can easily generate reports in Word from your Excel data by following the simple steps mentioned below:</p>
+<!-- raw HTML omitted -->
+<h3 id="get-excel-data">Excel Data Source</h3>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/08/Excel-Data-Source.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Excel Data Source<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h3 id="template">Template</h3>
+<p>You can use a Linq-based template syntax to create a template. A template is composed of common document contents and tags describing the template’s structure and data bindings. You can define the following template in the DOCX or XLSX file. This template enables you to iterate the Contracts’ data and their respective managers with the contract price. Each group in the template has a unique key defined by the input selector and contains items of the source enumeration associated with this key. You can access the key of a group instance using the Key property. Once you have created the template, you can jump into code for generating the report. You can read more about <a href="https://docs.groupdocs.com/assembly/java/template-syntax-part-1-of-2/">template syntax</a> in the documentation.<!-- raw HTML omitted --></p>
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/08/Report-Template.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Report Template<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h3 id="generate-excel-to-word-report">Convert Excel Data to Word Report in Java</h3>
+<p>You can automate the conversion of Excel data to the DOCX report based on the template by following the steps mentioned below:</p>
+<ul>
+<li>Define Excel data file, the template file, and DOCX output report file paths</li>
+<li>Create an instance of the <em><strong><a href="https://apireference.groupdocs.com/assembly/java/com.groupdocs.assembly/DocumentTableOptions">DocumentTableOptions</a></strong></em> class</li>
+<li>Set <em><strong><a href="https://apireference.groupdocs.com/assembly/java/com.groupdocs.assembly/DocumentTableOptions#setFirstRowContainsColumnNames-boolean-">setFirstRowContainsColumnNames</a></strong></em> to <em>true</em></li>
+<li>Create the <em><strong><a href="https://apireference.groupdocs.com/assembly/java/com.groupdocs.assembly/DocumentTable">DocumentTable</a></strong></em> with defined Excel data file and <em>DocumentTableOptions</em></li>
+<li>Create an instance of the **<a href="https://apireference.groupdocs.com/assembly/java/com.groupdocs.assembly/DocumentAssembler">DocumentAssembler</a> **class</li>
+<li>Call the <em><strong><a href="https://apireference.groupdocs.com/assembly/java/com.groupdocs.assembly/DocumentAssembler#assembleDocument-java.lang.String-java.lang.String-com.groupdocs.assembly.DataSourceInfo...-">assembleDocument()</a></strong></em> method with the provided Excel data and defined template</li>
+</ul>
+<p>The following code sample shows how to generate a report from an Excel data source according to the defined template using Java.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/08/output_report.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Generated Report<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The _<strong>DocumentTableOptions</strong> _class provides a set of options to control the extraction of data from a document table. I set the _FirstRowContainsColumnNames _property to <em>true</em> so that the column headers should not become part of the report data.</p>
+<p>The _<strong>DocumentTable </strong>_class provides access to the data of a single table (or a spreadsheet) located in an external document to be used while assembling a document.</p>
+<p>The <strong><em>DocumentAssembler</em></strong> class provides various methods to generate reports using the defined template document with data. The <em>assembleDocument**()**</em> method of this class takes three input parameters, the defined template as source document, the output file path, and the data source. It populates the data from the data source based on the provided template document, and stores the resulting document to the target path. You can save the resulting document into various supported file formats such as Word, Excel, or HTML.</p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to generate reports from Excel data using Java</strong>. You have also learned <strong>how to create a report template to generate reports</strong>. You can learn more about GroupDocs.Assembly for Java API using the <a href="https://docs.groupdocs.com/assembly/java/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/assembly/">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.groupdocs.com/2021/07/07/generate-reports-from-csv-data-in-java/">PDF &amp; Word Reports from CSV in Java</a></li>
+<li><a href="https://blog.groupdocs.com/2021/07/10/generate-reports-from-xml-data-in-java/">Generate Reports from XML Data in Java</a></li>
+<li><a href="https://blog.groupdocs.com/2021/02/10/generate-pdf-report-from-json-data-in-java/">Generate PDF Report from JSON Data in Java</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

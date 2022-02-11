@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Combine Word files using Java on Conholdate.Total</title>
+    <link>/tags/combine-word-files-using-java/</link>
+    <description>Recent content in Combine Word files using Java on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Jun 2021 15:26:55 +0000</lastBuildDate><atom:link href="/tags/combine-word-files-using-java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Merge Word Documents using Java</title>
+      <link>/2021/06/21/merge-word-documents-using-java/</link>
+      <pubDate>Mon, 21 Jun 2021 15:26:55 +0000</pubDate>
+      
+      <guid>/2021/06/21/merge-word-documents-using-java/</guid>
+      <description>As a Java developer, you can easily merge tow or more Word documents or combine pages from different Word files in your Java applications. In this article, you will learn &lt;!-- raw HTML omitted --&gt;how to merge Word documents using Java&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>You can programmatically merge two or more Word documents into a single document. As a Java developer, you can easily merge Word documents in your Java applications. In this article, you will learn <strong>how to merge Word documents using Java</strong>.</p>
+<p>The following topics are discussed/covered in this article:</p>
+<ul>
+<li><a href="#API-for-Merging-Word-Documents">Java API for Merging Word Documents</a></li>
+<li><a href="#Merge-Multiple-Word-Documents-using-Java">Merge Word Documents using Java</a></li>
+<li><a href="#Combine-Specific-Pages-of-Word-Documents-using-Java">Combine Specific Pages of Word Documents using Java</a></li>
+<li><a href="#Merge-and-Secure-with-Password-using-Java">Merge and Secure with Password using Java</a></li>
+<li><a href="#Merge-Word-Document-into-PDF-using-Java">Merge Word Document into PDF using Java</a></li>
+</ul>
+<h2 id="API-for-Merging-Word-Documents">Java API for Merging Word Documents</h2>
+<p>For merging <a href="https://docs.fileformat.com/word-processing/docx/">DOCX</a> files, I will be using <a href="https://products.groupdocs.com/merger/java">GroupDocs.Merger for Java</a> API. It allows you to develop high-performance applications that can combine, rip, shuffle, cut or delete pages, slides, and diagrams on the go.‎ It enables you to reorder or replace document pages, change page orientation, manage document passwords and perform other manipulations easily for the supported file formats such as Word, Excel, PDF, and PowerPoint.</p>
+<p>You can <a href="https://downloads.groupdocs.com/merger/java">download</a> the JAR of the API or just add the following <strong><em>pom.xml</em></strong> configuration in your Maven-based Java applications to try the below-mentioned code examples.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="Merge-Multiple-Word-Documents-using-Java">Merge Word Documents using Java</h2>
+<p>You can easily merge two or more Word documents programmatically by following the simple steps mentioned below:</p>
+<ul>
+<li>Create an instance of the <strong><em><a href="https://apireference.groupdocs.com/merger/java/com.groupdocs.merger/Merger">Merger</a></em></strong> class</li>
+<li>Specify the path to the input DOCX file</li>
+<li>Call the <strong><em><a href="https://apireference.groupdocs.com/merger/java/com.groupdocs.merger/Merger#join(java.lang.String)">join()</a></em></strong> method and specify the path to the target DOCX file</li>
+<li>Repeat the above step and add more files to merge</li>
+<li>Call the <strong><em><a href="https://apireference.groupdocs.com/merger/java/com.groupdocs.merger/Merger#save(java.lang.String)">save()</a></em></strong> method and save the merged file</li>
+</ul>
+<p>The following code sample shows how to merge multiple DOCX files using Java.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/06/Merge-Multiple-Word-Documents-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Merge Multiple Word Documents using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <strong><a href="https://apireference.groupdocs.com/merger/java/com.groupdocs.merger/Merger">Merger</a></strong> class is the main class that controls the document merging process. It provides various methods to join, extract, remove and split document pages.</p>
+<p>The <strong><a href="https://apireference.groupdocs.com/merger/java/com.groupdocs.merger/Merger#join(java.lang.String)">Join()</a></strong> method of the <strong>Merger</strong> class joins the two or more documents into one single document. It takes a document from the file path or from the input stream as an input parameter. You may also provide <strong>JoinOptions</strong> as well.</p>
+<p>The <strong><a href="https://apireference.groupdocs.com/merger/java/com.groupdocs.merger/Merger#save(java.lang.String)">save()</a></strong> method of the <strong>Merger</strong> class saves the resultant document to the provided file path. You may also save the document to the OutputStream.</p>
+<h2 id="Combine-Specific-Pages-of-Word-Documents-using-Java">Combine Specific Pages of Word Documents using Java</h2>
+<p>You can combine specific pages of Word documents programmatically by following the simple steps mentioned below:</p>
+<ul>
+<li>Create an instance of the <strong><em><a href="https://apireference.groupdocs.com/merger/java/com.groupdocs.merger/Merger">Merger</a></em></strong> class</li>
+<li>Specify the path to the input DOCX file</li>
+<li>Define <strong><em><a href="https://apireference.groupdocs.com/merger/java/com.groupdocs.merger.domain.options/JoinOptions">JoinOptions</a></em></strong> and set the start and end page number</li>
+<li>Call the <strong><em><a href="https://apireference.groupdocs.com/merger/java/com.groupdocs.merger/Merger#join(java.lang.String)">join()</a></em></strong> method and specify the path to the target DOCX file</li>
+<li>Call the <strong><em><a href="https://apireference.groupdocs.com/merger/java/com.groupdocs.merger/Merger#save(java.lang.String)">save()</a></em></strong> method and save the merged file</li>
+</ul>
+<p>The following code sample shows how to combine selected pages of Word documents using Java.</p>
+<!-- raw HTML omitted -->
+<p>The <strong><a href="https://apireference.groupdocs.com/merger/java/com.groupdocs.merger.domain.options/JoinOptions">JoinOptions</a></strong> class provides options such as start page number, end page number and mode for joining the documents.</p>
+<h2 id="Merge-and-Secure-with-Password-using-Java">Merge and Secure with Password using Java</h2>
+<p>You can merge two or more Word documents and then secure with a password programmatically by following the simple steps mentioned below:</p>
+<ul>
+<li>Create an instance of the <strong><em><a href="https://apireference.groupdocs.com/merger/java/com.groupdocs.merger/Merger">Merger</a></em></strong> class</li>
+<li>Specify the path to the input DOCX file</li>
+<li>Call the <strong><em><a href="https://apireference.groupdocs.com/merger/java/com.groupdocs.merger/Merger#join(java.lang.String)">join()</a></em></strong> method and specify the path to the target DOCX file</li>
+<li>Repeat the above step and add more files to merge</li>
+<li>Set password using <strong><em><a href="https://apireference.groupdocs.com/merger/java/com.groupdocs.merger.domain.options/AddPasswordOptions">AddPasswordOptions</a></em></strong></li>
+<li>Call the <strong><em><a href="https://apireference.groupdocs.com/merger/java/com.groupdocs.merger/Merger#addPassword(com.groupdocs.merger.domain.options.interfaces.IAddPasswordOptions)">addPassword()</a></em></strong> method with <em>AddPasswordOptions</em></li>
+<li>Call the <strong><em><a href="https://apireference.groupdocs.com/merger/java/com.groupdocs.merger/Merger#save(java.lang.String)">save()</a></em></strong> method to save the password-protected merged file</li>
+</ul>
+<p>The following code sample shows how to merge multiple DOCX files and then secure the merged file with a password using Java.</p>
+<!-- raw HTML omitted -->
+<p>The <strong><a href="https://apireference.groupdocs.com/merger/java/com.groupdocs.merger.domain.options/AddPasswordOptions">AddPasswordOptions</a></strong> class provides options to set password for document protection.</p>
+<p>The <strong><a href="https://apireference.groupdocs.com/merger/java/com.groupdocs.merger/Merger#addPassword(com.groupdocs.merger.domain.options.interfaces.IAddPasswordOptions)">addPassword()</a></strong> method of the <strong>Merger</strong> class gets <strong>AddPasswordOptions</strong> as an input parameter and protects the document with a password.</p>
+<h2 id="Merge-Word-Document-into-PDF-using-Java">Merge Word Document into PDF using Java</h2>
+<p>You can merge two or more Word documents into a PDF document programmatically by following the simple steps mentioned below:</p>
+<ul>
+<li>Create an instance of the <strong><em><a href="https://apireference.groupdocs.com/merger/java/com.groupdocs.merger/Merger">Merger</a></em></strong> class</li>
+<li>Specify the path to the input PDF file</li>
+<li>Call the <strong><em><a href="https://apireference.groupdocs.com/merger/java/com.groupdocs.merger/Merger#join(java.lang.String)">join()</a></em></strong> method and specify the path to the target DOCX file</li>
+<li>Call the <strong><em><a href="https://apireference.groupdocs.com/merger/java/com.groupdocs.merger/Merger#save(java.lang.String)">save()</a></em></strong> method and save the merged PDF file</li>
+</ul>
+<p>The following code sample shows how to merge DOCX files into a PDF file using Java.</p>
+<!-- raw HTML omitted -->
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to merge Word documents using Java</strong>. You can learn more about GroupDocs.Merger for Java API using the <a href="https://docs.groupdocs.com/merger/java/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/merger/">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.groupdocs.com/2021/06/13/merge-multiple-file-types-using-java/">Merge Multiple File Types into One File using Java</a></li>
+<li><a href="https://blog.groupdocs.com/2020/05/20/merge-pdf-word-excel-powerpoint-documents-in-java/">Split or Merge PDF, PowerPoint, Excel, Word, Documents in Java</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

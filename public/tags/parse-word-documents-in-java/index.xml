@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Parse Word Documents in Java on Conholdate.Total</title>
+    <link>/tags/parse-word-documents-in-java/</link>
+    <description>Recent content in Parse Word Documents in Java on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Dec 2021 06:16:36 +0000</lastBuildDate><atom:link href="/tags/parse-word-documents-in-java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MS Word Automation – Create, Edit, or Convert Word Documents using Java</title>
+      <link>/2021/12/01/ms-word-automation-create-edit-or-convert-word-documents-using-java/</link>
+      <pubDate>Wed, 01 Dec 2021 06:16:36 +0000</pubDate>
+      
+      <guid>/2021/12/01/ms-word-automation-create-edit-or-convert-word-documents-using-java/</guid>
+      <description>As a Java developer, you can automate Word to create new Word documents, edit or modify the existing ones, or convert them into other formats without using Microsoft Office. In this article, we will learn &lt;!-- raw HTML omitted --&gt;how to automate MS Word to create, edit, or convert Word documents using Java&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>Automation of Word enables you to create new Word documents, edit or modify the existing ones, or convert them into other formats without using Microsoft Office. All the actions that we can perform through the user interface of MS Word can also be performed programmatically by using Automation. In this article, we will learn <strong>how to automate MS Word to create, edit, or convert Word documents using Java</strong>.</p>
+<p>The following topics shall be covered in this article:</p>
+<ul>
+<li><a href="#Java-Word-Automation-API">Java Word Automation API to Create, Edit, or Convert Word Documents</a></li>
+<li><a href="#Create-Word-Documents-using-Java">Create Word Documents using Java</a></li>
+<li><a href="#Edit-or-Modify-Word-Documents-using-Java">Edit or Modify Word Documents using Java</a></li>
+<li><a href="#Find-and-Replace-Text-in-Word-Documents-using-Java">Find and Replace Text in Word Documents using Java</a></li>
+<li><a href="#Convert-Word-Documents-using-Java">Convert Word Documents using Java</a></li>
+<li><a href="#Parse-Word-Documents-using-Java">Parse Word Documents using Java</a></li>
+</ul>
+<h2 id="Java-Word-Automation-API">Java Word Automation API to Create, Edit, or Convert Word Documents</h2>
+<p>For automating Word, we will be using <a href="https://products.aspose.com/words/java/">Aspose.Words for Java</a> API. It is a complete and feature-rich Word automation solution to create, edit, or analyze Word documents programmatically. Please either <a href="https://downloads.aspose.com/words/java">download</a> the JAR of the API or just add the following <strong><em>pom.xml</em></strong> configuration in a Maven-based Java application.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="Create-Word-Documents-using-Java">Create Word Documents using Java</h2>
+<p>We can create Word documents programmatically by following the steps given below:</p>
+<ul>
+<li>Firstly, create an instance of the <strong><em><a href="https://apireference.aspose.com/words/java/com.aspose.words/Document">Document</a></em></strong> class. This class represents a Word document.</li>
+<li>Next, create an instance of the <strong><em><a href="https://apireference.aspose.com/words/java/com.aspose.words/DocumentBuilder">DocumentBuilder</a></em></strong> class with the <strong><em>Document</em></strong> object as argument. This class provides methods to insert text, images and other content, specify font, paragraph, and section formatting.</li>
+<li>Then, insert/write elements to add some text, paragraphs, table, or image using the <strong><em>DocumentBuilder</em></strong> object.</li>
+<li>Finally, call the <strong><em><a href="https://apireference.aspose.com/words/java/com.aspose.words/document#save(java.lang.String)">Document.save()</a></em></strong> method with the output file path to save the created file.</li>
+</ul>
+<p>The following code sample shows <strong>how to create a Word document (DOCX) using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/11/Create-Word-Documents-using-Java.png"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Create Word Documents using Java.<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="Edit-or-Modify-Word-Documents-using-Java">Edit or Modify Word Documents using Java</h2>
+<p>In the previous section, we have created a Word document. Now, let’s edit it and change the content of the document. We can edit Word documents programmatically by following the steps given below:</p>
+<ul>
+<li>Firstly, load a Word document using the <strong><em><a href="https://apireference.aspose.com/words/java/com.aspose.words/Document">Document</a></em></strong> class with input file path as argument.</li>
+<li>Next, access the specific section by its index.</li>
+<li>Then, access the first paragraph content as an object of the <strong><em><a href="https://apireference.aspose.com/words/java/com.aspose.words/Run">Run</a></em></strong> class. The <strong><em>Run</em></strong> class represents a run of characters with the same font formatting. All the text of the document is stored in runs of text.</li>
+<li>After that, set the text to update for the accessed paragraph.</li>
+<li>Finally, call the <strong><em><a href="https://apireference.aspose.com/words/java/com.aspose.words/document#save(java.lang.String)">Document.save()</a></em></strong> method with the output file path to save the updated file.</li>
+</ul>
+<p>The following code sample shows <strong>how to edit a Word document (DOCX) using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/11/Edit-or-Modify-Word-Documents-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Edit or Modify Word Documents using Java.<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="Find-and-Replace-Text-in-Word-Documents-using-Java">Find and Replace Text in Word Documents using Java</h2>
+<p>We can also update the content of Word documents by using the find and replace mechanism of the API. We can do this programmatically by following the steps given below:</p>
+<ul>
+<li>Firstly, load a Word document using the <strong><em><a href="https://apireference.aspose.com/words/java/com.aspose.words/Document">Document</a></em></strong> class with input file path as argument.</li>
+<li>Next, create an instance of the <strong><em><a href="https://apireference.aspose.com/words/java/com.aspose.words/FindReplaceOptions">FindReplaceOptions</a></em></strong> class.</li>
+<li>Then, call the <a href="https://apireference.aspose.com/words/java/com.aspose.words/range#replace(java.util.regex.Pattern,java.lang.String,com.aspose.words.FindReplaceOptions)"><strong><em>replace()</em></strong></a> method with the search string, the replace string and the <strong><em>FindReplaceOptions</em></strong> object as arguments. This method shall replace every occurrence of the search string with the replace string.</li>
+<li>Finally, call the <strong><em><a href="https://apireference.aspose.com/words/java/com.aspose.words/document#save(java.lang.String)">Document.save()</a></em></strong> method with the output file path to save the updated file.</li>
+</ul>
+<p>The following code sample shows <strong>how to find and replace specific text in a Word document (DOCX) using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/11/Find-and-Replace-Text-in-Word-Documents-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Find and Replace Text in Word Documents using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="Convert-Word-Documents-using-Java">Convert Word Documents using Java</h2>
+<p>We can convert Word documents to other formats such as PDF, XPS, EPUB, HTML, JPG, PNG, etc. programmatically by following the steps given below:</p>
+<ul>
+<li>Firstly, load a Word document using the <strong><em><a href="https://apireference.aspose.com/words/java/com.aspose.words/Document">Document</a></em></strong> class with input file path as argument.</li>
+<li>Next, create an instance of the <strong><em><a href="https://apireference.aspose.com/words/java/com.aspose.words/PdfSaveOptions">PdfSaveOptions</a></em></strong> class with the <strong><em>Document</em></strong> object as argument. This class provides additional options when saving a document into the PDF.</li>
+<li>Then, specify the PDF standards compliance level for the output document by setting the <em><strong><a href="https://apireference.aspose.com/words/java/com.aspose.words/pdfsaveoptions#Compliance">PdfSaveOptions.Compliance</a></strong></em> to <strong><em><a href="https://apireference.aspose.com/words/java/com.aspose.words/pdfcompliance#PDF_17">PdfCompliance.PDF_17</a></em></strong>.</li>
+<li>Finally, call the <strong><em><a href="https://apireference.aspose.com/words/java/com.aspose.words/document#save(java.lang.String)">Document.save()</a></em></strong> method with the output file path and <strong><em>PdfSaveOptions</em></strong> object as argument to save the PDF file.</li>
+</ul>
+<p>The following code sample shows <strong>how to convert a Word document (DOCX) to a PDF using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/11/Convert-Word-Documents-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Convert Word Documents using Java<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="Parse-Word-Documents-using-Java">Parse Word Documents using Java</h2>
+<p>We can parse Word documents and extract the content as plain text programmatically by following the steps given below:</p>
+<ul>
+<li>Load a Word document using the <strong><em><a href="https://apireference.aspose.com/words/java/com.aspose.words/Document">Document</a></em></strong> class with input file path as argument.</li>
+<li>Call the <strong><em><a href="https://apireference.aspose.com/words/java/com.aspose.words/document#save(java.lang.String)">Document.save()</a></em></strong> method to save the Word document as a text file. This method takes the path of the output file as an argument.</li>
+</ul>
+<p>The following code sample shows <strong>how to parse a Word document (DOCX) using Java</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/11/Parse-Word-Documents-using-Java.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Parse Word Documents using Java.<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>Please try the API without evaluation limitations by requesting <a href="https://purchase.conholdate.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, we have learned <strong>how to automate Word to create, edit, or convert Word documents using Java</strong>. We have also seen <strong>how to find and replace text in Word documents</strong> programmatically. Besides, you can learn more about Aspose.Words for Java API using the <a href="https://docs.aspose.com/words/java/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.aspose.com/c/words">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.conholdate.com/2021/10/13/extract-text-from-word-documents-using-java/">Extract Text from Word Documents using Java</a></li>
+<li><a href="https://blog.conholdate.com/2021/06/21/merge-word-documents-using-java/">Merge Word Documents using Java</a></li>
+<li><a href="https://blog.conholdate.com/2021/06/07/edit-word-documents-using-java/">Edit Word Documents using Java</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

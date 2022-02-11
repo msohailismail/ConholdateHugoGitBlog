@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Convert PDF to XLSX on Conholdate.Total</title>
+    <link>/tags/convert-pdf-to-xlsx/</link>
+    <description>Recent content in Convert PDF to XLSX on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 31 Mar 2021 03:23:05 +0000</lastBuildDate><atom:link href="/tags/convert-pdf-to-xlsx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Convert PDF to Excel using C#</title>
+      <link>/2021/03/31/convert-pdf-to-excel-using-csharp/</link>
+      <pubDate>Wed, 31 Mar 2021 03:23:05 +0000</pubDate>
+      
+      <guid>/2021/03/31/convert-pdf-to-excel-using-csharp/</guid>
+      <description>Easily export tabular data from PDF files into Excel sheets (.xlsx or .xls) programmatically in your .NET application. In this article, you are going to learn &lt;!-- raw HTML omitted --&gt;how to convert PDF to Excel using C#&lt;!-- raw HTML omitted --&gt;.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>You can easily export tabular data from PDF files into Excel sheets (<em>.xlsx</em> or <em>.xls</em>) programmatically in your .NET application. Such conversion is useful when you need to edit data or need to apply various calculations available in Excel. In this article, you are going to learn <strong>how to convert PDF to Excel using C#</strong>.</p>
+<p>The following topics shall be covered in this article:</p>
+<ul>
+<li><a href="#net-conversion-api">C# API to Convert PDF to Excel</a></li>
+<li><a href="#convert-pdf-to-xlsx">Convert PDF to Excel</a></li>
+</ul>
+<h2 id="net-conversion-api">C# API to Convert PDF to Excel</h2>
+<p>I will be using <a href="https://products.groupdocs.com/conversion/net">GroupDocs.Conversion for .NET API</a> for the conversion of <a href="https://docs.fileformat.com/pdf/">PDF</a> to <a href="https://docs.fileformat.com/spreadsheet/xlsx/">XLSX</a>. This API provides a fast, efficient, and reliable file conversion solution into .NET applications without installing any external software. It also enables you to build powerful document conversion applications in C#, ASP.NET, and other .NET related technologies.</p>
+<p>You can either <a href="https://downloads.groupdocs.com/conversion/net">download</a> the DLL of the API or install it using <a href="https://www.nuget.org/packages/GroupDocs.Conversion">NuGet</a>.</p>
+<!-- raw HTML omitted -->
+<h2 id="convert-pdf-to-xlsx">Convert PDF to Excel using C#</h2>
+<p>You can convert PDF documents to Excel by following the simple steps given below:</p>
+<ol>
+<li>Set <em><strong><a href="https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions">PdfLoadOptions</a></strong></em> if any apply.</li>
+<li>Set conversion options using <em><strong><a href="https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/spreadsheetconvertoptions">SpreadsheetConvertOptions</a></strong></em></li>
+<li>Create an instance of the <em><strong><a href="https://apireference.groupdocs.com/conversion/net/groupdocs.conversion/converter">Converter</a></strong></em> class</li>
+<li>Provide the file path and load options</li>
+<li>Call the <em><strong><a href="https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.converter/convert/methods/16">Convert</a></strong></em> method along with the output file path and convert options</li>
+</ol>
+<p>The following code sample shows <strong>how to export tabular data from a PDF file into an Excel sheet using C#</strong>.</p>
+<!-- raw HTML omitted -->
+<p><a href="https://blog.conholdate.com/wp-content/uploads/sites/27/2021/03/ConvertPDFtoXLSX.jpg"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Convert PDF to XLSX<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>The <strong><em>PdfLoadOptions</em></strong> class provides various options for loading PDF documents. These <a href="https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.load/pdfloadoptions/properties/index">properties</a> include the <strong>FlattenAllFields, HidePdfAnnotations, Password</strong>, and <strong>RemoveEmbeddedFiles</strong>. You may find more details in the <a href="https://docs.groupdocs.com/conversion/net/load-pdf-document-with-options/">documentation</a>.</p>
+<p>The <strong>SpreadsheetConvertOptions</strong> class provides certain <a href="https://apireference.groupdocs.com/conversion/net/groupdocs.conversion.options.convert/spreadsheetconvertoptions/properties/index">properties</a> for converting files from other formats to Spreadsheet file type.</p>
+<ul>
+<li>The <strong><em>PageNumber</em></strong> property defines the starting page number of the source document to convert.</li>
+<li>The <strong><em>PagesCount</em></strong> property defines the total number of pages to be converted starting from <strong><em>PageNumber</em></strong>.</li>
+<li>You may convert specific pages by providing a list of page indexes to <strong><em>Pages</em></strong> property.</li>
+<li>You can set a password for the converted file using the <strong><em>Password</em></strong> property.</li>
+<li>The <strong><em>Zoom</em></strong> property can be used to set the zoom level in percentage for the converted file.</li>
+<li>The <strong><em>Format</em></strong> property defines the output format of the converted file.</li>
+</ul>
+<p>You can find more details about “<a href="https://docs.groupdocs.com/conversion/net/convert-to-spreadsheet-with-advanced-options/">converting to a spreadsheet with advanced options</a>” in the documentation.</p>
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You can try the API without evaluation limitations by requesting <a href="https://purchase.groupdocs.com/temporary-license">a free temporary license</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, you have learned <strong>how to export table data from</strong> <strong>PDF documents to Excel sheets</strong> using C#. You can learn even more about GroupDocs.Conversion .NET API using the <a href="https://docs.groupdocs.com/conversion/net/">documentation</a>. In case of any ambiguity, please feel free to contact us on the <a href="https://forum.groupdocs.com/c/conversion/11">forum</a>.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://blog.conholdate.com/2020/08/10/export-data-to-excel-in-csharp/">Export Data to Excel in C#</a></li>
+<li><a href="https://blog.groupdocs.com/2020/11/08/convert-cad-drawings-to-pdf-in-csharp/">Convert CAD Drawings to PDF in C# .NET</a></li>
+<li><a href="https://blog.groupdocs.com/2020/06/30/convert-webp-to-jpg-png-tiff-and-pdf-in-csharp/">C# Convert WebP Images to JPG, PNG, TIFF &amp; PDF</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Convert PDF to HTML using CSharp on Conholdate.Total</title>
+    <link>/tags/convert-pdf-to-html-using-csharp/</link>
+    <description>Recent content in Convert PDF to HTML using CSharp on Conholdate.Total</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 08 Apr 2021 17:54:18 +0000</lastBuildDate><atom:link href="/tags/convert-pdf-to-html-using-csharp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Convert HTML to PDF using C# .NET API</title>
+      <link>/2021/04/08/convert-html-to-pdf-using-csharp-net-api/</link>
+      <pubDate>Thu, 08 Apr 2021 17:54:18 +0000</pubDate>
+      
+      <guid>/2021/04/08/convert-html-to-pdf-using-csharp-net-api/</guid>
+      <description>The PDF (Portable Document Format) is one of the widely used document formats for cross-platform data and information sharing. One of its unique capabilities includes that a document’s fidelity stays intact when viewing on any platform using the application as per Adobe specifications. Furthermore, the HTML (HyperText Markup Language) is also a leading file format for web page development and most web browsers support this format. However, PDF is widely accepted as it can be easily viewed on any device without losing document formatting.</description>
+      <content:encoded><![CDATA[<!-- raw HTML omitted -->
+<p>The <a href="https://docs.fileformat.com/pdf/">PDF</a> (<em>Portable Document Format</em>) is one of the widely used document formats for cross-platform data and information sharing. One of its unique capabilities includes that a document’s fidelity stays intact when viewing on any platform using the application as per Adobe specifications. Furthermore, the <a href="https://docs.fileformat.com/web/html/">HTML</a> (<em>HyperText Markup Language</em>) is also a leading file format for web page development and most web browsers support this format. However, PDF is widely accepted as it can be easily viewed on any device without losing document formatting. Therefore, in this article, we are going to discuss steps on how to convert the <a href="https://docs.fileformat.com/web/html/">HTML</a> file to <a href="https://docs.fileformat.com/pdf/">PDF</a> format using .NET API.</p>
+<ul>
+<li><a href="#C--API-to-Convert-HTML-to-PDF">C# API to Convert HTML to PDF</a></li>
+<li><a href="#Convert-HTML-to-PDF-in-C-">Convert HTML to PDF in C#</a></li>
+<li><a href="#Embed-fonts-during-conversion">Embed fonts during conversion</a></li>
+<li><a href="#Convert-Web-page-to-PDF">Convert Web pages to PDF</a></li>
+<li><a href="#Render-complete-HTML-on-a-single-page">Render complete HTML on a single page</a></li>
+</ul>
+<h2 id="C--API-to-Convert-HTML-to-PDF">C# API to Convert HTML to PDF</h2>
+<p>In order to perform the conversion operation, first, we need to install <a href="https://products.aspose.com/pdf/net">Aspose.PDF for .NET</a> on the system. The API is available on the <a href="https://www.nuget.org/packages/Aspose.PDF/">NuGet</a> library. Please run the following command on Package Manager Console to install it:</p>
+<!-- raw HTML omitted -->
+<p>Once the installation is complete, the Aspose.PDF for .NET will appear under the Packages folder in solution explorer.</p>
+<h2 id="Convert-HTML-to-PDF-in-C-">Convert HTML to PDF in C#</h2>
+<p>Given below are the steps on how you can Convert HTML to PDF using C#</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="Embed-fonts-during-conversion">Embed fonts during conversion</h2>
+<p>Most HTML pages often use fonts (i.g. fonts from local folders, Google Fonts, etc), and in order to preserve the layout of pages, the same fonts shall be embedded during the rendering process. So in order to control the embedding of fonts in the resultant document, we need to use <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/htmlloadoptions/properties/isembedfonts">IsEmbedFonts</a> property.</p>
+<!-- raw HTML omitted -->
+<p>The unit of measurement in Aspose.PDF is Points. And, we know that A3 measures 297 × 420 millimeters or 11.69 × 16.54 inches. So, the dimensions are rounded off to 842 × 1190 points. In the following code snippet, we are adjusting the page size of the resultant document as A3 and page orientation as Landscape.</p>
+<!-- raw HTML omitted -->
+<h2 id="Convert-Web-page-to-PDF">Convert Web page to PDF</h2>
+<p>Other than the conversion of HTML files, we may also have a requirement to directly convert a web page to PDF format. So in order to accomplish this requirement, first we will fetch the remote Web page contents using the HttpClient instance, create a Stream object and then pass the Stream instance to the Document object. The reason we need the content in Stream is that the Document instance only accepts files or steam objects.</p>
+<p>The following section explains the steps on how to convert a Web page to PDF using C#</p>
+<ol>
+<li>Read the contents of the page using an <a href="https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclient?view=net-5.0">HttpClient</a> object</li>
+<li>Instantiate the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/htmlloadoptions"></a><a href="https://apireference.aspose.com/pdf/net/aspose.pdf/htmlloadoptions">HtmlLoadOptions</a> object and set the base URL</li>
+<li>Initialize a <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/document">Document</a> object and pass the stream object and <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/htmlloadoptions">HtmlLoadOptions</a> instance as arguments</li>
+<li>Call the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf.document/save/methods/4">Save(String)</a> method from the Document class to generate the output</li>
+</ol>
+<!-- raw HTML omitted -->
+<h2 id="Render-complete-HTML-on-a-single-page">Render complete HTML on a single page</h2>
+<p>During the HTML to PDF conversion, the length of the resultant file is according to the content length of an input HTML document. Therefore, if the input HTML is comprised of multiple pages, then the resultant file will also span over multiple pages. However, we may confine the output to a single PDF page. In order to accomplish this requirement, the <a href="https://apireference.aspose.com/pdf/net/aspose.pdf/htmlloadoptions/properties/isrendertosinglepage">IsRenderToSinglePage</a> property of HtmlLoadOptions class can be used.</p>
+<p>Given below is the code snippet for rendering the complete HTML content on a single PDF page using C#.</p>
+<!-- raw HTML omitted -->
+<h2 id="get-a-free-license">Get a Free License</h2>
+<p>You may request <!-- raw HTML omitted -->a free temporary license<!-- raw HTML omitted --> to try the API without any evaluation limitations.</p>
+<h2 id="Conclusion">Conclusion</h2>
+<p>In this article, we have learned about the approach of converting HTML files to PDF format using .NET API. If you are further interested to learn about other exciting features being offered by Aspose.PDF for .NET, please visit the <a href="https://docs.aspose.com/pdf/net/key-features/">Key features</a> page. A complete set of examples can be found over the <a href="https://github.com/aspose-pdf/Aspose.Pdf-for-.NET">GitHub repository</a>.</p>
+<h2 id="quick-tip">Quick Tip</h2>
+<p>We have also developed free online applications to quickly check the features being offered by our APIs. So you may check the <a href="https://products.aspose.app/pdf/conversion">Aspose.PDF Conversion App</a> to transform HTML file to PDF format. Furthermore, you may also use various other file formats and accomplish your conversion requirements.</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
